@@ -7,6 +7,7 @@ function renderManager(id) {
       <div><a class="back-link" href="#managers">← All managers</a><p class="eyebrow">${m.active2025?'Current manager':'Ranch alumni'}</p><h1>${m.name}</h1><div class="profile-full">${m.fullName}</div></div>
       <div class="legacy-badge"><small>Legacy Score</small><strong>${fmt.format(m.legacyScore || 0)}</strong></div>
     </section>
+    ${m.legacyReconciliationNote ? `<div class="notice" style="margin-top:14px">${m.legacyReconciliationNote}</div>` : ''}
     <section class="profile-grid">
       <div class="panel chart-panel">
         <div class="panel-title"><h3>Career timeline</h3><small>Gold dots mark championships</small></div>
