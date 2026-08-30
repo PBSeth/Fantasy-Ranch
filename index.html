@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#141414" />
+  <meta name="description" content="Fantasy Ranch league history, manager profiles, legacy scores, records, and season archive." />
+  <title>Fantasy Ranch</title>
+  <link rel="icon" href="/assets/fantasy-ranch-logo.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Fantasy Ranch home">
+      <span class="brand-mark">FR</span>
+      <span class="brand-copy"><strong>Fantasy Ranch</strong><small>League archive</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#managers" data-nav="managers">Managers</a>
+      <a href="#seasons" data-nav="seasons">Seasons</a>
+      <a href="#records" data-nav="records">Records</a>
+      <a href="#methodology" data-nav="methodology">Method</a>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <div class="loading-shell">
+      <div class="loading-dot"></div>
+      <p>Opening the Ranch…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Fantasy Ranch • Est. 2012</span>
+    <span>Google Sheets is the historical source of truth.</span>
+  </footer>
+
+  <script src="/app-core.js" defer></script>
+  <script src="/app-pages.js" defer></script>
+</body>
+</html>
