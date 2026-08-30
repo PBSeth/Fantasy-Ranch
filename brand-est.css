@@ -1,2 +1,1 @@
-.brand-copy small{color:#8f8981!important;font-size:9px!important;letter-spacing:.14em!important;text-transform:uppercase!important}
-@media(max-width:680px){.brand-copy small{display:block!important;margin-top:3px!important;font-size:8px!important}}
+.brand{min-width:0!important;width:auto!important;flex:0 0 auto!important}.brand-sign{display:block!important;width:68px!important;height:68px!important;object-fit:contain!important;background:#fff}.site-header{min-height:82px!important}@media(max-width:680px){.brand{flex:0 0 auto!important}.brand-sign{width:58px!important;height:58px!important}.site-header{min-height:74px!important;padding-top:8px!important;padding-bottom:8px!important}}
