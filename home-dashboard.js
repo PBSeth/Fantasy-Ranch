@@ -3,7 +3,7 @@ function parseSeasonRecord(record) {
   if (!m) return null;
   const wins = Number(m[1]), losses = Number(m[2]), ties = Number(m[3] || 0);
   const games = wins + losses + ties;
-  return { wins, losses, ties, games, pct: games ? (wins + ties * 0.5) / games : 0 };
+  return { wins, losses, ties, games };
 }
 
 function leagueHighs() {
@@ -16,7 +16,6 @@ function leagueHighs() {
 
   const maxSeasonWins = Math.max(...seasonRows.map(x => x.wins));
   const seasonWinLeaders = seasonRows.filter(x => x.wins === maxSeasonWins).sort((a,b)=>a.s.year-b.s.year);
-  const bestSeason = [...seasonRows].sort((a,b)=>b.pct-a.pct || b.games-a.games || b.wins-a.wins)[0];
   const mostTitles = [...managers].sort((a,b)=>(b.titles||0)-(a.titles||0) || (b.legacyScore||0)-(a.legacyScore||0))[0];
   const mostPlayoffWins = [...managers].sort((a,b)=>(b.playoffWins||0)-(a.playoffWins||0))[0];
   const mostCareerWins = [...managers].sort((a,b)=>{
@@ -26,15 +25,7 @@ function leagueHighs() {
   })[0];
   const careerWins = Math.max(...(mostCareerWins.seasons||[]).map(s=>s.cumulativeWins ?? -1));
 
-  return {
-    mostTitles,
-    mostPlayoffWins,
-    mostCareerWins,
-    careerWins,
-    seasonWinLeaders,
-    maxSeasonWins,
-    bestSeason
-  };
+  return { mostTitles, mostPlayoffWins, mostCareerWins, careerWins, seasonWinLeaders, maxSeasonWins };
 }
 
 function highCard(label, value, name, detail='') {
@@ -48,32 +39,30 @@ function highCard(label, value, name, detail='') {
 
 renderHome = function() {
   setActiveNav('home');
-  const curr = currentManagers();
-  const legacy = [...curr].sort((a,b)=>(b.legacyScore||0)-(a.legacyScore||0));
+  const legacy = [...allManagers()].filter(m=>m.legacyScore!=null).sort((a,b)=>(b.legacyScore||0)-(a.legacyScore||0));
   const champs = Object.entries(DATA.champions).sort((a,b)=>Number(b[0])-Number(a[0]));
   const highs = leagueHighs();
-  const seasonWinsNames = highs.seasonWinLeaders.map(x=>x.m.name).join(' / ');
+  const seasonWinsNames = highs.seasonWinLeaders.map(x=>managerDisplay(x.m)).join(' / ');
   const seasonWinsYears = highs.seasonWinLeaders.map(x=>x.s.year).join(' / ');
 
   app.innerHTML = `
     <section class="home-lead">
-      <div class="home-lead-head"><h1>Legacy Board</h1></div>
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
       <div class="panel home-legacy-panel">
-        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore), 'Legacy')}</div>
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore), 'Score')}</div>
       </div>
     </section>
 
     <section class="section wall-section">
-      <div class="section-head wall-title"><div><p class="eyebrow">The Wall</p><h2>League Champs</h2></div></div>
-      <div class="champion-strip wall-champs">${champs.map(([year,c])=>`<div class="champ-card"><div class="champ-year">${year}</div><div class="champ-manager">${c.manager}</div><div class="champ-pick">${safe(c.playerPicked)}</div></div>`).join('')}</div>
+      <div class="section-head wall-title"><h2>League Champs</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>`<div class="champ-card"><div class="champ-year">${year}</div><div class="champ-manager">${fullManagerName(c.manager)}</div><div class="champ-pick">First draft choice: ${safe(c.playerPicked)}${c.draftPosition != null ? ` • ${c.draftPosition}` : ''}</div></div>`).join('')}</div>
 
       <div class="wall-subhead"><h2>League Highs</h2></div>
       <div class="wall-high-grid">
-        ${highCard('Most championships', highs.mostTitles.titles, highs.mostTitles.name)}
-        ${highCard('Career regular-season wins', highs.careerWins, highs.mostCareerWins.name)}
-        ${highCard('Playoff wins', highs.mostPlayoffWins.playoffWins, highs.mostPlayoffWins.name, 'Bye weeks included')}
+        ${highCard('Most championships', highs.mostTitles.titles, managerDisplay(highs.mostTitles))}
+        ${highCard('Career regular-season wins', highs.careerWins, managerDisplay(highs.mostCareerWins))}
+        ${highCard('Playoff wins', highs.mostPlayoffWins.playoffWins, managerDisplay(highs.mostPlayoffWins), 'Bye weeks included')}
         ${highCard('Regular-season wins in a season', highs.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
-        ${highCard('Best regular-season win rate', `${(highs.bestSeason.pct*100).toFixed(1)}%`, highs.bestSeason.m.name, `${highs.bestSeason.s.record} • ${highs.bestSeason.s.year}`)}
       </div>
     </section>`;
 };
