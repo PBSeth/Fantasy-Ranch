@@ -12,5 +12,8 @@ Standalone league-history website for Fantasy Ranch. This project is intentional
 
 Playoff byes count as playoff wins. Cumulative win percentage is rounded to four decimals before the formula is applied, matching the locked workbook.
 
+## Deployment
+`main` is connected directly to the standalone Fantasy Ranch Vercel project. Production deploys are GitHub-backed so every site change remains versioned in this repository.
+
 ## Local development
 Serve the directory with any static server, e.g. `python3 -m http.server 4173`.
