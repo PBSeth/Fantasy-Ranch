@@ -10,10 +10,9 @@ function renderManager(id) {
       </div>
       <div class="legacy-badge"><small>Legacy Score</small><strong>${fmt.format(m.legacyScore || 0)}</strong></div>
     </section>
-    ${m.legacyReconciliationNote ? `<div class="notice" style="margin-top:14px">${m.legacyReconciliationNote}</div>` : ''}
     <section class="profile-grid">
       <div class="panel chart-panel">
-        <div class="panel-title"><h3>Career timeline</h3><small>Gold dots mark championships</small></div>
+        <div class="panel-title"><h3>Career timeline</h3><small class="champ-legend"><span class="legend-gold-dot"></span> = 🏆</small></div>
         <div class="metric-tabs" id="metricTabs">${Object.entries(metricDefs).map(([k,d])=>`<button class="metric-tab ${k==='legacy'?'active':''}" data-metric="${k}">${d.label}</button>`).join('')}</div>
         <div class="chart-wrap" id="chartWrap">${chartSVG(m,'legacy')}</div>
       </div>
