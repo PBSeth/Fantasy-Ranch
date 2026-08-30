@@ -12,7 +12,7 @@ const winPct3 = v => v == null ? '—' : Number(v).toFixed(3).replace(/^0/, '');
 const safe = v => v == null || v === '' ? '—' : v;
 const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const managerById = id => Object.values(DATA.managers).find(m => m.id === id);
-const managerDisplay = m => m?.fullName || m?.name || '—';
+const managerDisplay = m => m?.id === 'nickster' ? 'Nicholas Morris' : (m?.fullName || m?.name || '—');
 const managerFromLabel = label => DATA.managers[label] || Object.values(DATA.managers).find(m => m.name === label || m.fullName === label);
 const fullManagerName = label => managerDisplay(managerFromLabel(label)) || label;
 const routeParts = () => location.hash.replace(/^#/, '').split('/').filter(Boolean);
@@ -22,6 +22,8 @@ function setActiveNav(name) {
 }
 
 function managerRecord(m) {
+  if (m?.id === 'diddles') return '95-83-1';
+  if (m?.id === 'nickster') return '57-60-1';
   if (m.combinedRecord || m.record) return m.combinedRecord || m.record;
   const last = [...m.seasons].reverse().find(s => s.record);
   if (!last) return '—';
@@ -35,6 +37,12 @@ function recordGames(record) {
   return Number(match[1]) + Number(match[2]) + Number(match[3] || 0);
 }
 
+function teamPpgForSeason(s) {
+  if (s?.pf == null) return null;
+  const games = recordGames(s.record);
+  return games ? s.pf / games : null;
+}
+
 function starterCountForYear(year) {
   const raw = DATA?.champions?.[String(year)]?.avgPPGPlayer;
   if (!raw || !String(raw).includes('/')) return null;
@@ -42,17 +50,15 @@ function starterCountForYear(year) {
   if (!Number.isFinite(avgTeamPpg) || !Number.isFinite(avgPpgPerPlayer) || avgPpgPerPlayer <= 0) return null;
   const ratio = avgTeamPpg / avgPpgPerPlayer;
   const starters = Math.round(ratio);
-  // Deliberately conservative: 2014 does not reconcile tightly enough and is excluded.
   if (starters <= 0 || Math.abs(ratio - starters) > 0.045) return null;
   return starters;
 }
 
 function ppgPerPlayerForSeason(s) {
-  if (s?.pf == null) return null;
-  const games = recordGames(s.record);
-  const starters = starterCountForYear(s.year);
-  if (!games || !starters) return null;
-  return s.pf / games / starters;
+  const teamPpg = teamPpgForSeason(s);
+  const starters = starterCountForYear(s?.year);
+  if (teamPpg == null || !starters) return null;
+  return teamPpg / starters;
 }
 
 function cardManager(m) {
@@ -108,7 +114,7 @@ function chartSVG(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=720,H=270,pad={l:44,r:14,t:16,b:32};
+  const W=760,H=410,pad={l:46,r:12,t:20,b:36};
   let vals=points.map(p=>p.v);
   let min=Math.min(...vals), max=Math.max(...vals);
   if (metricKey !== 'finish' && metricKey !== 'winpct') min=Math.min(0,min);
@@ -124,8 +130,8 @@ function chartSVG(m, metricKey='legacy') {
     const val=def.invert ? min+(max-min)*i/4 : max-(max-min)*i/4;
     grids += `<line class="chart-grid" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text" x="${pad.l-7}" y="${gy+3}" text-anchor="end">${def.format(val)}</text>`;
   }
-  const labels=points.map((p,i)=> (i===0||i===points.length-1||i%2===0) ? `<text class="chart-axis-text" x="${x(i)}" y="${H-9}" text-anchor="middle">${p.s.year}</text>`:'').join('');
-  const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?5.5:3.5}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
+  const labels=points.map((p,i)=> (i===0||i===points.length-1||i%2===0) ? `<text class="chart-axis-text" x="${x(i)}" y="${H-10}" text-anchor="middle">${p.s.year}</text>`:'').join('');
+  const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?6.5:3.8}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
   return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} ${def.label} by season">${grids}${area?`<path class="chart-area" d="${area}"></path>`:''}<path class="chart-line" d="${line}"></path>${dots}${labels}</svg>`;
 }
 
