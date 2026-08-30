@@ -9,6 +9,7 @@
   <link rel="icon" href="/assets/fantasy-ranch-logo.svg" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/theme-dark.css" />
+  <link rel="stylesheet" href="/mobile-polish.css" />
 </head>
 <body>
   <header class="site-header">
@@ -16,7 +17,7 @@
       <img class="brand-sign" src="/assets/fantasy-ranch-logo.svg" alt="" aria-hidden="true">
       <span class="brand-copy"><strong>Fantasy Ranch</strong><small>League archive</small></span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">☰</button>
     <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
       <a href="#home" data-nav="home">Home</a>
       <a href="#managers" data-nav="managers">Managers</a>
@@ -40,5 +41,6 @@
 
   <script src="/app-core.js" defer></script>
   <script src="/app-pages.js" defer></script>
+  <script src="/nav-polish.js" defer></script>
 </body>
 </html>
