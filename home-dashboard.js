@@ -10,11 +10,7 @@ renderHome = function() {
   app.innerHTML = `
     <section class="home-lead">
       <div class="home-lead-head">
-        <div>
-          <p class="eyebrow">2012–2025 • All-time</p>
-          <h1>Legacy Board</h1>
-        </div>
-        <a class="text-link" href="#methodology">How it works →</a>
+        <h1>Legacy Board</h1>
       </div>
       <div class="panel home-legacy-panel">
         <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore), 'Legacy')}</div>
@@ -42,7 +38,6 @@ renderHome = function() {
           <a href="#managers"><strong>Managers</strong><span>Career pages & Legacy curves</span></a>
           <a href="#seasons"><strong>Seasons</strong><span>Year-by-year standings</span></a>
           <a href="#records"><strong>Records</strong><span>Titles, win %, average finish</span></a>
-          <a href="#methodology"><strong>Method</strong><span>Legacy formula & sources</span></a>
         </div>
       </div>
     </section>
