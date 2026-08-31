@@ -50,11 +50,12 @@ function renderSeasons(year=2025) {
   const champ=DATA.champions[String(year)];
   const champManager = champ ? fullManagerName(champ.manager) : '—';
   const points = rows.filter(x=>x.s.pf!=null).sort((a,b)=>b.s.pf-a.s.pf);
+  const draftPos = champ ? formatDraftPosition(year, champ.draftPosition) : '';
   app.innerHTML=`
     <header class="page-head compact-page-head"><h1>${year}</h1></header>
     <div class="season-selector"><label for="seasonSelect"><strong>Season</strong></label><select id="seasonSelect">${Array.from({length:14},(_,i)=>2025-i).map(y=>`<option value="${y}" ${y===year?'selected':''}>${y}</option>`).join('')}</select></div>
     <div class="season-summary">
-      <div class="kpi"><div class="kpi-label">Champion</div><div class="kpi-value">${champManager}</div><div class="kpi-sub">${champ?.playerPicked ? `First draft choice: ${champ.playerPicked}`:'Fantasy Ranch'}</div></div>
+      <div class="kpi"><div class="kpi-label">Champion</div><div class="kpi-value">${champManager}</div><div class="kpi-sub">${champ?.playerPicked ? `#1 draft choice: ${champ.playerPicked}${draftPos ? ` • ${draftPos}` : ''}`:'Fantasy Ranch'}</div></div>
       <div class="kpi"><div class="kpi-label">League size</div><div class="kpi-value">${rows.length}</div><div class="kpi-sub">Managers with recorded results</div></div>
       <div class="kpi"><div class="kpi-label">Points leader</div><div class="kpi-value">${points[0] ? managerDisplay(points[0].m) : 'Backfill'}</div><div class="kpi-sub">${points[0] ? `${fmt1.format(points[0].s.pf)} PF` : 'Historical PF/PA being loaded'}</div></div>
     </div>
@@ -63,8 +64,8 @@ function renderSeasons(year=2025) {
   document.getElementById('seasonSelect')?.addEventListener('change',e=>location.hash=`seasons/${e.target.value}`);
 }
 
-function recCard(title, managers, valueFn, labelFn) {
-  return `<div class="record-card"><h3>${title}</h3><div class="leaderboard">${managers.slice(0,8).map((m,i)=>`<a class="leader-row" href="#manager/${m.id}"><span class="rank-pill">${i+1}</span><span class="leader-main"><strong>${managerDisplay(m)}</strong></span><span class="leader-value">${valueFn(m)}<small>${labelFn}</small></span></a>`).join('')}</div></div>`;
+function recCard(title, managers, valueFn, labelFn='') {
+  return `<div class="record-card"><h3>${title}</h3><div class="leaderboard">${managers.slice(0,8).map((m,i)=>`<a class="leader-row" href="#manager/${m.id}"><span class="rank-pill">${i+1}</span><span class="leader-main"><strong>${managerDisplay(m)}</strong></span><span class="leader-value">${valueFn(m)}${labelFn ? `<small>${labelFn}</small>` : ''}</span></a>`).join('')}</div></div>`;
 }
 
 function renderRecords() {
@@ -77,7 +78,7 @@ function renderRecords() {
   app.innerHTML=`
     <header class="page-head compact-page-head"><h1>Records</h1></header>
     <div class="record-grid">
-      ${recCard('Legacy Score',byLegacy,x=>fmt.format(x.legacyScore),'Score')}
+      ${recCard('Legacy Score',byLegacy,x=>fmt.format(x.legacyScore))}
       ${recCard('Championships',byTitles,x=>x.titles,'Titles')}
       ${recCard('Regular-season Win%',byWin,x=>winPct3(x.winPct),'Win%')}
       ${recCard('Best average finish',byAvg,x=>fmt1.format(x.avgFinish),'Avg finish')}
