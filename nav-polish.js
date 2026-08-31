@@ -10,11 +10,22 @@
     toggle.textContent = open ? '×' : '☰';
   };
 
+  const syncPageCopy = () => {
+    document.querySelectorAll('.simple-page-title').forEach(title => {
+      if (title.textContent.trim() === 'Ranch Hands') title.textContent = 'Managers';
+    });
+  };
+
   toggle.setAttribute('aria-controls', 'mainNav');
   sync();
+  syncPageCopy();
 
   toggle.addEventListener('click', () => requestAnimationFrame(sync));
   nav.addEventListener('click', () => requestAnimationFrame(sync));
+
+  const pageObserver = new MutationObserver(syncPageCopy);
+  const app = document.getElementById('app');
+  if (app) pageObserver.observe(app, { childList: true, subtree: true });
 
   document.addEventListener('click', (event) => {
     if (!nav.classList.contains('open')) return;
