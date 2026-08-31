@@ -109,13 +109,13 @@ renderHome = function() {
       <div class="home-lead-head"><h1>League Highlights</h1></div>
       <div class="wall-high-grid highlights-grid">
         ${highCard('Highest team PPG', fmt1.format(h.highestPpg.ppg), managerDisplay(h.highestPpg.m), h.highestPpg.s.year)}
-        ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), managerDisplay(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
-        ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, managerDisplay(h.bestMargin.m), h.bestMargin.s.year)}
         ${highCard('Lowest team PPG', fmt1.format(h.lowestPpg.ppg), managerDisplay(h.lowestPpg.m), h.lowestPpg.s.year)}
+        ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, managerDisplay(h.bestMargin.m), h.bestMargin.s.year)}
         ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), managerDisplay(h.worstMargin.m), h.worstMargin.s.year)}
+        ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), managerDisplay(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
         ${highCard('Most championships', h.mostTitles.titles, managerDisplay(h.mostTitles))}
         ${highCard('Career regular-season wins', h.careerWins, managerDisplay(h.mostCareerWins))}
-        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, managerDisplay(h.mostPlayoffWins), 'Byes included')}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, managerDisplay(h.mostPlayoffWins))}
         ${highCard('Playoff appearances', h.mostPlayoffApps.count, managerDisplay(h.mostPlayoffApps.m))}
         ${highCard('Wins in one season', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
         ${highCard('Fewest wins in one season', h.minSeasonWins, lowWinNames, lowWinYears)}
