@@ -60,11 +60,26 @@ function leagueHighlights() {
   const biggestDrop=[...legacyMoves].sort((a,b)=>a.delta-b.delta)[0];
   const lowestCareer=[...managers].filter(m=>(m.serviceTime||0)>=3 && m.winPct!=null).sort((a,b)=>a.winPct-b.winPct)[0];
 
+  const scoringRows=seasonRows.filter(x=>x.s.pfGame!=null).map(x=>({
+    ...x,
+    ppg:x.s.pfGame,
+    papg:x.s.paGame,
+    diffGame:x.s.diffGame!=null ? x.s.diffGame : (x.s.pfGame-x.s.paGame),
+    ppgPlayer:ppgPerPlayerForSeason(x.s)
+  }));
+  const highestPpg=[...scoringRows].sort((a,b)=>b.ppg-a.ppg)[0];
+  const lowestPpg=[...scoringRows].sort((a,b)=>a.ppg-b.ppg)[0];
+  const bestMargin=[...scoringRows].sort((a,b)=>b.diffGame-a.diffGame)[0];
+  const worstMargin=[...scoringRows].sort((a,b)=>a.diffGame-b.diffGame)[0];
+  const playerPpgRows=scoringRows.filter(x=>x.ppgPlayer!=null);
+  const highestPpgPlayer=[...playerPpgRows].sort((a,b)=>b.ppgPlayer-a.ppgPlayer)[0];
+
   return {
     mostTitles, mostPlayoffWins, mostCareerWins, careerWins,
     mostPlayoffApps:playoffApps[0], seasonWinLeaders, maxSeasonWins,
     seasonLowWins, minSeasonWins, seasonLossLeaders, maxSeasonLosses,
-    biggestJump, biggestDrop, lowestCareer
+    biggestJump, biggestDrop, lowestCareer,
+    highestPpg, lowestPpg, bestMargin, worstMargin, highestPpgPlayer
   };
 }
 
@@ -93,6 +108,11 @@ renderHome = function() {
     <section class="home-lead highlights-lead">
       <div class="home-lead-head"><h1>League Highlights</h1></div>
       <div class="wall-high-grid highlights-grid">
+        ${highCard('Highest team PPG', fmt1.format(h.highestPpg.ppg), managerDisplay(h.highestPpg.m), h.highestPpg.s.year)}
+        ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), managerDisplay(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
+        ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, managerDisplay(h.bestMargin.m), h.bestMargin.s.year)}
+        ${highCard('Lowest team PPG', fmt1.format(h.lowestPpg.ppg), managerDisplay(h.lowestPpg.m), h.lowestPpg.s.year)}
+        ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), managerDisplay(h.worstMargin.m), h.worstMargin.s.year)}
         ${highCard('Most championships', h.mostTitles.titles, managerDisplay(h.mostTitles))}
         ${highCard('Career regular-season wins', h.careerWins, managerDisplay(h.mostCareerWins))}
         ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, managerDisplay(h.mostPlayoffWins), 'Byes included')}
