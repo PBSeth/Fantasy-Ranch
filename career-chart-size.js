@@ -3,7 +3,7 @@ chartSVG = function(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=760,H=520,pad={l:metricKey==='winpct'?68:58,r:12,t:22,b:38};
+  const W=700,H=420,pad={l:metricKey==='winpct'?62:54,r:8,t:20,b:34};
   const vals=points.map(p=>p.v);
   let min=def.min ?? Math.min(...vals), max=def.max ?? Math.max(...vals);
   const threshold = metricKey === 'winpct' ? .5 : null;
@@ -23,14 +23,14 @@ chartSVG = function(m, metricKey='legacy') {
   tickValues.forEach(val=>{
     const gy=y(val);
     const baselineClass = threshold!=null && Math.abs(val-threshold)<.000001 ? ' chart-grid-500' : '';
-    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text chart-y-label${baselineClass}" x="${pad.l-9}" y="${gy+5}" text-anchor="end">${def.format(val)}</text>`;
+    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text chart-y-label${baselineClass}" x="${pad.l-8}" y="${gy+5}" text-anchor="end">${def.format(val)}</text>`;
   });
   const labels=points.map((p,i)=> {
     const current = p.s.year === DATA.meta.currentYear;
     const show = !current && (i===0 || p.s.year===DATA.meta.currentYear-1 || i%2===0);
-    return show ? `<text class="chart-axis-text" x="${x(i)}" y="${H-11}" text-anchor="middle">${p.s.year}</text>`:'';
+    return show ? `<text class="chart-axis-text chart-year-label" x="${x(i)}" y="${H-9}" text-anchor="middle">${p.s.year}</text>`:'';
   }).join('');
-  const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?6.5:3.8}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
+  const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?6.8:4.2}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
 
   let plottedLine;
   if (threshold == null) {
