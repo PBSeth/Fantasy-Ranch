@@ -19,7 +19,7 @@ function renderManager(id) {
       <div class="stat-stack">
         <div class="big-stat"><strong>${safe(managerRecord(m))}</strong><span>All-time record</span></div>
         <div class="big-stat"><strong>${m.titles}</strong><span>Championships</span></div>
-        <div class="big-stat"><strong>${m.playoffWins || 0}</strong><span>Playoff wins incl. byes</span></div>
+        <div class="big-stat"><strong>${m.playoffWins || 0}</strong><span>Playoff wins</span></div>
         <div class="big-stat"><strong>${m.avgFinish ? fmt1.format(m.avgFinish) : '—'}</strong><span>Average finish</span></div>
         <div class="big-stat"><strong>${m.winPct != null ? winPct3(m.winPct) : '—'}</strong><span>Win%</span></div>
         <div class="big-stat"><strong>${m.serviceTime || 0}</strong><span>Seasons</span></div>
