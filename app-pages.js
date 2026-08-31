@@ -5,7 +5,7 @@ function renderManager(id) {
   app.innerHTML = `
     <section class="profile-hero">
       <div>
-        <a class="back-link" href="#managers">← Ranch Hands</a>
+        <a class="back-link" href="#managers">← Managers</a>
         <div class="profile-name-row"><h1>${managerDisplay(m)}</h1><span class="status ${m.active2025 ? '' : 'alumni'}">${m.active2025 ? 'Active' : 'RIP'}</span></div>
       </div>
       <div class="legacy-badge"><small>Legacy Score</small><strong>${fmt.format(m.legacyScore || 0)}</strong></div>
@@ -18,7 +18,7 @@ function renderManager(id) {
       </div>
       <div class="stat-stack">
         <div class="big-stat"><strong>${safe(managerRecord(m))}</strong><span>All-time record</span></div>
-        <div class="big-stat"><strong>${m.titles}</strong><span>Championships</span></div>
+        <div class="big-stat championship-stat"><strong>${m.titles}</strong><span>Championships</span></div>
         <div class="big-stat"><strong>${m.playoffWins || 0}</strong><span>Playoff wins</span></div>
         <div class="big-stat"><strong>${m.avgFinish ? fmt1.format(m.avgFinish) : '—'}</strong><span>Average finish</span></div>
         <div class="big-stat"><strong>${m.winPct != null ? winPct3(m.winPct) : '—'}</strong><span>Win%</span></div>
