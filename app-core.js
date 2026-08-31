@@ -22,6 +22,7 @@ function setActiveNav(name) {
 }
 
 function managerRecord(m) {
+  if (m?.id === 'seth') return '97-82';
   if (m?.id === 'diddles') return '95-83-1';
   if (m?.id === 'nickster') return '57-60-1';
   if (m?.id === 'ty-molly') return '89-90';
