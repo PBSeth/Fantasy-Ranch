@@ -12,8 +12,8 @@ const winPct3 = v => v == null ? '—' : Number(v).toFixed(3).replace(/^0/, '');
 const safe = v => v == null || v === '' ? '—' : v;
 const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const managerById = id => Object.values(DATA.managers).find(m => m.id === id);
-const managerDisplay = m => m?.id === 'nickster' ? 'Nicholas Morris' : (m?.fullName || m?.name || '—');
-const managerFromLabel = label => DATA.managers[label] || Object.values(DATA.managers).find(m => m.name === label || m.fullName === label);
+const managerDisplay = m => m?.id === 'nickster' ? 'Nicholas Morris' : (m?.id === 'dick' ? 'Nick Thompson' : (m?.fullName || m?.name || '—'));
+const managerFromLabel = label => DATA.managers[label] || Object.values(DATA.managers).find(m => m.name === label || m.fullName === label || (m.id === 'dick' && label === 'Nick Thompson'));
 const fullManagerName = label => managerDisplay(managerFromLabel(label)) || label;
 const routeParts = () => location.hash.replace(/^#/, '').split('/').filter(Boolean);
 
@@ -24,6 +24,7 @@ function setActiveNav(name) {
 function managerRecord(m) {
   if (m?.id === 'diddles') return '95-83-1';
   if (m?.id === 'nickster') return '57-60-1';
+  if (m?.id === 'ty-molly') return '89-90';
   if (m.combinedRecord || m.record) return m.combinedRecord || m.record;
   const last = [...m.seasons].reverse().find(s => s.record);
   if (!last) return '—';
