@@ -171,10 +171,14 @@ function pfpaChartSVG(m) {
     const paX=center+barGap/2;
     const pfY=y(s.pf), paY=y(s.pa);
     const base=H-pad.b;
+    const current=s.year===DATA.meta.currentYear;
+    const showLabel=!current && (i===0 || s.year===DATA.meta.currentYear-1 || i%2===0);
+    const champY=Math.max(pad.t+7,Math.min(pfY,paY)-10);
     return `<g>
       <rect class="chart-bar-pf" x="${pfX.toFixed(1)}" y="${pfY.toFixed(1)}" width="${barW.toFixed(1)}" height="${(base-pfY).toFixed(1)}" rx="2"><title>${s.year} PF: ${fmt1.format(s.pf)}</title></rect>
       <rect class="chart-bar-pa" x="${paX.toFixed(1)}" y="${paY.toFixed(1)}" width="${barW.toFixed(1)}" height="${(base-paY).toFixed(1)}" rx="2"><title>${s.year} PA: ${fmt1.format(s.pa)}</title></rect>
-      <text class="chart-axis-text" x="${center.toFixed(1)}" y="${H-11}" text-anchor="middle">${s.year}</text>
+      ${s.champion?`<circle class="chart-milestone" cx="${center.toFixed(1)}" cy="${champY.toFixed(1)}" r="5.5"><title>${s.year} • Champion</title></circle>`:''}
+      ${showLabel?`<text class="chart-axis-text" x="${center.toFixed(1)}" y="${H-11}" text-anchor="middle">${s.year}</text>`:''}
     </g>`;
   }).join('');
   const legend=`<g class="pfpa-legend" transform="translate(${pad.l},10)"><rect class="chart-bar-pf" x="0" y="0" width="11" height="11" rx="2"></rect><text class="chart-axis-text" x="16" y="10">PF</text><rect class="chart-bar-pa" x="48" y="0" width="11" height="11" rx="2"></rect><text class="chart-axis-text" x="64" y="10">PA</text></g>`;
