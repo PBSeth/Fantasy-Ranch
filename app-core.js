@@ -116,6 +116,13 @@ function leaderboardRows(items, valueFn, label='') {
 function currentManagers() { return DATA.currentManagers.map(n => DATA.managers[n]); }
 function allManagers() { return [...DATA.currentManagers, ...DATA.alumni].map(n => DATA.managers[n]); }
 
+function leagueSizeForYear(year) {
+  return allManagers().reduce((count,m) => {
+    const season=(m.seasons || []).find(s=>s.year===Number(year));
+    return count + (season && (season.record || season.finish) ? 1 : 0);
+  },0);
+}
+
 function renderHome() {
   setActiveNav('home');
   const legacy = [...allManagers()].sort((a,b)=>(b.legacyScore||0)-(a.legacyScore||0));
@@ -143,14 +150,18 @@ function chartSVG(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=760,H=410,pad={l:metricKey==='winpct'?58:46,r:12,t:20,b:36};
+  const W=760,H=410,pad={l:metricKey==='winpct'?64:52,r:12,t:20,b:36};
   let vals=points.map(p=>p.v);
   let min=Math.min(...vals), max=Math.max(...vals);
   const threshold = metricKey === 'winpct' ? .5 : null;
   if (metricKey === 'winpct') {
     const extent = Math.max(Math.abs(max-.5), Math.abs(min-.5), .08);
     min=.5-extent; max=.5+extent;
-  } else if (metricKey !== 'finish') {
+  } else if (metricKey === 'finish') {
+    min=1;
+    const fieldSizes=points.map(p=>leagueSizeForYear(p.s.year)).filter(n=>n>0);
+    max=Math.max(...vals, ...(fieldSizes.length ? fieldSizes : [12]));
+  } else {
     min=Math.min(0,min);
   }
   if (max===min) max=min+1;
