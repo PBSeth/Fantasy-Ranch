@@ -58,7 +58,7 @@ function renderSeasons(year=2025) {
       <div class="kpi"><div class="kpi-label">League size</div><div class="kpi-value">${rows.length}</div></div>
       <div class="kpi"><div class="kpi-label">Points leader</div><div class="kpi-value">${points[0] ? managerDisplay(points[0].m) : '—'}</div></div>
     </div>
-    <section class="section"><div class="table-wrap"><table><thead><tr><th>Finish</th><th>Manager</th><th>Record</th><th>Playoffs</th><th>PF</th><th>PA</th></tr></thead><tbody>${rows.map(({m,s})=>`<tr><td class="cell-rank">${s.finish?`#${s.finish}`:'—'}</td><td><a class="text-link" href="#manager/${m.id}">${managerDisplay(m)}</a></td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td>${s.pf!=null?fmt1.format(s.pf):'—'}</td><td>${s.pa!=null?fmt1.format(s.pa):'—'}</td></tr>`).join('')}</tbody></table></div></section>`;
+    <section class="section"><div class="table-wrap"><table><thead><tr><th>Finish</th><th>Manager</th><th>Record</th><th>Playoffs</th><th>PF</th><th>PA</th></tr></thead><tbody>${rows.map(({m,s})=>`<tr><td class="cell-rank">${s.finish?`${s.finish}`:'—'}</td><td><a class="text-link" href="#manager/${m.id}">${managerDisplay(m)}</a></td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td>${s.pf!=null?fmt1.format(s.pf):'—'}</td><td>${s.pa!=null?fmt1.format(s.pa):'—'}</td></tr>`).join('')}</tbody></table></div></section>`;
   document.getElementById('seasonSelect')?.addEventListener('change',e=>location.hash=`seasons/${e.target.value}`);
 }
 
