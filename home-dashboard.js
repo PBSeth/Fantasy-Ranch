@@ -29,6 +29,10 @@ function compactManagerName(m) {
   return managerDisplay(m);
 }
 
+function formatSeasonRate(rate) {
+  return `${Number((rate * 100).toFixed(1))}%`;
+}
+
 function seasonStreaksForManager(m) {
   const seasons=(m.seasons || [])
     .map(s=>({s,r:parseSeasonRecord(s.record)}))
@@ -91,12 +95,30 @@ function leagueHighlights() {
   const seasonWinLeaders = seasonRows.filter(x => x.wins === maxSeasonWins).sort((a,b)=>a.s.year-b.s.year);
   const seasonLowWins = seasonRows.filter(x => x.wins === minSeasonWins).sort((a,b)=>a.s.year-b.s.year);
   const seasonLossLeaders = seasonRows.filter(x => x.losses === maxSeasonLosses).sort((a,b)=>a.s.year-b.s.year);
+
   const winningStreaks=seasonStreaks.filter(x=>x.kind==='winning');
   const losingStreaks=seasonStreaks.filter(x=>x.kind==='losing');
   const maxWinningSeasonStreak=Math.max(0,...winningStreaks.map(x=>x.count));
   const maxLosingSeasonStreak=Math.max(0,...losingStreaks.map(x=>x.count));
   const winningSeasonStreakLeaders=winningStreaks.filter(x=>x.count===maxWinningSeasonStreak).sort((a,b)=>a.startYear-b.startYear);
   const losingSeasonStreakLeaders=losingStreaks.filter(x=>x.count===maxLosingSeasonStreak).sort((a,b)=>a.startYear-b.startYear);
+
+  const seasonRateRows=managers.map(m=>{
+    const records=(m.seasons || []).map(s=>parseSeasonRecord(s.record)).filter(Boolean);
+    const total=records.length;
+    const winning=records.filter(r=>r.wins>r.losses).length;
+    const losing=records.filter(r=>r.losses>r.wins).length;
+    return {m,total,winning,losing,winningRate:total ? winning/total : 0,losingRate:total ? losing/total : 0};
+  }).filter(x=>x.total>=3);
+  const highestWinningRate=Math.max(...seasonRateRows.map(x=>x.winningRate));
+  const lowestWinningRate=Math.min(...seasonRateRows.map(x=>x.winningRate));
+  const highestLosingRate=Math.max(...seasonRateRows.map(x=>x.losingRate));
+  const lowestLosingRate=Math.min(...seasonRateRows.map(x=>x.losingRate));
+  const highestWinningRateLeaders=seasonRateRows.filter(x=>x.winningRate===highestWinningRate).sort((a,b)=>b.total-a.total);
+  const lowestWinningRateLeaders=seasonRateRows.filter(x=>x.winningRate===lowestWinningRate).sort((a,b)=>b.total-a.total);
+  const highestLosingRateLeaders=seasonRateRows.filter(x=>x.losingRate===highestLosingRate).sort((a,b)=>b.total-a.total);
+  const lowestLosingRateLeaders=seasonRateRows.filter(x=>x.losingRate===lowestLosingRate).sort((a,b)=>b.total-a.total);
+
   const mostTitles = [...managers].sort((a,b)=>(b.titles||0)-(a.titles||0) || (b.legacyScore||0)-(a.legacyScore||0))[0];
   const mostPlayoffWins = [...managers].sort((a,b)=>(b.playoffWins||0)-(a.playoffWins||0))[0];
   const playoffApps = managers.map(m=>({m,count:(m.seasons||[]).filter(s=>s.playoffRecord).length})).sort((a,b)=>b.count-a.count);
@@ -131,6 +153,9 @@ function leagueHighlights() {
     seasonLowWins, minSeasonWins, seasonLossLeaders, maxSeasonLosses,
     winningSeasonStreakLeaders, maxWinningSeasonStreak,
     losingSeasonStreakLeaders, maxLosingSeasonStreak,
+    highestWinningRate, lowestWinningRate, highestLosingRate, lowestLosingRate,
+    highestWinningRateLeaders, lowestWinningRateLeaders,
+    highestLosingRateLeaders, lowestLosingRateLeaders,
     biggestJump, biggestDrop, lowestCareer,
     highestPpg, lowestPpg, bestMargin, worstMargin, highestPpgPlayer, lowestPpgPlayer
   };
@@ -160,6 +185,8 @@ renderHome = function() {
   const winningStreakYears=h.winningSeasonStreakLeaders.map(x=>`${x.startYear}–${x.endYear}`).join(' / ');
   const losingStreakNames=h.losingSeasonStreakLeaders.map(x=>compactManagerName(x.m)).join(' / ');
   const losingStreakYears=h.losingSeasonStreakLeaders.map(x=>`${x.startYear}–${x.endYear}`).join(' / ');
+  const rateNames=rows=>rows.map(x=>compactManagerName(x.m)).join(' / ');
+  const rateDetail=(rows,kind)=>rows.map(x=>`${kind==='winning' ? x.winning : x.losing} of ${x.total} seasons`).join(' / ');
 
   app.innerHTML = `
     <section class="home-lead highlights-lead">
@@ -180,6 +207,10 @@ renderHome = function() {
         ${highCard('Single Season Losses', h.maxSeasonLosses, lossNames, lossYears)}
         ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
         ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
         ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
         ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
         ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
