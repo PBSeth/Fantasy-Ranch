@@ -140,9 +140,9 @@ function renderManagers() {
 }
 
 const metricDefs = {
-  legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false },
-  wins: { label:'Season Wins', value:s=>seasonWins(s), format:v=>fmt.format(v), invert:false },
-  winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false },
+  legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false, min:0, max:2500, ticks:[0,500,1000,1500,2000,2500] },
+  wins: { label:'Season Wins', value:s=>seasonWins(s), format:v=>fmt.format(v), invert:false, min:0, max:14, ticks:[0,2,4,6,8,10,12,14] },
+  winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false, min:.25, max:.75, ticks:[.25,.375,.5,.625,.75] },
   finish: { label:'Final Finish', value:s=>s.finish, format:v=>`${Math.round(v)}`, invert:true }
 };
 
@@ -151,18 +151,13 @@ function chartSVG(m, metricKey='legacy') {
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
   const W=760,H=410,pad={l:metricKey==='winpct'?64:52,r:12,t:20,b:36};
-  let vals=points.map(p=>p.v);
-  let min=Math.min(...vals), max=Math.max(...vals);
+  const vals=points.map(p=>p.v);
+  let min=def.min ?? Math.min(...vals), max=def.max ?? Math.max(...vals);
   const threshold = metricKey === 'winpct' ? .5 : null;
-  if (metricKey === 'winpct') {
-    const extent = Math.max(Math.abs(max-.5), Math.abs(min-.5), .08);
-    min=.5-extent; max=.5+extent;
-  } else if (metricKey === 'finish') {
+  if (metricKey === 'finish') {
     min=1;
     const fieldSizes=points.map(p=>leagueSizeForYear(p.s.year)).filter(n=>n>0);
     max=Math.max(...vals, ...(fieldSizes.length ? fieldSizes : [12]));
-  } else {
-    min=Math.min(0,min);
   }
   if (max===min) max=min+1;
   const x=i=>pad.l + (i/(Math.max(1,points.length-1)))*(W-pad.l-pad.r);
@@ -170,13 +165,13 @@ function chartSVG(m, metricKey='legacy') {
   const coords=points.map((p,i)=>[x(i),y(p.v)]);
   const line=coords.map((c,i)=>`${i?'L':'M'} ${c[0].toFixed(1)} ${c[1].toFixed(1)}`).join(' ');
   const area = (metricKey==='finish' || threshold!=null) ? '' : `${line} L ${coords[coords.length-1][0].toFixed(1)} ${H-pad.b} L ${coords[0][0].toFixed(1)} ${H-pad.b} Z`;
+  const tickValues = def.ticks || Array.from({length:5},(_,i)=>def.invert ? min+(max-min)*i/4 : max-(max-min)*i/4);
   let grids='';
-  for(let i=0;i<5;i++){
-    const gy=pad.t + i*(H-pad.t-pad.b)/4;
-    const val=def.invert ? min+(max-min)*i/4 : max-(max-min)*i/4;
-    const baselineClass = threshold!=null && i===2 ? ' chart-grid-500' : '';
+  tickValues.forEach(val=>{
+    const gy=y(val);
+    const baselineClass = threshold!=null && Math.abs(val-threshold)<.000001 ? ' chart-grid-500' : '';
     grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text${baselineClass}" x="${pad.l-8}" y="${gy+4}" text-anchor="end">${def.format(val)}</text>`;
-  }
+  });
   const labels=points.map((p,i)=> {
     const current = p.s.year === DATA.meta.currentYear;
     const show = !current && (i===0 || p.s.year===DATA.meta.currentYear-1 || i%2===0);
