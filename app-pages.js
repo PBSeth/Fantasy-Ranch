@@ -63,27 +63,6 @@ function renderSeasons(year=2025) {
   document.getElementById('seasonSelect')?.addEventListener('change',e=>location.hash=`seasons/${e.target.value}`);
 }
 
-function recCard(title, managers, valueFn) {
-  return `<div class="record-card"><h3>${title}</h3><div class="leaderboard">${managers.slice(0,8).map((m,i)=>`<a class="leader-row" href="#manager/${m.id}"><span class="rank-pill">${i+1}</span><span class="leader-main"><strong>${managerDisplay(m)}</strong></span><span class="leader-value">${valueFn(m)}</span></a>`).join('')}</div></div>`;
-}
-
-function renderRecords() {
-  setActiveNav('records');
-  const m=allManagers();
-  const byLegacy=[...m].filter(x=>x.legacyScore!=null).sort((a,b)=>b.legacyScore-a.legacyScore);
-  const byTitles=[...m].sort((a,b)=>b.titles-a.titles || b.legacyScore-a.legacyScore);
-  const byWin=[...m].filter(x=>x.winPct!=null).sort((a,b)=>b.winPct-a.winPct);
-  const byAvg=[...m].filter(x=>x.avgFinish!=null).sort((a,b)=>a.avgFinish-b.avgFinish);
-  app.innerHTML=`
-    <header class="page-head compact-page-head"><h1>Records</h1></header>
-    <div class="record-grid">
-      ${recCard('Legacy Score',byLegacy,x=>fmt.format(x.legacyScore))}
-      ${recCard('Championships',byTitles,x=>x.titles)}
-      ${recCard('Regular-season Win%',byWin,x=>winPct3(x.winPct))}
-      ${recCard('Best average finish',byAvg,x=>fmt1.format(x.avgFinish))}
-    </div>`;
-}
-
 function renderNotFound(){ setActiveNav(''); app.innerHTML=`<header class="page-head"><h1>Not found</h1><p><a class="text-link" href="#home">Back to the Ranch →</a></p></header>`; }
 
 function router(){
@@ -92,7 +71,6 @@ function router(){
   else if(page==='managers') renderManagers();
   else if(page==='manager') renderManager(arg);
   else if(page==='seasons') renderSeasons(arg||2025);
-  else if(page==='records') renderRecords();
   else renderNotFound();
   window.scrollTo({top:0,behavior:'auto'});
 }
