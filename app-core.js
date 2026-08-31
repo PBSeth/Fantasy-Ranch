@@ -133,7 +133,7 @@ function renderManagers() {
 }
 
 const metricDefs = {
-  legacy: { label:'Legacy +/-', value:s=>s.legacyScore, format:v=>`${v>0?'+':''}${fmt.format(v)}`, invert:false },
+  legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false },
   wins: { label:'Season Wins', value:s=>seasonWins(s), format:v=>fmt.format(v), invert:false },
   winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false },
   finish: { label:'Final Finish', value:s=>s.finish, format:v=>`#${Math.round(v)}`, invert:true }
@@ -141,25 +141,15 @@ const metricDefs = {
 
 function chartSVG(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
-  let points;
-  if (metricKey === 'legacy') {
-    const legacySeasons = m.seasons.filter(s=>s.legacyScore!=null).slice().sort((a,b)=>a.year-b.year);
-    points = legacySeasons.map((s,i)=>i===0 ? null : ({s,v:s.legacyScore-legacySeasons[i-1].legacyScore})).filter(Boolean);
-    if (!points.length && legacySeasons.length) points=[{s:legacySeasons[0],v:legacySeasons[0].legacyScore}];
-  } else {
-    points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
-  }
+  const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=760,H=410,pad={l:metricKey==='winpct'?58:50,r:12,t:20,b:36};
+  const W=760,H=410,pad={l:metricKey==='winpct'?58:46,r:12,t:20,b:36};
   let vals=points.map(p=>p.v);
   let min=Math.min(...vals), max=Math.max(...vals);
-  const threshold = metricKey === 'winpct' ? .5 : (metricKey === 'legacy' ? 0 : null);
+  const threshold = metricKey === 'winpct' ? .5 : null;
   if (metricKey === 'winpct') {
     const extent = Math.max(Math.abs(max-.5), Math.abs(min-.5), .08);
     min=.5-extent; max=.5+extent;
-  } else if (metricKey === 'legacy') {
-    const extent = Math.max(Math.abs(max), Math.abs(min), 50);
-    min=-extent; max=extent;
   } else if (metricKey !== 'finish') {
     min=Math.min(0,min);
   }
