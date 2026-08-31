@@ -57,9 +57,8 @@ function renderSeasons(year=2025) {
     <div class="season-summary">
       <div class="kpi"><div class="kpi-label">Champion</div><div class="kpi-value">${champManager}</div><div class="kpi-sub">${champ?.playerPicked ? `Top draft pick: ${champ.playerPicked}${draftPos ? ` • ${draftPos}` : ''}`:'Fantasy Ranch'}</div></div>
       <div class="kpi"><div class="kpi-label">League size</div><div class="kpi-value">${rows.length}</div><div class="kpi-sub">Managers with recorded results</div></div>
-      <div class="kpi"><div class="kpi-label">Points leader</div><div class="kpi-value">${points[0] ? managerDisplay(points[0].m) : 'Backfill'}</div><div class="kpi-sub">${points[0] ? `${fmt1.format(points[0].s.pf)} PF` : 'Historical PF/PA being loaded'}</div></div>
+      <div class="kpi"><div class="kpi-label">Points leader</div><div class="kpi-value">${points[0] ? managerDisplay(points[0].m) : '—'}</div><div class="kpi-sub">${points[0] ? `${fmt1.format(points[0].s.pf)} PF` : '—'}</div></div>
     </div>
-    ${year!==2025 && !points.length ? `<div class="notice">Historical scoring is still being loaded for this season.</div>`:''}
     <section class="section"><div class="table-wrap"><table><thead><tr><th>Finish</th><th>Manager</th><th>Record</th><th>Playoffs</th><th>PF</th><th>PA</th></tr></thead><tbody>${rows.map(({m,s})=>`<tr><td class="cell-rank">${s.finish?`#${s.finish}`:'—'}</td><td><a class="text-link" href="#manager/${m.id}">${managerDisplay(m)}</a></td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td>${s.pf!=null?fmt1.format(s.pf):'—'}</td><td>${s.pa!=null?fmt1.format(s.pa):'—'}</td></tr>`).join('')}</tbody></table></div></section>`;
   document.getElementById('seasonSelect')?.addEventListener('change',e=>location.hash=`seasons/${e.target.value}`);
 }
@@ -100,9 +99,16 @@ function router(){
 
 async function boot(){
   try {
-    const files=['/data-core.json','/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json'];
+    const files=[
+      '/data-core.json',
+      '/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json',
+      '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json'
+    ];
     const parts=await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok)throw new Error(`Data ${r.status}: ${f}`);return r.json();})));
-    DATA={...parts[0],managers:Object.assign({},...parts.slice(1))}; router();
+    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6))};
+    const scoringHistory=Object.assign({},...parts.slice(6));
+    applyScoringHistory(scoringHistory);
+    router();
   } catch(err){ console.error(err); app.innerHTML=`<div class="notice">The Ranch data failed to load. ${err.message}</div>`; }
 }
 
