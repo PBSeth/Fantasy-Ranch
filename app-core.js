@@ -87,7 +87,7 @@ function cardManager(m) {
   return `<a class="manager-card" href="#manager/${m.id}">
     <div class="manager-top">
       <h3>${managerDisplay(m)}</h3>
-      <span class="status ${m.active2025 ? '' : 'alumni'}">${m.active2025 ? 'Active' : 'Alumni'}</span>
+      <span class="status ${m.active2025 ? '' : 'alumni'}">${m.active2025 ? 'Active' : 'RIP'}</span>
     </div>
     <div class="mini-stats">
       <div><strong>${fmt.format(m.legacyScore || 0)}</strong><small>Legacy Score</small></div>
