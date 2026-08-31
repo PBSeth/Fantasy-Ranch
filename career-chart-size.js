@@ -3,7 +3,7 @@ chartSVG = function(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=760,H=460,pad={l:metricKey==='winpct'?64:52,r:12,t:20,b:36};
+  const W=760,H=520,pad={l:metricKey==='winpct'?68:58,r:12,t:22,b:38};
   const vals=points.map(p=>p.v);
   let min=def.min ?? Math.min(...vals), max=def.max ?? Math.max(...vals);
   const threshold = metricKey === 'winpct' ? .5 : null;
@@ -23,12 +23,12 @@ chartSVG = function(m, metricKey='legacy') {
   tickValues.forEach(val=>{
     const gy=y(val);
     const baselineClass = threshold!=null && Math.abs(val-threshold)<.000001 ? ' chart-grid-500' : '';
-    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text${baselineClass}" x="${pad.l-8}" y="${gy+4}" text-anchor="end">${def.format(val)}</text>`;
+    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text chart-y-label${baselineClass}" x="${pad.l-9}" y="${gy+5}" text-anchor="end">${def.format(val)}</text>`;
   });
   const labels=points.map((p,i)=> {
     const current = p.s.year === DATA.meta.currentYear;
     const show = !current && (i===0 || p.s.year===DATA.meta.currentYear-1 || i%2===0);
-    return show ? `<text class="chart-axis-text" x="${x(i)}" y="${H-10}" text-anchor="middle">${p.s.year}</text>`:'';
+    return show ? `<text class="chart-axis-text" x="${x(i)}" y="${H-11}" text-anchor="middle">${p.s.year}</text>`:'';
   }).join('');
   const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?6.5:3.8}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
 
@@ -55,5 +55,6 @@ chartSVG = function(m, metricKey='legacy') {
     plottedLine=segments.join('');
   }
 
-  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} ${def.label} by season">${grids}${area?`<path class="chart-area" d="${area}"></path>`:''}${plottedLine}${dots}${labels}</svg>`;
+  const border=`<rect class="chart-plot-border" x="${pad.l}" y="${pad.t}" width="${W-pad.l-pad.r}" height="${H-pad.t-pad.b}" rx="2"></rect>`;
+  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} ${def.label} by season">${border}${grids}${area?`<path class="chart-area" d="${area}"></path>`:''}${plottedLine}${dots}${labels}</svg>`;
 };
