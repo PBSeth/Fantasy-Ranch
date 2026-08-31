@@ -6,7 +6,7 @@ function renderManager(id) {
     <section class="profile-hero">
       <div>
         <a class="back-link" href="#managers">← Ranch Hands</a>
-        <div class="profile-name-row"><h1>${managerDisplay(m)}</h1><span class="status ${m.active2025 ? '' : 'alumni'}">${m.active2025 ? 'Active' : 'Alumni'}</span></div>
+        <div class="profile-name-row"><h1>${managerDisplay(m)}</h1><span class="status ${m.active2025 ? '' : 'alumni'}">${m.active2025 ? 'Active' : 'RIP'}</span></div>
       </div>
       <div class="legacy-badge"><small>Legacy Score</small><strong>${fmt.format(m.legacyScore || 0)}</strong></div>
     </section>
