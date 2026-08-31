@@ -29,16 +29,50 @@ function compactManagerName(m) {
   return managerDisplay(m);
 }
 
+function seasonStreaksForManager(m) {
+  const seasons=(m.seasons || [])
+    .map(s=>({s,r:parseSeasonRecord(s.record)}))
+    .filter(x=>x.r)
+    .sort((a,b)=>a.s.year-b.s.year);
+  const out=[];
+  let kind=null,start=null,end=null,count=0,prevYear=null;
+  const flush=()=>{
+    if(kind && count>0) out.push({m,kind,startYear:start,endYear:end,count});
+    kind=null; start=null; end=null; count=0;
+  };
+  seasons.forEach(({s,r})=>{
+    const nextKind=r.wins>r.losses ? 'winning' : r.losses>r.wins ? 'losing' : null;
+    if(prevYear!=null && s.year!==prevYear+1) flush();
+    if(!nextKind) {
+      flush();
+    } else if(nextKind===kind) {
+      end=s.year;
+      count+=1;
+    } else {
+      flush();
+      kind=nextKind;
+      start=s.year;
+      end=s.year;
+      count=1;
+    }
+    prevYear=s.year;
+  });
+  flush();
+  return out;
+}
+
 function leagueHighlights() {
   const managers = allManagers();
   const seasonRows = [];
   const legacyMoves=[];
+  const seasonStreaks=[];
   managers.forEach(m => {
     const seasons=(m.seasons || []).filter(s=>s.record).slice().sort((a,b)=>a.year-b.year);
     seasons.forEach(s => {
       const r = parseSeasonRecord(s.record);
       if (r) seasonRows.push({ m, s, ...r });
     });
+    seasonStreaks.push(...seasonStreaksForManager(m));
     for(let i=1;i<seasons.length;i++) {
       if (seasons[i].legacyScore!=null && seasons[i-1].legacyScore!=null) {
         legacyMoves.push({
@@ -57,6 +91,12 @@ function leagueHighlights() {
   const seasonWinLeaders = seasonRows.filter(x => x.wins === maxSeasonWins).sort((a,b)=>a.s.year-b.s.year);
   const seasonLowWins = seasonRows.filter(x => x.wins === minSeasonWins).sort((a,b)=>a.s.year-b.s.year);
   const seasonLossLeaders = seasonRows.filter(x => x.losses === maxSeasonLosses).sort((a,b)=>a.s.year-b.s.year);
+  const winningStreaks=seasonStreaks.filter(x=>x.kind==='winning');
+  const losingStreaks=seasonStreaks.filter(x=>x.kind==='losing');
+  const maxWinningSeasonStreak=Math.max(0,...winningStreaks.map(x=>x.count));
+  const maxLosingSeasonStreak=Math.max(0,...losingStreaks.map(x=>x.count));
+  const winningSeasonStreakLeaders=winningStreaks.filter(x=>x.count===maxWinningSeasonStreak).sort((a,b)=>a.startYear-b.startYear);
+  const losingSeasonStreakLeaders=losingStreaks.filter(x=>x.count===maxLosingSeasonStreak).sort((a,b)=>a.startYear-b.startYear);
   const mostTitles = [...managers].sort((a,b)=>(b.titles||0)-(a.titles||0) || (b.legacyScore||0)-(a.legacyScore||0))[0];
   const mostPlayoffWins = [...managers].sort((a,b)=>(b.playoffWins||0)-(a.playoffWins||0))[0];
   const playoffApps = managers.map(m=>({m,count:(m.seasons||[]).filter(s=>s.playoffRecord).length})).sort((a,b)=>b.count-a.count);
@@ -89,6 +129,8 @@ function leagueHighlights() {
     mostTitles, mostPlayoffWins, mostCareerWins, careerWins,
     mostPlayoffApps:playoffApps[0], seasonWinLeaders, maxSeasonWins,
     seasonLowWins, minSeasonWins, seasonLossLeaders, maxSeasonLosses,
+    winningSeasonStreakLeaders, maxWinningSeasonStreak,
+    losingSeasonStreakLeaders, maxLosingSeasonStreak,
     biggestJump, biggestDrop, lowestCareer,
     highestPpg, lowestPpg, bestMargin, worstMargin, highestPpgPlayer, lowestPpgPlayer
   };
@@ -114,6 +156,10 @@ renderHome = function() {
   const lowWinYears = h.seasonLowWins.map(x=>x.s.year).join(' / ');
   const lossNames = h.seasonLossLeaders.map(x=>compactManagerName(x.m)).join(' / ');
   const lossYears = h.seasonLossLeaders.map(x=>x.s.year).join(' / ');
+  const winningStreakNames=h.winningSeasonStreakLeaders.map(x=>compactManagerName(x.m)).join(' / ');
+  const winningStreakYears=h.winningSeasonStreakLeaders.map(x=>`${x.startYear}–${x.endYear}`).join(' / ');
+  const losingStreakNames=h.losingSeasonStreakLeaders.map(x=>compactManagerName(x.m)).join(' / ');
+  const losingStreakYears=h.losingSeasonStreakLeaders.map(x=>`${x.startYear}–${x.endYear}`).join(' / ');
 
   app.innerHTML = `
     <section class="home-lead highlights-lead">
@@ -132,6 +178,8 @@ renderHome = function() {
         ${highCard('Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
         ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
         ${highCard('Single Season Losses', h.maxSeasonLosses, lossNames, lossYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
         ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
         ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
         ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
