@@ -95,7 +95,7 @@ function highCard(label, value, name, detail='') {
 renderHome = function() {
   setActiveNav('home');
   const legacy = [...allManagers()].filter(m=>m.legacyScore!=null).sort((a,b)=>(b.legacyScore||0)-(a.legacyScore||0));
-  const champs = Object.entries(DATA.champions).sort((a,b)=>Number(b[0])-Number(a[0]));
+  const champs = Object.entries(DATA.champions).sort((a,b)=>Number(a[0])-Number(b[0]));
   const h = leagueHighlights();
   const seasonWinsNames = h.seasonWinLeaders.map(x=>managerDisplay(x.m)).join(' / ');
   const seasonWinsYears = h.seasonWinLeaders.map(x=>x.s.year).join(' / ');
