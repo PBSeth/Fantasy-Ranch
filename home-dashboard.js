@@ -129,9 +129,9 @@ renderHome = function() {
         ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
         ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
         ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
-        ${highCard('Wins in one season', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
-        ${highCard('Fewest wins in one season', h.minSeasonWins, lowWinNames, lowWinYears)}
-        ${highCard('Most losses in one season', h.maxSeasonLosses, lossNames, lossYears)}
+        ${highCard('Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Single Season Losses', h.maxSeasonLosses, lossNames, lossYears)}
         ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
         ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
         ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
