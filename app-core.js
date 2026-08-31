@@ -76,11 +76,11 @@ function cardManager(m) {
   </a>`;
 }
 
-function leaderboardRows(items, valueFn, label='Score') {
+function leaderboardRows(items, valueFn, label='') {
   return items.map((m,i) => `<a class="leader-row" href="#manager/${m.id}">
     <span class="rank-pill">${i+1}</span>
     <span class="leader-main"><strong>${managerDisplay(m)}</strong></span>
-    <span class="leader-value">${valueFn(m)}<small>${label}</small></span>
+    <span class="leader-value">${valueFn(m)}${label ? `<small>${label}</small>` : ''}</span>
   </a>`).join('');
 }
 
@@ -90,7 +90,7 @@ function allManagers() { return [...DATA.currentManagers, ...DATA.alumni].map(n 
 function renderHome() {
   setActiveNav('home');
   const legacy = [...allManagers()].sort((a,b)=>(b.legacyScore||0)-(a.legacyScore||0));
-  app.innerHTML = `<section class="home-lead"><div class="home-lead-head"><h1>Legacy Score</h1></div><div class="panel home-legacy-panel"><div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore), 'Score')}</div></div></section>`;
+  app.innerHTML = `<section class="home-lead"><div class="home-lead-head"><h1>Legacy Score</h1></div><div class="panel home-legacy-panel"><div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div></div></section>`;
 }
 
 function renderManagers() {
@@ -117,22 +117,56 @@ function chartSVG(m, metricKey='legacy') {
   const W=760,H=410,pad={l:46,r:12,t:20,b:36};
   let vals=points.map(p=>p.v);
   let min=Math.min(...vals), max=Math.max(...vals);
-  if (metricKey !== 'finish' && metricKey !== 'winpct') min=Math.min(0,min);
+  if (metricKey === 'winpct') {
+    const extent = Math.max(Math.abs(max-.5), Math.abs(min-.5), .08);
+    min=.5-extent; max=.5+extent;
+  } else if (metricKey !== 'finish') {
+    min=Math.min(0,min);
+  }
   if (max===min) max=min+1;
   const x=i=>pad.l + (i/(Math.max(1,points.length-1)))*(W-pad.l-pad.r);
   const y=v=> def.invert ? pad.t + ((v-min)/(max-min))*(H-pad.t-pad.b) : pad.t + ((max-v)/(max-min))*(H-pad.t-pad.b);
   const coords=points.map((p,i)=>[x(i),y(p.v)]);
   const line=coords.map((c,i)=>`${i?'L':'M'} ${c[0].toFixed(1)} ${c[1].toFixed(1)}`).join(' ');
-  const area = metricKey==='finish' ? '' : `${line} L ${coords[coords.length-1][0].toFixed(1)} ${H-pad.b} L ${coords[0][0].toFixed(1)} ${H-pad.b} Z`;
+  const area = (metricKey==='finish' || metricKey==='winpct') ? '' : `${line} L ${coords[coords.length-1][0].toFixed(1)} ${H-pad.b} L ${coords[0][0].toFixed(1)} ${H-pad.b} Z`;
   let grids='';
   for(let i=0;i<5;i++){
     const gy=pad.t + i*(H-pad.t-pad.b)/4;
     const val=def.invert ? min+(max-min)*i/4 : max-(max-min)*i/4;
-    grids += `<line class="chart-grid" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text" x="${pad.l-7}" y="${gy+3}" text-anchor="end">${def.format(val)}</text>`;
+    const baselineClass = metricKey==='winpct' && i===2 ? ' chart-grid-500' : '';
+    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text${baselineClass}" x="${pad.l-7}" y="${gy+3}" text-anchor="end">${def.format(val)}</text>`;
   }
-  const labels=points.map((p,i)=> (i===0||i===points.length-1||i%2===0) ? `<text class="chart-axis-text" x="${x(i)}" y="${H-10}" text-anchor="middle">${p.s.year}</text>`:'').join('');
+  const labels=points.map((p,i)=> {
+    const current = p.s.year === DATA.meta.currentYear;
+    const show = !current && (i===0 || p.s.year===DATA.meta.currentYear-1 || i%2===0);
+    return show ? `<text class="chart-axis-text" x="${x(i)}" y="${H-10}" text-anchor="middle">${p.s.year}</text>`:'';
+  }).join('');
   const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?6.5:3.8}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
-  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} ${def.label} by season">${grids}${area?`<path class="chart-area" d="${area}"></path>`:''}<path class="chart-line" d="${line}"></path>${dots}${labels}</svg>`;
+
+  let plottedLine;
+  if (metricKey !== 'winpct') {
+    plottedLine = `<path class="chart-line" d="${line}"></path>`;
+  } else if (points.length === 1) {
+    plottedLine = '';
+  } else {
+    const segments=[];
+    for(let i=0;i<points.length-1;i++) {
+      const p1=points[i], p2=points[i+1];
+      const x1=x(i), y1=y(p1.v), x2=x(i+1), y2=y(p2.v);
+      const side1=p1.v>=.5?'above':'below', side2=p2.v>=.5?'above':'below';
+      if (side1===side2 || p1.v===p2.v) {
+        segments.push(`<line class="chart-line-${side1}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"></line>`);
+      } else {
+        const t=(.5-p1.v)/(p2.v-p1.v);
+        const cx=x1+(x2-x1)*t, cy=y(.5);
+        segments.push(`<line class="chart-line-${side1}" x1="${x1}" y1="${y1}" x2="${cx}" y2="${cy}"></line>`);
+        segments.push(`<line class="chart-line-${side2}" x1="${cx}" y1="${cy}" x2="${x2}" y2="${y2}"></line>`);
+      }
+    }
+    plottedLine=segments.join('');
+  }
+
+  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} ${def.label} by season">${grids}${area?`<path class="chart-area" d="${area}"></path>`:''}${plottedLine}${dots}${labels}</svg>`;
 }
 
 function profileTable(m) {
