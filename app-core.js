@@ -134,7 +134,7 @@ function renderManagers() {
   const managers = [...allManagers()].sort((a,b)=>Number(b.active2025)-Number(a.active2025) || (b.legacyScore||0)-(a.legacyScore||0));
   app.innerHTML = `
     <section class="section managers-section">
-      <div class="section-head"><h1 class="simple-page-title">Ranch Hands</h1></div>
+      <div class="section-head"><h1 class="simple-page-title">Managers</h1></div>
       <div class="manager-grid">${managers.map(cardManager).join('')}</div>
     </section>`;
 }
@@ -142,11 +142,47 @@ function renderManagers() {
 const metricDefs = {
   legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false, min:0, max:2500, ticks:[0,500,1000,1500,2000,2500] },
   wins: { label:'Season Wins', value:s=>seasonWins(s), format:v=>fmt.format(v), invert:false, min:0, max:14, ticks:[0,2,4,6,8,10,12,14] },
+  pfpa: { label:'PF/PA' },
   winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false, min:.25, max:.75, ticks:[.25,.375,.5,.625,.75] },
   finish: { label:'Final Finish', value:s=>s.finish, format:v=>`${Math.round(v)}`, invert:true }
 };
 
+function pfpaChartSVG(m) {
+  const points=(m.seasons || []).filter(s=>s.pf!=null && s.pa!=null).sort((a,b)=>a.year-b.year);
+  if (!points.length) return `<div class="notice">No PF/PA data available.</div>`;
+  const W=760,H=410,pad={l:58,r:12,t:28,b:40};
+  const maxRaw=Math.max(...points.flatMap(s=>[s.pf,s.pa]));
+  const step=maxRaw>2000?500:250;
+  const max=Math.ceil(maxRaw/step)*step;
+  const y=v=>pad.t+((max-v)/max)*(H-pad.t-pad.b);
+  const groupW=(W-pad.l-pad.r)/points.length;
+  const barGap=Math.max(2,Math.min(5,groupW*.07));
+  const barW=Math.max(4,Math.min(18,(groupW-barGap*3)/2));
+  const ticks=[];
+  for(let v=0;v<=max;v+=step) ticks.push(v);
+  let grids='';
+  ticks.forEach(val=>{
+    const gy=y(val);
+    grids+=`<line class="chart-grid" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text" x="${pad.l-8}" y="${gy+4}" text-anchor="end">${fmt.format(val)}</text>`;
+  });
+  const bars=points.map((s,i)=>{
+    const center=pad.l+groupW*(i+.5);
+    const pfX=center-barW-barGap/2;
+    const paX=center+barGap/2;
+    const pfY=y(s.pf), paY=y(s.pa);
+    const base=H-pad.b;
+    return `<g>
+      <rect class="chart-bar-pf" x="${pfX.toFixed(1)}" y="${pfY.toFixed(1)}" width="${barW.toFixed(1)}" height="${(base-pfY).toFixed(1)}" rx="2"><title>${s.year} PF: ${fmt1.format(s.pf)}</title></rect>
+      <rect class="chart-bar-pa" x="${paX.toFixed(1)}" y="${paY.toFixed(1)}" width="${barW.toFixed(1)}" height="${(base-paY).toFixed(1)}" rx="2"><title>${s.year} PA: ${fmt1.format(s.pa)}</title></rect>
+      <text class="chart-axis-text" x="${center.toFixed(1)}" y="${H-11}" text-anchor="middle">${s.year}</text>
+    </g>`;
+  }).join('');
+  const legend=`<g class="pfpa-legend" transform="translate(${pad.l},10)"><rect class="chart-bar-pf" x="0" y="0" width="11" height="11" rx="2"></rect><text class="chart-axis-text" x="16" y="10">PF</text><rect class="chart-bar-pa" x="48" y="0" width="11" height="11" rx="2"></rect><text class="chart-axis-text" x="64" y="10">PA</text></g>`;
+  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} points for and points against by season">${grids}${bars}${legend}</svg>`;
+}
+
 function chartSVG(m, metricKey='legacy') {
+  if (metricKey==='pfpa') return pfpaChartSVG(m);
   const def = metricDefs[metricKey];
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
