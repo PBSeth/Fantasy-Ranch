@@ -129,13 +129,13 @@ renderHome = function() {
     </section>
 
     <section class="section wall-section champs-before-legacy">
-      <div class="section-head wall-title"><h2>League Champs</h2></div>
+      <div class="section-head wall-title"><h2>Champions</h2></div>
       <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
         const pick=formatDraftPosition(Number(year),c.draftPosition);
         return `<div class="champ-card">
           <div class="champ-year">${year}</div>
           <div class="champ-manager">${fullManagerName(c.manager)}</div>
-          <div class="champ-pick-label">Top Draft Pick:</div>
+          <div class="champ-pick-label">Top Draft Pick</div>
           <div class="champ-player">${safe(c.playerPicked)}</div>
           <div class="champ-cost">${pick || '—'}</div>
         </div>`;
