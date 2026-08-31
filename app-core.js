@@ -40,12 +40,9 @@ function recordGames(record) {
   return Number(match[1]) + Number(match[2]) + Number(match[3] || 0);
 }
 
-function seasonWinPct(s) {
+function seasonWins(s) {
   const match = String(s?.record || '').match(/^(\d+)-(\d+)(?:-(\d+))?/);
-  if (!match) return null;
-  const wins=Number(match[1]), losses=Number(match[2]), ties=Number(match[3] || 0);
-  const games=wins+losses+ties;
-  return games ? (wins + ties * 0.5) / games : null;
+  return match ? Number(match[1]) : null;
 }
 
 function teamPpgForSeason(s) {
@@ -136,22 +133,33 @@ function renderManagers() {
 }
 
 const metricDefs = {
-  legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false },
-  wins: { label:'Career Wins', value:s=>s.cumulativeWins, format:v=>fmt.format(v), invert:false },
-  winpct: { label:'Win%', value:s=>seasonWinPct(s), format:v=>winPct3(v), invert:false },
+  legacy: { label:'Legacy +/-', value:s=>s.legacyScore, format:v=>`${v>0?'+':''}${fmt.format(v)}`, invert:false },
+  wins: { label:'Season Wins', value:s=>seasonWins(s), format:v=>fmt.format(v), invert:false },
+  winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false },
   finish: { label:'Final Finish', value:s=>s.finish, format:v=>`#${Math.round(v)}`, invert:true }
 };
 
 function chartSVG(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
-  const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
+  let points;
+  if (metricKey === 'legacy') {
+    const legacySeasons = m.seasons.filter(s=>s.legacyScore!=null).slice().sort((a,b)=>a.year-b.year);
+    points = legacySeasons.map((s,i)=>i===0 ? null : ({s,v:s.legacyScore-legacySeasons[i-1].legacyScore})).filter(Boolean);
+    if (!points.length && legacySeasons.length) points=[{s:legacySeasons[0],v:legacySeasons[0].legacyScore}];
+  } else {
+    points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
+  }
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=760,H=410,pad={l:metricKey==='winpct'?58:46,r:12,t:20,b:36};
+  const W=760,H=410,pad={l:metricKey==='winpct'?58:50,r:12,t:20,b:36};
   let vals=points.map(p=>p.v);
   let min=Math.min(...vals), max=Math.max(...vals);
+  const threshold = metricKey === 'winpct' ? .5 : (metricKey === 'legacy' ? 0 : null);
   if (metricKey === 'winpct') {
     const extent = Math.max(Math.abs(max-.5), Math.abs(min-.5), .08);
     min=.5-extent; max=.5+extent;
+  } else if (metricKey === 'legacy') {
+    const extent = Math.max(Math.abs(max), Math.abs(min), 50);
+    min=-extent; max=extent;
   } else if (metricKey !== 'finish') {
     min=Math.min(0,min);
   }
@@ -160,12 +168,12 @@ function chartSVG(m, metricKey='legacy') {
   const y=v=> def.invert ? pad.t + ((v-min)/(max-min))*(H-pad.t-pad.b) : pad.t + ((max-v)/(max-min))*(H-pad.t-pad.b);
   const coords=points.map((p,i)=>[x(i),y(p.v)]);
   const line=coords.map((c,i)=>`${i?'L':'M'} ${c[0].toFixed(1)} ${c[1].toFixed(1)}`).join(' ');
-  const area = (metricKey==='finish' || metricKey==='winpct') ? '' : `${line} L ${coords[coords.length-1][0].toFixed(1)} ${H-pad.b} L ${coords[0][0].toFixed(1)} ${H-pad.b} Z`;
+  const area = (metricKey==='finish' || threshold!=null) ? '' : `${line} L ${coords[coords.length-1][0].toFixed(1)} ${H-pad.b} L ${coords[0][0].toFixed(1)} ${H-pad.b} Z`;
   let grids='';
   for(let i=0;i<5;i++){
     const gy=pad.t + i*(H-pad.t-pad.b)/4;
     const val=def.invert ? min+(max-min)*i/4 : max-(max-min)*i/4;
-    const baselineClass = metricKey==='winpct' && i===2 ? ' chart-grid-500' : '';
+    const baselineClass = threshold!=null && i===2 ? ' chart-grid-500' : '';
     grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text${baselineClass}" x="${pad.l-8}" y="${gy+4}" text-anchor="end">${def.format(val)}</text>`;
   }
   const labels=points.map((p,i)=> {
@@ -176,7 +184,7 @@ function chartSVG(m, metricKey='legacy') {
   const dots=points.map((p,i)=>`<g><circle class="${p.s.champion ? 'chart-milestone':'chart-dot'}" cx="${x(i)}" cy="${y(p.v)}" r="${p.s.champion?6.5:3.8}"><title>${p.s.year}: ${def.format(p.v)}${p.s.champion?' • Champion':''}</title></circle></g>`).join('');
 
   let plottedLine;
-  if (metricKey !== 'winpct') {
+  if (threshold == null) {
     plottedLine = `<path class="chart-line" d="${line}"></path>`;
   } else if (points.length === 1) {
     plottedLine = '';
@@ -185,12 +193,12 @@ function chartSVG(m, metricKey='legacy') {
     for(let i=0;i<points.length-1;i++) {
       const p1=points[i], p2=points[i+1];
       const x1=x(i), y1=y(p1.v), x2=x(i+1), y2=y(p2.v);
-      const side1=p1.v>=.5?'above':'below', side2=p2.v>=.5?'above':'below';
+      const side1=p1.v>=threshold?'above':'below', side2=p2.v>=threshold?'above':'below';
       if (side1===side2 || p1.v===p2.v) {
         segments.push(`<line class="chart-line-${side1}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"></line>`);
       } else {
-        const t=(.5-p1.v)/(p2.v-p1.v);
-        const cx=x1+(x2-x1)*t, cy=y(.5);
+        const t=(threshold-p1.v)/(p2.v-p1.v);
+        const cx=x1+(x2-x1)*t, cy=y(threshold);
         segments.push(`<line class="chart-line-${side1}" x1="${x1}" y1="${y1}" x2="${cx}" y2="${cy}"></line>`);
         segments.push(`<line class="chart-line-${side2}" x1="${cx}" y1="${cy}" x2="${x2}" y2="${y2}"></line>`);
       }
