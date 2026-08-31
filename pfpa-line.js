@@ -2,7 +2,7 @@ pfpaChartSVG = function(m) {
   const points=(m.seasons || []).filter(s=>s.pf!=null && s.pa!=null).sort((a,b)=>a.year-b.year);
   if (!points.length) return `<div class="notice">No PF/PA data available.</div>`;
 
-  const W=760,H=410,pad={l:58,r:12,t:30,b:36};
+  const W=760,H=460,pad={l:58,r:12,t:30,b:36};
   const leagueValues=allManagers().flatMap(manager=>(manager.seasons || []).flatMap(s=>[
     s.pf!=null ? Number(s.pf) : null,
     s.pa!=null ? Number(s.pa) : null
