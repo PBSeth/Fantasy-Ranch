@@ -10,7 +10,7 @@ function formatDraftPosition(year, pos) {
   if (pos == null || pos === '') return '';
   if (typeof pos === 'number' || /^\d+$/.test(String(pos))) return `$${Number(pos)}`;
   const ordinal = String(pos).match(/^(\d+)(?:st|nd|rd|th)$/i);
-  if (year >= 2020 && ordinal) {
+  if (ordinal) {
     const n=Number(ordinal[1]);
     const round=Math.floor((n-1)/12)+1;
     const pick=((n-1)%12)+1;
@@ -73,13 +73,14 @@ function leagueHighlights() {
   const worstMargin=[...scoringRows].sort((a,b)=>a.diffGame-b.diffGame)[0];
   const playerPpgRows=scoringRows.filter(x=>x.ppgPlayer!=null);
   const highestPpgPlayer=[...playerPpgRows].sort((a,b)=>b.ppgPlayer-a.ppgPlayer)[0];
+  const lowestPpgPlayer=[...playerPpgRows].sort((a,b)=>a.ppgPlayer-b.ppgPlayer)[0];
 
   return {
     mostTitles, mostPlayoffWins, mostCareerWins, careerWins,
     mostPlayoffApps:playoffApps[0], seasonWinLeaders, maxSeasonWins,
     seasonLowWins, minSeasonWins, seasonLossLeaders, maxSeasonLosses,
     biggestJump, biggestDrop, lowestCareer,
-    highestPpg, lowestPpg, bestMargin, worstMargin, highestPpgPlayer
+    highestPpg, lowestPpg, bestMargin, worstMargin, highestPpgPlayer, lowestPpgPlayer
   };
 }
 
@@ -113,6 +114,7 @@ renderHome = function() {
         ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, managerDisplay(h.bestMargin.m), h.bestMargin.s.year)}
         ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), managerDisplay(h.worstMargin.m), h.worstMargin.s.year)}
         ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), managerDisplay(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
+        ${highCard('Lowest PPG / starter', fmt1.format(h.lowestPpgPlayer.ppgPlayer), managerDisplay(h.lowestPpgPlayer.m), h.lowestPpgPlayer.s.year)}
         ${highCard('Most championships', h.mostTitles.titles, managerDisplay(h.mostTitles))}
         ${highCard('Career regular-season wins', h.careerWins, managerDisplay(h.mostCareerWins))}
         ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, managerDisplay(h.mostPlayoffWins))}
@@ -130,7 +132,13 @@ renderHome = function() {
       <div class="section-head wall-title"><h2>League Champs</h2></div>
       <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
         const pick=formatDraftPosition(Number(year),c.draftPosition);
-        return `<div class="champ-card"><div class="champ-year">${year}</div><div class="champ-manager">${fullManagerName(c.manager)}</div><div class="champ-pick">Top draft pick: ${safe(c.playerPicked)}${pick ? ` • ${pick}` : ''}</div></div>`;
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${fullManagerName(c.manager)}</div>
+          <div class="champ-pick-label">Top Draft Pick:</div>
+          <div class="champ-player">${safe(c.playerPicked)}</div>
+          <div class="champ-cost">${pick || '—'}</div>
+        </div>`;
       }).join('')}</div>
     </section>
 
