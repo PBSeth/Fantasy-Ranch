@@ -40,6 +40,14 @@ function recordGames(record) {
   return Number(match[1]) + Number(match[2]) + Number(match[3] || 0);
 }
 
+function seasonWinPct(s) {
+  const match = String(s?.record || '').match(/^(\d+)-(\d+)(?:-(\d+))?/);
+  if (!match) return null;
+  const wins=Number(match[1]), losses=Number(match[2]), ties=Number(match[3] || 0);
+  const games=wins+losses+ties;
+  return games ? (wins + ties * 0.5) / games : null;
+}
+
 function teamPpgForSeason(s) {
   if (s?.pfGame != null) return s.pfGame;
   if (s?.pf == null) return null;
@@ -130,7 +138,7 @@ function renderManagers() {
 const metricDefs = {
   legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false },
   wins: { label:'Career Wins', value:s=>s.cumulativeWins, format:v=>fmt.format(v), invert:false },
-  winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false },
+  winpct: { label:'Win%', value:s=>seasonWinPct(s), format:v=>winPct3(v), invert:false },
   finish: { label:'Final Finish', value:s=>s.finish, format:v=>`#${Math.round(v)}`, invert:true }
 };
 
@@ -138,7 +146,7 @@ function chartSVG(m, metricKey='legacy') {
   const def = metricDefs[metricKey];
   const points = m.seasons.map(s=>({s, v:def.value(s)})).filter(x=>x.v != null);
   if (!points.length) return `<div class="notice">No data available for this metric.</div>`;
-  const W=760,H=410,pad={l:46,r:12,t:20,b:36};
+  const W=760,H=410,pad={l:metricKey==='winpct'?58:46,r:12,t:20,b:36};
   let vals=points.map(p=>p.v);
   let min=Math.min(...vals), max=Math.max(...vals);
   if (metricKey === 'winpct') {
@@ -158,7 +166,7 @@ function chartSVG(m, metricKey='legacy') {
     const gy=pad.t + i*(H-pad.t-pad.b)/4;
     const val=def.invert ? min+(max-min)*i/4 : max-(max-min)*i/4;
     const baselineClass = metricKey==='winpct' && i===2 ? ' chart-grid-500' : '';
-    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text${baselineClass}" x="${pad.l-7}" y="${gy+3}" text-anchor="end">${def.format(val)}</text>`;
+    grids += `<line class="chart-grid${baselineClass}" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text${baselineClass}" x="${pad.l-8}" y="${gy+4}" text-anchor="end">${def.format(val)}</text>`;
   }
   const labels=points.map((p,i)=> {
     const current = p.s.year === DATA.meta.currentYear;
