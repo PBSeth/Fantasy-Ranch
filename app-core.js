@@ -38,6 +38,7 @@ function recordGames(record) {
 }
 
 function teamPpgForSeason(s) {
+  if (s?.pfGame != null) return s.pfGame;
   if (s?.pf == null) return null;
   const games = recordGames(s.record);
   return games ? s.pf / games : null;
@@ -59,6 +60,26 @@ function ppgPerPlayerForSeason(s) {
   const starters = starterCountForYear(s?.year);
   if (teamPpg == null || !starters) return null;
   return teamPpg / starters;
+}
+
+function applyScoringHistory(history) {
+  Object.entries(history || {}).forEach(([year, rows]) => {
+    (rows || []).forEach(row => {
+      const manager = DATA.managers[row.manager];
+      const season = manager?.seasons?.find(s => s.year === Number(year));
+      if (!season) {
+        console.warn('Scoring row did not match Ranch history', year, row.manager, row.teamName);
+        return;
+      }
+      season.teamName = row.teamName;
+      season.pf = row.pf;
+      season.pa = row.pa;
+      season.pfGame = row.pfGame;
+      season.paGame = row.paGame;
+      season.diffGame = row.diffGame;
+      season.scoringSourceRecord = row.sourceRecord;
+    });
+  });
 }
 
 function cardManager(m) {
