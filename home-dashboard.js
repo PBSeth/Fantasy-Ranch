@@ -26,8 +26,6 @@ function trophyManagerName(label) {
 }
 
 function compactManagerName(m) {
-  if (m?.id === 'ty-molly') return 'Tyler Schmidt';
-  if (m?.id === 'diddles') return 'Matt Diddle';
   return managerDisplay(m);
 }
 
@@ -119,7 +117,7 @@ renderHome = function() {
 
   app.innerHTML = `
     <section class="home-lead highlights-lead">
-      <div class="home-lead-head"><h1>League Highlights</h1></div>
+      <div class="home-lead-head"><h1>Wall of Fame</h1></div>
       <div class="wall-high-grid highlights-grid">
         ${highCard('Highest team PPG', fmt1.format(h.highestPpg.ppg), compactManagerName(h.highestPpg.m), h.highestPpg.s.year)}
         ${highCard('Lowest team PPG', fmt1.format(h.lowestPpg.ppg), compactManagerName(h.lowestPpg.m), h.lowestPpg.s.year)}
