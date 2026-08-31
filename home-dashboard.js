@@ -19,6 +19,12 @@ function formatDraftPosition(year, pos) {
   return String(pos);
 }
 
+function trophyManagerName(label) {
+  if (label === 'Ty/Molly') return 'Tyler Schmidt';
+  if (label === 'Diddles') return 'Matt Diddle';
+  return fullManagerName(label);
+}
+
 function leagueHighlights() {
   const managers = allManagers();
   const seasonRows = [];
@@ -134,7 +140,7 @@ renderHome = function() {
         const pick=formatDraftPosition(Number(year),c.draftPosition);
         return `<div class="champ-card">
           <div class="champ-year">${year}</div>
-          <div class="champ-manager">${fullManagerName(c.manager)}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
           <div class="champ-pick-label">Top Draft Pick</div>
           <div class="champ-player">${safe(c.playerPicked)}</div>
           <div class="champ-cost">${pick || '—'}</div>
