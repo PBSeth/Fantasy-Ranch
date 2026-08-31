@@ -12,8 +12,8 @@ const winPct3 = v => v == null ? '—' : Number(v).toFixed(3).replace(/^0/, '');
 const safe = v => v == null || v === '' ? '—' : v;
 const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const managerById = id => Object.values(DATA.managers).find(m => m.id === id);
-const managerDisplay = m => m?.id === 'nickster' ? 'Nicholas Morris' : (m?.id === 'dick' ? 'Nick Thompson' : (m?.fullName || m?.name || '—'));
-const managerFromLabel = label => DATA.managers[label] || Object.values(DATA.managers).find(m => m.name === label || m.fullName === label || (m.id === 'dick' && label === 'Nick Thompson'));
+const managerDisplay = m => m?.id === 'diddles' ? 'Matt Diddle' : (m?.id === 'ty-molly' ? 'Tyler Schmidt' : (m?.id === 'nickster' ? 'Nicholas Morris' : (m?.id === 'dick' ? 'Nick Thompson' : (m?.fullName || m?.name || '—'))));
+const managerFromLabel = label => DATA.managers[label] || Object.values(DATA.managers).find(m => m.name === label || m.fullName === label || (m.id === 'dick' && label === 'Nick Thompson') || (m.id === 'diddles' && label === 'Matt Diddle') || (m.id === 'ty-molly' && label === 'Tyler Schmidt'));
 const fullManagerName = label => managerDisplay(managerFromLabel(label)) || label;
 const routeParts = () => location.hash.replace(/^#/, '').split('/').filter(Boolean);
 
@@ -143,7 +143,7 @@ const metricDefs = {
   legacy: { label:'Legacy Score', value:s=>s.legacyScore, format:v=>fmt.format(v), invert:false },
   wins: { label:'Season Wins', value:s=>seasonWins(s), format:v=>fmt.format(v), invert:false },
   winpct: { label:'Win%', value:s=>s.cumulativeWinPctOfficial, format:v=>winPct3(v), invert:false },
-  finish: { label:'Final Finish', value:s=>s.finish, format:v=>`#${Math.round(v)}`, invert:true }
+  finish: { label:'Final Finish', value:s=>s.finish, format:v=>`${Math.round(v)}`, invert:true }
 };
 
 function chartSVG(m, metricKey='legacy') {
@@ -212,6 +212,6 @@ function chartSVG(m, metricKey='legacy') {
 
 function profileTable(m) {
   return m.seasons.filter(s=>s.record || s.finish).slice().reverse().map(s=>`<tr>
-    <td><strong>${s.year}</strong></td><td class="cell-rank">${s.finish ? `#${s.finish}` : '—'}</td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td>${s.pf != null ? fmt1.format(s.pf) : '—'}</td><td>${s.pa != null ? fmt1.format(s.pa) : '—'}</td>
+    <td><strong>${s.year}</strong></td><td class="cell-rank">${s.finish ? `${s.finish}` : '—'}</td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td>${s.pf != null ? fmt1.format(s.pf) : '—'}</td><td>${s.pa != null ? fmt1.format(s.pa) : '—'}</td>
   </tr>`).join('');
 }
