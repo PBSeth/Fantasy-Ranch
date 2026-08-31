@@ -25,6 +25,7 @@ function managerRecord(m) {
   if (m?.id === 'diddles') return '95-83-1';
   if (m?.id === 'nickster') return '57-60-1';
   if (m?.id === 'ty-molly') return '89-90';
+  if (m?.id === 'payton') return '100-79';
   if (m.combinedRecord || m.record) return m.combinedRecord || m.record;
   const last = [...m.seasons].reverse().find(s => s.record);
   if (!last) return '—';
