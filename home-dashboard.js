@@ -31,7 +31,12 @@ function leagueHighlights() {
     });
     for(let i=1;i<seasons.length;i++) {
       if (seasons[i].legacyScore!=null && seasons[i-1].legacyScore!=null) {
-        legacyMoves.push({m,year:seasons[i].year,delta:seasons[i].legacyScore-seasons[i-1].legacyScore});
+        legacyMoves.push({
+          m,
+          fromYear:seasons[i-1].year,
+          toYear:seasons[i].year,
+          delta:seasons[i].legacyScore-seasons[i-1].legacyScore
+        });
       }
     }
   });
@@ -96,9 +101,17 @@ renderHome = function() {
         ${highCard('Fewest wins in one season', h.minSeasonWins, lowWinNames, lowWinYears)}
         ${highCard('Most losses in one season', h.maxSeasonLosses, lossNames, lossYears)}
         ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), managerDisplay(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
-        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, managerDisplay(h.biggestJump.m), h.biggestJump.year)}
-        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), managerDisplay(h.biggestDrop.m), h.biggestDrop.year)}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, managerDisplay(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), managerDisplay(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
       </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>League Champs</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card"><div class="champ-year">${year}</div><div class="champ-manager">${fullManagerName(c.manager)}</div><div class="champ-pick">Top draft pick: ${safe(c.playerPicked)}${pick ? ` • ${pick}` : ''}</div></div>`;
+      }).join('')}</div>
     </section>
 
     <section class="section legacy-section">
@@ -106,13 +119,5 @@ renderHome = function() {
       <div class="panel home-legacy-panel">
         <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
       </div>
-    </section>
-
-    <section class="section wall-section">
-      <div class="section-head wall-title"><h2>League Champs</h2></div>
-      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
-        const pick=formatDraftPosition(Number(year),c.draftPosition);
-        return `<div class="champ-card"><div class="champ-year">${year}</div><div class="champ-manager">${fullManagerName(c.manager)}</div><div class="champ-pick">#1 draft choice: ${safe(c.playerPicked)}${pick ? ` • ${pick}` : ''}</div></div>`;
-      }).join('')}</div>
     </section>`;
 };
