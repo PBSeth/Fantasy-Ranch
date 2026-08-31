@@ -2,6 +2,6 @@
   <title id="t">Fantasy Ranch</title>
   <desc id="d">Fantasy Ranch logo with red stacked serif lettering on a white background.</desc>
   <rect width="512" height="512" fill="#ffffff"/>
-  <text x="256" y="226" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="900" letter-spacing="1">FANTASY</text>
-  <text x="256" y="326" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="98" font-weight="900" letter-spacing="1">RANCH</text>
+  <text x="256" y="228" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="900" letter-spacing="1">FANTASY</text>
+  <text x="256" y="329" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="104" font-weight="900" letter-spacing="1">RANCH</text>
 </svg>
