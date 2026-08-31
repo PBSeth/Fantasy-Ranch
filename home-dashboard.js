@@ -25,6 +25,12 @@ function trophyManagerName(label) {
   return fullManagerName(label);
 }
 
+function compactManagerName(m) {
+  if (m?.id === 'ty-molly') return 'Tyler Schmidt';
+  if (m?.id === 'diddles') return 'Matt Diddle';
+  return managerDisplay(m);
+}
+
 function leagueHighlights() {
   const managers = allManagers();
   const seasonRows = [];
@@ -104,33 +110,33 @@ renderHome = function() {
   const legacy = [...allManagers()].filter(m=>m.legacyScore!=null).sort((a,b)=>(b.legacyScore||0)-(a.legacyScore||0));
   const champs = Object.entries(DATA.champions).sort((a,b)=>Number(a[0])-Number(b[0]));
   const h = leagueHighlights();
-  const seasonWinsNames = h.seasonWinLeaders.map(x=>managerDisplay(x.m)).join(' / ');
+  const seasonWinsNames = h.seasonWinLeaders.map(x=>compactManagerName(x.m)).join(' / ');
   const seasonWinsYears = h.seasonWinLeaders.map(x=>x.s.year).join(' / ');
-  const lowWinNames = h.seasonLowWins.map(x=>managerDisplay(x.m)).join(' / ');
+  const lowWinNames = h.seasonLowWins.map(x=>compactManagerName(x.m)).join(' / ');
   const lowWinYears = h.seasonLowWins.map(x=>x.s.year).join(' / ');
-  const lossNames = h.seasonLossLeaders.map(x=>managerDisplay(x.m)).join(' / ');
+  const lossNames = h.seasonLossLeaders.map(x=>compactManagerName(x.m)).join(' / ');
   const lossYears = h.seasonLossLeaders.map(x=>x.s.year).join(' / ');
 
   app.innerHTML = `
     <section class="home-lead highlights-lead">
       <div class="home-lead-head"><h1>League Highlights</h1></div>
       <div class="wall-high-grid highlights-grid">
-        ${highCard('Highest team PPG', fmt1.format(h.highestPpg.ppg), managerDisplay(h.highestPpg.m), h.highestPpg.s.year)}
-        ${highCard('Lowest team PPG', fmt1.format(h.lowestPpg.ppg), managerDisplay(h.lowestPpg.m), h.lowestPpg.s.year)}
-        ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, managerDisplay(h.bestMargin.m), h.bestMargin.s.year)}
-        ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), managerDisplay(h.worstMargin.m), h.worstMargin.s.year)}
-        ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), managerDisplay(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
-        ${highCard('Lowest PPG / starter', fmt1.format(h.lowestPpgPlayer.ppgPlayer), managerDisplay(h.lowestPpgPlayer.m), h.lowestPpgPlayer.s.year)}
-        ${highCard('Most championships', h.mostTitles.titles, managerDisplay(h.mostTitles))}
-        ${highCard('Career regular-season wins', h.careerWins, managerDisplay(h.mostCareerWins))}
-        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, managerDisplay(h.mostPlayoffWins))}
-        ${highCard('Playoff appearances', h.mostPlayoffApps.count, managerDisplay(h.mostPlayoffApps.m))}
+        ${highCard('Highest team PPG', fmt1.format(h.highestPpg.ppg), compactManagerName(h.highestPpg.m), h.highestPpg.s.year)}
+        ${highCard('Lowest team PPG', fmt1.format(h.lowestPpg.ppg), compactManagerName(h.lowestPpg.m), h.lowestPpg.s.year)}
+        ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, compactManagerName(h.bestMargin.m), h.bestMargin.s.year)}
+        ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), compactManagerName(h.worstMargin.m), h.worstMargin.s.year)}
+        ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), compactManagerName(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
+        ${highCard('Lowest PPG / starter', fmt1.format(h.lowestPpgPlayer.ppgPlayer), compactManagerName(h.lowestPpgPlayer.m), h.lowestPpgPlayer.s.year)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
         ${highCard('Wins in one season', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
         ${highCard('Fewest wins in one season', h.minSeasonWins, lowWinNames, lowWinYears)}
         ${highCard('Most losses in one season', h.maxSeasonLosses, lossNames, lossYears)}
-        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), managerDisplay(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
-        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, managerDisplay(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
-        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), managerDisplay(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
       </div>
     </section>
 
@@ -141,9 +147,11 @@ renderHome = function() {
         return `<div class="champ-card">
           <div class="champ-year">${year}</div>
           <div class="champ-manager">${trophyManagerName(c.manager)}</div>
-          <div class="champ-pick-label">Top Draft Pick</div>
-          <div class="champ-player">${safe(c.playerPicked)}</div>
-          <div class="champ-cost">${pick || '—'}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
         </div>`;
       }).join('')}</div>
     </section>
