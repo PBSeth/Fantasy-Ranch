@@ -22,11 +22,15 @@ function setActiveNav(name) {
 }
 
 function managerRecord(m) {
+  if (m?.id === 'mott') return '102-77';
+  if (m?.id === 'payton') return '100-79';
   if (m?.id === 'seth') return '97-82';
   if (m?.id === 'diddles') return '95-83-1';
-  if (m?.id === 'nickster') return '57-60-1';
+  if (m?.id === 'kevin') return '93-86';
+  if (m?.id === 'mason') return '93-86';
+  if (m?.id === 'brett') return '91-88';
   if (m?.id === 'ty-molly') return '89-90';
-  if (m?.id === 'payton') return '100-79';
+  if (m?.id === 'nickster') return '57-60-1';
   if (m.combinedRecord || m.record) return m.combinedRecord || m.record;
   const last = [...m.seasons].reverse().find(s => s.record);
   if (!last) return '—';
