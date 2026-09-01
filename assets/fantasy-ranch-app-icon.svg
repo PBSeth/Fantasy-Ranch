@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
   <title id="t">Fantasy Ranch</title>
-  <desc id="d">Fantasy Ranch app icon with equal-size red stacked serif lettering on a white square.</desc>
+  <desc id="d">Fantasy Ranch app icon with compact red stacked serif lettering centered safely within a white square.</desc>
   <rect width="512" height="512" fill="#ffffff"/>
-  <text x="256" y="240" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="98" font-weight="900" letter-spacing="1">FANTASY</text>
-  <text x="256" y="341" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="98" font-weight="900" letter-spacing="1">RANCH</text>
+  <text x="256" y="235" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="900" letter-spacing="1">FANTASY</text>
+  <text x="256" y="320" text-anchor="middle" fill="#c6262e" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="900" letter-spacing="1">RANCH</text>
 </svg>
