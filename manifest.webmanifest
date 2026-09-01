@@ -9,7 +9,7 @@
   "theme_color": "#0d0d0d",
   "icons": [
     {
-      "src": "/assets/fantasy-ranch-app-icon.svg?v=4",
+      "src": "/assets/fantasy-ranch-app-icon.svg?v=5",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
