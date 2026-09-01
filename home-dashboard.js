@@ -203,10 +203,10 @@ renderHome = function() {
         ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
         ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
         ${highCard('Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
-        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
         ${highCard('Single Season Losses', h.maxSeasonLosses, lossNames, lossYears)}
         ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
         ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
         ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
         ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
         ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
