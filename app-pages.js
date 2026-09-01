@@ -85,6 +85,7 @@ async function boot(){
     DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6))};
     const scoringHistory=Object.assign({},...parts.slice(6));
     applyScoringHistory(scoringHistory);
+    normalizeCareerAggregates();
     router();
   } catch(err){ console.error(err); app.innerHTML=`<div class="notice">The Ranch data failed to load. ${err.message}</div>`; }
 }
