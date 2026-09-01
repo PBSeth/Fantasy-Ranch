@@ -12,7 +12,7 @@ function renderManager(id) {
     </section>
     <section class="profile-grid">
       <div class="panel chart-panel">
-        <div class="panel-title"><h3>Career timeline</h3><small class="champ-legend"><span class="legend-gold-dot"></span> = 🏆</small></div>
+        <div class="panel-title career-overview-title"><h3>Career Overview</h3><small class="champ-legend"><span class="legend-gold-dot"></span> = 🏆</small></div>
         <div class="metric-tabs" id="metricTabs">${Object.entries(metricDefs).map(([k,d])=>`<button class="metric-tab ${k==='legacy'?'active':''}" data-metric="${k}">${d.label}</button>`).join('')}</div>
         <div class="chart-wrap" id="chartWrap">${chartSVG(m,'legacy')}</div>
       </div>
