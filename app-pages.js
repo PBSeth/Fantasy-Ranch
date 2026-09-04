@@ -1,3 +1,64 @@
+const managerMetricTabs = [
+  { key:'legacy', label:'Legacy Score' },
+  { key:'winsfinish', label:'<span>Season Wins</span><span>Final Finish</span>', twoLine:true },
+  { key:'pfpa', label:'PF/PA' },
+  { key:'winpct', label:'<span>Career</span><span>Win%</span>', twoLine:true }
+];
+
+function managerMetricTabMarkup(tab) {
+  return `<button class="metric-tab ${tab.twoLine ? 'metric-tab-two-line ' : ''}${tab.key==='legacy'?'active':''}" data-metric="${tab.key}" aria-label="${tab.key==='winsfinish' ? 'Season Wins and Final Finish' : tab.key==='winpct' ? 'Career Win%' : tab.label}">${tab.label}</button>`;
+}
+
+function winsFinishChartSVG(m) {
+  const points=(m.seasons || [])
+    .map(s=>({s,wins:seasonWins(s),finish:s.finish}))
+    .filter(p=>p.wins!=null || p.finish!=null)
+    .sort((a,b)=>a.s.year-b.s.year);
+  if (!points.length) return `<div class="notice">No season wins or finish data available.</div>`;
+
+  const W=760,H=410,pad={l:48,r:48,t:34,b:36};
+  const innerH=H-pad.t-pad.b;
+  const maxWins=14;
+  const fieldSizes=points.map(p=>leagueSizeForYear(p.s.year)).filter(n=>n>0);
+  const finishValues=points.map(p=>p.finish).filter(v=>v!=null);
+  const maxFinish=Math.max(...finishValues, ...(fieldSizes.length ? fieldSizes : [12]));
+  const x=i=>pad.l+(i/(Math.max(1,points.length-1)))*(W-pad.l-pad.r);
+  const yWins=v=>pad.t+((maxWins-v)/maxWins)*innerH;
+  const yFinish=v=>pad.t+((v-1)/(Math.max(1,maxFinish-1)))*innerH;
+
+  const winsTicks=[14,12,10,8,6,4,2,0];
+  let grids='';
+  winsTicks.forEach(val=>{
+    const gy=yWins(val);
+    grids+=`<line class="chart-grid" x1="${pad.l}" y1="${gy}" x2="${W-pad.r}" y2="${gy}"></line><text class="chart-axis-text" x="${pad.l-8}" y="${gy+4}" text-anchor="end">${val}</text>`;
+  });
+
+  const finishTicks=[];
+  for(let v=1;v<=maxFinish;v+=(v===1?1:2)) finishTicks.push(v);
+  if(finishTicks[finishTicks.length-1]!==maxFinish) finishTicks.push(maxFinish);
+  const finishAxis=finishTicks.map(val=>`<text class="chart-axis-text chart-axis-finish" x="${W-pad.r+8}" y="${yFinish(val)+4}" text-anchor="start">${val}</text>`).join('');
+
+  const winsPoints=points.map((p,i)=>p.wins==null?null:{...p,i}).filter(Boolean);
+  const finishPoints=points.map((p,i)=>p.finish==null?null:{...p,i}).filter(Boolean);
+  const winsLine=winsPoints.map((p,j)=>`${j?'L':'M'} ${x(p.i).toFixed(1)} ${yWins(p.wins).toFixed(1)}`).join(' ');
+  const finishLine=finishPoints.map((p,j)=>`${j?'L':'M'} ${x(p.i).toFixed(1)} ${yFinish(p.finish).toFixed(1)}`).join(' ');
+
+  const winsDots=winsPoints.map(p=>`<circle class="chart-dot-wins" cx="${x(p.i)}" cy="${yWins(p.wins)}" r="3.8"><title>${p.s.year} Season Wins: ${p.wins}</title></circle>`).join('');
+  const finishDots=finishPoints.map(p=>`<circle class="${p.s.champion ? 'chart-milestone':'chart-dot-finish'}" cx="${x(p.i)}" cy="${yFinish(p.finish)}" r="${p.s.champion?6.5:3.8}"><title>${p.s.year} Final Finish: ${p.finish}${p.s.champion?' • Champion':''}</title></circle>`).join('');
+  const labels=points.map((p,i)=>{
+    const current=p.s.year===DATA.meta.currentYear;
+    const show=!current && (i===0 || p.s.year===DATA.meta.currentYear-1 || i%2===0);
+    return show?`<text class="chart-axis-text" x="${x(i)}" y="${H-10}" text-anchor="middle">${p.s.year}</text>`:'';
+  }).join('');
+  const legend=`<g class="winsfinish-legend" transform="translate(${pad.l},12)"><line class="chart-line-wins" x1="0" y1="0" x2="20" y2="0"></line><circle class="chart-dot-wins" cx="10" cy="0" r="3"></circle><text class="chart-axis-text" x="27" y="4">Season Wins</text><line class="chart-line-finish" x1="104" y1="0" x2="124" y2="0"></line><circle class="chart-dot-finish" cx="114" cy="0" r="3"></circle><text class="chart-axis-text" x="131" y="4">Final Finish</text></g>`;
+
+  return `<svg class="chart-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${managerDisplay(m)} Season Wins and Final Finish by season">${grids}${finishAxis}${winsLine?`<path class="chart-line-wins" d="${winsLine}"></path>`:''}${finishLine?`<path class="chart-line-finish" d="${finishLine}"></path>`:''}${winsDots}${finishDots}${labels}${legend}</svg>`;
+}
+
+function managerChartSVG(m, metricKey) {
+  return metricKey==='winsfinish' ? winsFinishChartSVG(m) : chartSVG(m,metricKey);
+}
+
 function renderManager(id) {
   setActiveNav('managers');
   const m=managerById(id);
@@ -13,7 +74,7 @@ function renderManager(id) {
     <section class="profile-grid">
       <div class="panel chart-panel">
         <div class="panel-title career-overview-title"><h3>Career Overview</h3><small class="champ-legend"><span class="legend-gold-dot"></span> = 🏆</small></div>
-        <div class="metric-tabs" id="metricTabs">${Object.entries(metricDefs).map(([k,d])=>`<button class="metric-tab ${k==='legacy'?'active':''}" data-metric="${k}">${d.label}</button>`).join('')}</div>
+        <div class="metric-tabs" id="metricTabs">${managerMetricTabs.map(managerMetricTabMarkup).join('')}</div>
         <div class="chart-wrap" id="chartWrap">${chartSVG(m,'legacy')}</div>
       </div>
       <div class="stat-stack">
@@ -21,7 +82,7 @@ function renderManager(id) {
         <div class="big-stat championship-stat"><strong>${m.titles}</strong><span>Championships</span></div>
         <div class="big-stat"><strong>${m.playoffWins || 0}</strong><span>Playoff wins</span></div>
         <div class="big-stat"><strong>${m.avgFinish ? fmt1.format(m.avgFinish) : '—'}</strong><span>Average finish</span></div>
-        <div class="big-stat"><strong>${m.winPct != null ? winPct3(m.winPct) : '—'}</strong><span>Win%</span></div>
+        <div class="big-stat"><strong>${m.winPct != null ? winPct3(m.winPct) : '—'}</strong><span>Career Win%</span></div>
         <div class="big-stat"><strong>${m.serviceTime || 0}</strong><span>Seasons</span></div>
       </div>
     </section>
@@ -32,7 +93,7 @@ function renderManager(id) {
   document.getElementById('metricTabs')?.addEventListener('click',e=>{
     const b=e.target.closest('[data-metric]'); if(!b) return;
     document.querySelectorAll('.metric-tab[data-metric]').forEach(x=>x.classList.toggle('active',x===b));
-    document.getElementById('chartWrap').innerHTML=chartSVG(m,b.dataset.metric);
+    document.getElementById('chartWrap').innerHTML=managerChartSVG(m,b.dataset.metric);
   });
 }
 
