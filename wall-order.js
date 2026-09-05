@@ -2,8 +2,8 @@
 // The order is intentionally about readability and related concepts, not prestige.
 (function () {
   const groups = [
-    // Career record / sustained performance
-    ['Most Regular Season Wins','Least Regular Season Wins','Highest Career Win%','Lowest Career Win%'],
+    // Career efficiency
+    ['Highest Career Win%','Lowest Career Win%'],
     // Playoff résumé
     ['Most Playoff Wins','Most Playoff Appearances','Highest Playoff Appearance Rate','Lowest Playoff Appearance Rate'],
     // Season-level wins / consistency
@@ -23,6 +23,8 @@
   ];
 
   const removedTitles = new Set([
+    'Most Regular Season Wins',
+    'Least Regular Season Wins',
     'Highest Losing Season Rate',
     'Lowest Losing Season Rate'
   ]);
