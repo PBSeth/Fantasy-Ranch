@@ -43,7 +43,7 @@
   function luckCard(label,row) {
     const sign=row.adjustedPaGame>0?'+':'';
     return highCard(
-      label,
+      `${label}<br><span style="font-size:.78em;font-weight:500">(22 game min)</span>`,
       `${sign}${fmt1.format(row.adjustedPaGame)} PA/G`,
       compactManagerName(row.m),
       `${fmt1.format(row.paGame)} raw PA/G • ${row.games} career regular-season games`
@@ -59,7 +59,7 @@
     const unluckiest=[...rows].sort((a,b)=>b.adjustedPaGame-a.adjustedPaGame)[0];
     const grid=document.querySelector('.highlights-grid');
     if (!grid) return;
-    grid.insertAdjacentHTML('beforeend', luckCard('Luckiest Manager · 22+ games',luckiest));
-    grid.insertAdjacentHTML('beforeend', luckCard('Unluckiest Manager · 22+ games',unluckiest));
+    grid.insertAdjacentHTML('beforeend', luckCard('Luckiest Manager',luckiest));
+    grid.insertAdjacentHTML('beforeend', luckCard('Unluckiest Manager',unluckiest));
   };
 })();
