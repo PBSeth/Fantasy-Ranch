@@ -43,7 +43,7 @@
   function luckCard(label,row) {
     const sign=row.adjustedPaGame>0?'+':'';
     return `<div class="wall-high-card">
-      <div class="wall-high-label wall-high-label-stacked"><span>${label}</span><small>(22 game min)</small></div>
+      <div class="wall-high-label">${label}</div>
       <div class="wall-high-value">${sign}${fmt1.format(row.adjustedPaGame)} PA/G</div>
       <div class="wall-high-name">${compactManagerName(row.m)}</div>
       <div class="wall-high-detail">${fmt1.format(row.paGame)} raw PA/G • ${row.games} career regular-season games</div>
