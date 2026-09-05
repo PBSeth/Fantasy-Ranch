@@ -9,7 +9,7 @@
     // Season-level wins / consistency
     ['Most Single Season Wins','Fewest Single Season Wins','Consecutive Winning Seasons','Consecutive Losing Seasons'],
     // Season-rate profile
-    ['Highest Winning Season Rate','Lowest Winning Season Rate','Highest Losing Season Rate','Lowest Losing Season Rate'],
+    ['Highest Winning Season Rate','Lowest Winning Season Rate'],
     // Scoring environment / production
     ['Highest team PPG','Lowest team PPG','Highest PPG / starter','Lowest PPG / starter'],
     // Scoring margin
@@ -22,6 +22,11 @@
     ['Biggest Legacy jump','Biggest Legacy drop']
   ];
 
+  const removedTitles = new Set([
+    'Highest Losing Season Rate',
+    'Lowest Losing Season Rate'
+  ]);
+
   function normalizedTitle(card) {
     const label=card.querySelector('.wall-high-label');
     const span=label?.querySelector('span');
@@ -33,10 +38,16 @@
     if (!grid) return;
     const cards=[...grid.querySelectorAll('.wall-high-card')];
     if (!cards.length) return;
+
+    cards.forEach(card=>{
+      if (removedTitles.has(normalizedTitle(card))) card.remove();
+    });
+
+    const remaining=[...grid.querySelectorAll('.wall-high-card')];
     const used=new Set();
 
     groups.flat().forEach(wanted=>{
-      const card=cards.find(c=>!used.has(c) && normalizedTitle(c)===wanted);
+      const card=remaining.find(c=>!used.has(c) && normalizedTitle(c)===wanted);
       if (card) {
         grid.appendChild(card);
         used.add(card);
@@ -44,7 +55,7 @@
     });
 
     // Preserve any future/unrecognized awards rather than dropping them.
-    cards.filter(c=>!used.has(c)).forEach(c=>grid.appendChild(c));
+    remaining.filter(c=>!used.has(c)).forEach(c=>grid.appendChild(c));
   }
 
   const baseRenderHome=renderHome;
