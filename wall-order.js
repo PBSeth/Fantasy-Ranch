@@ -5,7 +5,7 @@
     // Career efficiency
     ['Highest Career Win%','Lowest Career Win%'],
     // Playoff résumé
-    ['Most Playoff Wins','Most Playoff Appearances','Highest Playoff Appearance Rate','Lowest Playoff Appearance Rate'],
+    ['Most Playoff Wins','Most Playoff Appearances','Highest Playoff %','Lowest Playoff %'],
     // Season-level wins / consistency
     ['Most Single Season Wins','Fewest Single Season Wins','Consecutive Winning Seasons','Consecutive Losing Seasons'],
     // Season-rate profile
