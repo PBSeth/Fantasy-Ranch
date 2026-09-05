@@ -14,6 +14,10 @@ function renderManager(id) {
   setActiveNav('managers');
   const m=managerById(id);
   if (!m) return renderNotFound();
+  const careerPF=(m.seasons || []).reduce((sum,s)=>sum+(Number.isFinite(Number(s.pf))?Number(s.pf):0),0);
+  const careerPA=(m.seasons || []).reduce((sum,s)=>sum+(Number.isFinite(Number(s.pa))?Number(s.pa):0),0);
+  const hasCareerPF=(m.seasons || []).some(s=>s.pf!=null && Number.isFinite(Number(s.pf)));
+  const hasCareerPA=(m.seasons || []).some(s=>s.pa!=null && Number.isFinite(Number(s.pa)));
   app.innerHTML = `
     <section class="profile-hero">
       <div>
@@ -35,6 +39,8 @@ function renderManager(id) {
         <div class="big-stat"><strong>${m.avgFinish ? fmt1.format(m.avgFinish) : '—'}</strong><span>Average finish</span></div>
         <div class="big-stat"><strong>${m.winPct != null ? winPct3(m.winPct) : '—'}</strong><span>Career Win%</span></div>
         <div class="big-stat"><strong>${m.serviceTime || 0}</strong><span>Seasons</span></div>
+        <div class="big-stat"><strong>${hasCareerPF ? fmt1.format(careerPF) : '—'}</strong><span>Career PF</span></div>
+        <div class="big-stat"><strong>${hasCareerPA ? fmt1.format(careerPA) : '—'}</strong><span>Career PA</span></div>
       </div>
     </section>
     <section class="section">
