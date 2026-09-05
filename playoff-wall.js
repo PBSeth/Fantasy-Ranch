@@ -1,14 +1,10 @@
 // Playoff Wall of Fame awards.
 // Retitles the existing playoff counting awards and adds highest/lowest
-// playoff appearance rate with a two-season minimum.
+// playoff percentage with a two-season minimum kept in the calculation only.
 (function () {
-  function stackedLabel(title, note) {
-    return `<div class="wall-high-label wall-high-label-stacked"><span>${title}</span><small>${note}</small></div>`;
-  }
-
-  function playoffCard(title, value, manager, detail='', note='') {
+  function playoffCard(title, value, manager, detail='') {
     return `<div class="wall-high-card">
-      ${note ? stackedLabel(title, note) : `<div class="wall-high-label">${title}</div>`}
+      <div class="wall-high-label">${title}</div>
       <div class="wall-high-value">${value}</div>
       <div class="wall-high-name">${compactManagerName(manager)}</div>
       ${detail ? `<div class="wall-high-detail">${detail}</div>` : ''}
@@ -49,8 +45,8 @@
 
     const holder=document.createElement('div');
     holder.innerHTML=[
-      playoffCard('Highest Playoff Appearance Rate', formatSeasonRate(highest.rate), highest.m, `${highest.appearances} of ${highest.seasons} seasons`, '(2 season min.)'),
-      playoffCard('Lowest Playoff Appearance Rate', formatSeasonRate(lowest.rate), lowest.m, `${lowest.appearances} of ${lowest.seasons} seasons`, '(2 season min.)')
+      playoffCard('Highest Playoff %', formatSeasonRate(highest.rate), highest.m, `${highest.appearances} of ${highest.seasons} seasons`),
+      playoffCard('Lowest Playoff %', formatSeasonRate(lowest.rate), lowest.m, `${lowest.appearances} of ${lowest.seasons} seasons`)
     ].join('');
     const rateCards=[...holder.children];
     appsCard.insertAdjacentElement('afterend',rateCards[0]);
