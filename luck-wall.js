@@ -42,12 +42,13 @@
 
   function luckCard(label,row) {
     const sign=row.adjustedPaGame>0?'+':'';
-    return highCard(
-      `${label}<br><span style="font-size:.78em;font-weight:500">(22 game min)</span>`,
-      `${sign}${fmt1.format(row.adjustedPaGame)} PA/G`,
-      compactManagerName(row.m),
-      `${fmt1.format(row.paGame)} raw PA/G • ${row.games} career regular-season games`
-    );
+    return `<div class="wall-high-card">
+      <div class="wall-high-label">${label}</div>
+      <div class="wall-high-detail">(22 game min)</div>
+      <div class="wall-high-value">${sign}${fmt1.format(row.adjustedPaGame)} PA/G</div>
+      <div class="wall-high-name">${compactManagerName(row.m)}</div>
+      <div class="wall-high-detail">${fmt1.format(row.paGame)} raw PA/G • ${row.games} career regular-season games</div>
+    </div>`;
   }
 
   const baseRenderHome=renderHome;
