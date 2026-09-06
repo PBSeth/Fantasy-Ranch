@@ -1,1 +1,3 @@
 .career-overview-title{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:5px!important}.career-overview-title h3{margin:0!important;text-align:center!important}.career-overview-title .champ-legend{justify-content:center!important}
+.profile-name-row{display:flex!important;align-items:center!important;justify-content:center!important;gap:12px!important;text-align:center!important}.profile-name-row h1{margin-left:0!important;margin-right:0!important;text-align:center!important}
+.profile-grid + .section .section-head{justify-content:center!important;text-align:center!important}.profile-grid + .section .section-head h2{width:100%!important;text-align:center!important}
