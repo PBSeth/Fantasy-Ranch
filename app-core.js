@@ -17,6 +17,13 @@ const managerFromLabel = label => DATA.managers[label] || Object.values(DATA.man
 const fullManagerName = label => managerDisplay(managerFromLabel(label)) || label;
 const routeParts = () => location.hash.replace(/^#/, '').split('/').filter(Boolean);
 
+function parseSeasonRecord(record) {
+  const m=String(record || '').match(/^(\d+)-(\d+)(?:-(\d+))?/);
+  if(!m) return null;
+  const wins=Number(m[1]), losses=Number(m[2]), ties=Number(m[3] || 0);
+  return {wins,losses,ties,games:wins+losses+ties};
+}
+
 function setActiveNav(name) {
   document.querySelectorAll('[data-nav]').forEach(a => a.classList.toggle('active', a.dataset.nav === name));
 }
