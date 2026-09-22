@@ -45,7 +45,8 @@ function renderManager(id) {
     </section>
     <section class="section">
       <div class="section-head"><h2>Year by year</h2></div>
-      <div class="table-wrap"><table><thead><tr><th>Year</th><th>Finish</th><th>Reg. record</th><th>Playoffs</th><th>PF</th><th>PA</th></tr></thead><tbody>${profileTable(m)}</tbody></table></div>
+      <div class="table-wrap"><table><thead><tr><th>Year</th><th>Finish</th><th>Reg. record</th><th>Playoffs</th><th>Top Pick</th><th>PF</th><th>PA</th></tr></thead><tbody>${profileTable(m)}</tbody></table></div>
+      ${m.topPick2026 ? `<div class="notice top-pick-current"><strong>2026 Top Pick:</strong> ${m.topPick2026}</div>` : ''}
     </section>`;
   document.getElementById('metricTabs')?.addEventListener('click',e=>{
     const b=e.target.closest('[data-metric]'); if(!b) return;

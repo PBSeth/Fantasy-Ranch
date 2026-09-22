@@ -307,6 +307,6 @@ function chartSVG(m, metricKey='legacy') {
 
 function profileTable(m) {
   return m.seasons.filter(s=>s.record || s.finish).slice().reverse().map(s=>`<tr>
-    <td><strong>${s.year}</strong></td><td class="cell-rank">${s.finish ? `${s.finish}` : '—'}</td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td>${s.pf != null ? fmt1.format(s.pf) : '—'}</td><td>${s.pa != null ? fmt1.format(s.pa) : '—'}</td>
+    <td><strong>${s.year}</strong></td><td class="cell-rank">${s.finish ? `${s.finish}` : '—'}</td><td>${safe(s.record)}</td><td>${safe(s.playoffRecord)}</td><td class="top-pick-cell">${safe(s.topPick)}</td><td>${s.pf != null ? fmt1.format(s.pf) : '—'}</td><td>${s.pa != null ? fmt1.format(s.pa) : '—'}</td>
   </tr>`).join('');
 }
