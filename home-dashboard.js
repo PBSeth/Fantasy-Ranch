@@ -158,11 +158,11 @@ function leagueHighlights() {
   managers.forEach(m=>{
     (m.seasons||[]).forEach(s=>{
       if(s.year < 2021 || !s.topPick) return;
-      const match=String(s.topPick).match(/^(.*) \\(\\$(\\d+)\\)$/);
+      const match=String(s.topPick).match(/^(.*) \(\$(\d+)\)$/);
       if(match) auctionPicks.push({m,year:s.year,player:match[1],price:Number(match[2])});
     });
     if(m.topPick2026){
-      const match=String(m.topPick2026).match(/^(.*) \\(\\$(\\d+)\\)$/);
+      const match=String(m.topPick2026).match(/^(.*) \(\$(\d+)\)$/);
       if(match) auctionPicks.push({m,year:2026,player:match[1],price:Number(match[2])});
     }
   });
@@ -176,7 +176,6 @@ function leagueHighlights() {
   const avgSpend=[...spendByManager.values()].filter(x=>x.count>=3).map(x=>({...x,avg:x.total/x.count}));
   const bigSpender=[...avgSpend].sort((a,b)=>b.avg-a.avg)[0];
   const valueShopper=[...avgSpend].sort((a,b)=>a.avg-b.avg)[0];
-
   return {
     mostTitles, mostPlayoffWins, mostCareerWins, careerWins,
     mostPlayoffApps:playoffApps[0], mostFinalsApps, maxFinalsAppearances,
