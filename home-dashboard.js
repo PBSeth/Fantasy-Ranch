@@ -1,11 +1,3 @@
-function parseSeasonRecord(record) {
-  const m = String(record || '').match(/^(\d+)-(\d+)(?:-(\d+))?/);
-  if (!m) return null;
-  const wins = Number(m[1]), losses = Number(m[2]), ties = Number(m[3] || 0);
-  const games = wins + losses + ties;
-  return { wins, losses, ties, games };
-}
-
 function formatDraftPosition(year, pos) {
   if (pos == null || pos === '') return '';
   if (typeof pos === 'number' || /^\d+$/.test(String(pos))) return `$${Number(pos)}`;
