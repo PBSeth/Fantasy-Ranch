@@ -230,7 +230,686 @@ renderHome = function() {
         ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), compactManagerName(h.worstMargin.m), h.worstMargin.s.year)}
         ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), compactManagerName(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
         ${highCard('Lowest PPG / starter', fmt1.format(h.lowestPpgPlayer.ppgPlayer), compactManagerName(h.lowestPpgPlayer.m), h.lowestPpgPlayer.s.year)}
-        ${highCard('Biggest Bet', `${h.biggestBet.price}`, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Biggest Bet', ', compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', ', compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', ', compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', ', compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.bargainBin.price, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++fmt1.format(h.bigSpender.avg)+' avg', compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.bargainBin.price, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++fmt1.format(h.valueShopper.avg)+' avg', compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.bargainBin.price, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++fmt1.format(h.bigSpender.avg)+' avg', compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
+        ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.bargainBin.price, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
+        ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
+        ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
+        ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
+        ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
+        ${highCard('Lowest career Win% · 3+ seasons', winPct3(h.lowestCareer.winPct), compactManagerName(h.lowestCareer), `${h.lowestCareer.serviceTime} seasons`)}
+        ${highCard('Playoff wins', h.mostPlayoffWins.playoffWins, compactManagerName(h.mostPlayoffWins))}
+        ${highCard('Playoff appearances', h.mostPlayoffApps.count, compactManagerName(h.mostPlayoffApps.m))}
+        ${highCard('Most Single Season Wins', h.maxSeasonWins, seasonWinsNames, seasonWinsYears)}
+        ${highCard('Fewest Single Season Wins', h.minSeasonWins, lowWinNames, lowWinYears)}
+        ${highCard('Consecutive Winning Seasons', h.maxWinningSeasonStreak, winningStreakNames, winningStreakYears)}
+        ${highCard('Consecutive Losing Seasons', h.maxLosingSeasonStreak, losingStreakNames, losingStreakYears)}
+        ${highCard('Highest Winning Season Rate · 3+ seasons', formatSeasonRate(h.highestWinningRate), rateNames(h.highestWinningRateLeaders), rateDetail(h.highestWinningRateLeaders,'winning'))}
+        ${highCard('Lowest Winning Season Rate · 3+ seasons', formatSeasonRate(h.lowestWinningRate), rateNames(h.lowestWinningRateLeaders), rateDetail(h.lowestWinningRateLeaders,'winning'))}
+        ${highCard('Highest Losing Season Rate · 3+ seasons', formatSeasonRate(h.highestLosingRate), rateNames(h.highestLosingRateLeaders), rateDetail(h.highestLosingRateLeaders,'losing'))}
+        ${highCard('Lowest Losing Season Rate · 3+ seasons', formatSeasonRate(h.lowestLosingRate), rateNames(h.lowestLosingRateLeaders), rateDetail(h.lowestLosingRateLeaders,'losing'))}
+        ${highCard('Biggest Legacy jump', `+${fmt.format(h.biggestJump.delta)}`, compactManagerName(h.biggestJump.m), `${h.biggestJump.fromYear} → ${h.biggestJump.toYear}`)}
+        ${highCard('Biggest Legacy drop', fmt.format(h.biggestDrop.delta), compactManagerName(h.biggestDrop.m), `${h.biggestDrop.fromYear} → ${h.biggestDrop.toYear}`)}
+      </div>
+    </section>
+
+    <section class="section wall-section champs-before-legacy">
+      <div class="section-head wall-title"><h2>Champions</h2></div>
+      <div class="champion-strip wall-champs">${champs.map(([year,c])=>{
+        const pick=formatDraftPosition(Number(year),c.draftPosition);
+        return `<div class="champ-card">
+          <div class="champ-year">${year}</div>
+          <div class="champ-manager">${trophyManagerName(c.manager)}</div>
+          <div class="champ-pick-group">
+            <div class="champ-pick-label">Top Draft Pick</div>
+            <div class="champ-player">${safe(c.playerPicked)}</div>
+            <div class="champ-cost">${pick || '—'}</div>
+          </div>
+        </div>`;
+      }).join('')}</div>
+    </section>
+
+    <section class="section legacy-section">
+      <div class="home-lead-head"><h1>Legacy Score</h1></div>
+      <div class="panel home-legacy-panel">
+        <div class="leaderboard">${leaderboardRows(legacy, m => fmt.format(m.legacyScore))}</div>
+      </div>
+    </section>`;
+};
++h.biggestBet.price, compactManagerName(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
         ${highCard('Bargain Bin', `${h.bargainBin.price}`, compactManagerName(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
         ${highCard('Big Spender', `${fmt1.format(h.bigSpender.avg)} avg`, compactManagerName(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
         ${highCard('Value Shopper', `${fmt1.format(h.valueShopper.avg)} avg`, compactManagerName(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
