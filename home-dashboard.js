@@ -222,10 +222,10 @@ renderHome = function() {
         ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), compactManagerName(h.worstMargin.m), h.worstMargin.s.year)}
         ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), compactManagerName(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
         ${highCard('Lowest PPG / starter', fmt1.format(h.lowestPpgPlayer.ppgPlayer), compactManagerName(h.lowestPpgPlayer.m), h.lowestPpgPlayer.s.year)}
-        ${highCard('Biggest Bet', '(h.biggestBet.m), `${h.biggestBet.player} · ${h.biggestBet.year}`)}
-        ${highCard('Bargain Bin', '(h.bargainBin.m), `${h.bargainBin.player} · ${h.bargainBin.year}`)}
-        ${highCard('Big Spender', '(h.bigSpender.m), `${h.bigSpender.count} auction seasons`)}
-        ${highCard('Value Shopper', '(h.valueShopper.m), `${h.valueShopper.count} auction seasons`)}
+        ${highCard('Biggest Bet', '$'+h.biggestBet.price, compactManagerName(h.biggestBet.m), h.biggestBet.player+' · '+h.biggestBet.year)}
+        ${highCard('Bargain Bin', '$'+h.bargainBin.price, compactManagerName(h.bargainBin.m), h.bargainBin.player+' · '+h.bargainBin.year)}
+        ${highCard('Big Spender', '$'+fmt1.format(h.bigSpender.avg)+' avg', compactManagerName(h.bigSpender.m), h.bigSpender.count+' auction seasons')}
+        ${highCard('Value Shopper', '$'+fmt1.format(h.valueShopper.avg)+' avg', compactManagerName(h.valueShopper.m), h.valueShopper.count+' auction seasons')}
         ${highCard('Most championships', h.mostTitles.titles, compactManagerName(h.mostTitles))}
         ${highCard('Most Finals Appearances', h.maxFinalsAppearances, finalsNames)}
         ${highCard('Career regular-season wins', h.careerWins, compactManagerName(h.mostCareerWins))}
