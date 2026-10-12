@@ -182,13 +182,16 @@ h1 { margin-bottom: 14px; font-family: Georgia, "Times New Roman", serif; font-s
 .h2h-picker select {
   min-width: min(330px, 100%);
   min-height: 44px;
-  padding: 0 38px 0 12px;
+  padding: 0 38px;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--card-2, var(--card));
   color: var(--ink);
   font-weight: 850;
+  text-align: center;
+  text-align-last: center;
 }
+.h2h-picker select option { text-align: center; }
 .h2h-result { margin-top: 18px; text-align: center; }
 .h2h-summary { display: grid; justify-items: center; gap: 16px; }
 .h2h-record { text-align: center; }
