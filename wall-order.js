@@ -4,6 +4,8 @@
   const groups = [
     // Career efficiency
     ['Highest Career Win%','Lowest Career Win%'],
+    // Head-to-head rivalry
+    ['Most Rivalry Wins','Fewest Rivalry Wins'],
     // Playoff résumé
     ['Most Playoff Wins','Most Playoff Appearances','Highest Playoff %','Lowest Playoff %'],
     // Season-level wins / consistency
