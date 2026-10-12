@@ -1,7 +1,7 @@
 {
   "season": 2016,
   "source": "ESPN historical scoreboard screenshots supplied by user",
-  "status": "Partial: Weeks 1-9 of 13 logged",
+  "status": "Complete: Weeks 1-13 logged",
   "canonicalManagerMap": {
     "Bumbling Berts": "Seth",
     "Katy Trail Blazers": "Brad",
@@ -584,6 +584,250 @@
           "score2": 87
         }
       ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Bumbling Berts",
+          "score1": 106.6,
+          "manager2": "Mason",
+          "team2": "Daks My Quarterback",
+          "score2": 108.8
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Mo.s' Largest Furniture Store",
+          "score1": 123.7,
+          "manager2": "Diddles",
+          "team2": "Scrumptious Scravis",
+          "score2": 92.6
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Show Me Your Ditties",
+          "score1": 112,
+          "manager2": "Sean",
+          "team2": "The Dingoes",
+          "score2": 135.9
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Katy Trail Blazers",
+          "score1": 81.9,
+          "manager2": "Payton",
+          "team2": "Hut Hut One Hut Hut Two",
+          "score2": 119.1
+        },
+        {
+          "manager1": "Molly",
+          "team1": "Maple Syrup Secreeters",
+          "score1": 94.1,
+          "manager2": "Mott",
+          "team2": "Air Balled",
+          "score2": 93
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Trashboat 2016",
+          "score1": 116.8,
+          "manager2": "Ty/Molly",
+          "team2": "Donny, Your out Of Your Element",
+          "score2": 76.6
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Restraining Order",
+          "score1": 142,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 110.4
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "manager1": "Zach B",
+          "team1": "I Voted Shayne",
+          "score1": 102.1,
+          "manager2": "Seth",
+          "team2": "Bumbling Berts",
+          "score2": 108.9
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Daks My Quarterback",
+          "score1": 103.2,
+          "manager2": "Dick",
+          "team2": "Mo.s' Largest Furniture Store",
+          "score2": 82.4
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Scrumptious Scravis",
+          "score1": 103.3,
+          "manager2": "Kevin",
+          "team2": "Show Me Your Ditties",
+          "score2": 70.5
+        },
+        {
+          "manager1": "Sean",
+          "team1": "The Dingoes",
+          "score1": 80.9,
+          "manager2": "Brad",
+          "team2": "Katy Trail Blazers",
+          "score2": 76.2
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Hut Hut One Hut Hut Two",
+          "score1": 147,
+          "manager2": "Molly",
+          "team2": "Maple Syrup Secreeters",
+          "score2": 94.3
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Air Balled",
+          "score1": 114.8,
+          "manager2": "Shea",
+          "team2": "Trashboat 2016",
+          "score2": 121.8
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Donny, Your out Of Your Element",
+          "score1": 96.2,
+          "manager2": "Brett",
+          "team2": "Restraining Order",
+          "score2": 105.7
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Bumbling Berts",
+          "score1": 146.5,
+          "manager2": "Ty/Molly",
+          "team2": "Donny, Your out Of Your Element",
+          "score2": 98.2
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Show Me Your Ditties",
+          "score1": 114.5,
+          "manager2": "Mason",
+          "team2": "Daks My Quarterback",
+          "score2": 97
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Katy Trail Blazers",
+          "score1": 131.7,
+          "manager2": "Diddles",
+          "team2": "Scrumptious Scravis",
+          "score2": 109.2
+        },
+        {
+          "manager1": "Molly",
+          "team1": "Maple Syrup Secreeters",
+          "score1": 94.8,
+          "manager2": "Sean",
+          "team2": "The Dingoes",
+          "score2": 105.2
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Trashboat 2016",
+          "score1": 85.1,
+          "manager2": "Payton",
+          "team2": "Hut Hut One Hut Hut Two",
+          "score2": 104.6
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Restraining Order",
+          "score1": 86.5,
+          "manager2": "Mott",
+          "team2": "Air Balled",
+          "score2": 110.3
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Mo.s' Largest Furniture Store",
+          "score1": 70.3,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 107
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Bumbling Berts",
+          "score1": 99.9,
+          "manager2": "Mott",
+          "team2": "Air Balled",
+          "score2": 114.9
+        },
+        {
+          "manager1": "Molly",
+          "team1": "Maple Syrup Secreeters",
+          "score1": 93.1,
+          "manager2": "Diddles",
+          "team2": "Scrumptious Scravis",
+          "score2": 106.9
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Mo.s' Largest Furniture Store",
+          "score1": 110.9,
+          "manager2": "Ty/Molly",
+          "team2": "Donny, Your out Of Your Element",
+          "score2": 100
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Restraining Order",
+          "score1": 108.6,
+          "manager2": "Payton",
+          "team2": "Hut Hut One Hut Hut Two",
+          "score2": 97.3
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Trashboat 2016",
+          "score1": 117.3,
+          "manager2": "Sean",
+          "team2": "The Dingoes",
+          "score2": 86.7
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Show Me Your Ditties",
+          "score1": 109.6,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 118.4
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Katy Trail Blazers",
+          "score1": 92.4,
+          "manager2": "Mason",
+          "team2": "Daks My Quarterback",
+          "score2": 82.4
+        }
+      ]
     }
   ],
   "partialThroughWeek9": {
@@ -676,5 +920,173 @@
     "14-team season; 7 head-to-head matchups per week.",
     "Bumbling Berts maps to Seth per existing Ranch 2016 scoring data.",
     "ESPN weekly scoreboard spelling 'Maple Syrup Secreeters' is preserved here; existing Ranch season-scoring file spells it 'Maple Syrup Secreteers'."
-  ]
+  ],
+  "lineup": {
+    "starters": [
+      "QB",
+      "RB",
+      "RB",
+      "WR",
+      "WR",
+      "TE",
+      "FLEX",
+      "D/ST",
+      "K"
+    ],
+    "starterCount": 9,
+    "source": "ESPN 2016 Season Stats screenshot supplied by user"
+  },
+  "screenshotSeasonTotals": {
+    "Seth": {
+      "w": 6,
+      "l": 7,
+      "t": 0,
+      "pf": 1379,
+      "pa": 1326.1
+    },
+    "Brad": {
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "pf": 1257.7,
+      "pa": 1223.6
+    },
+    "Sean": {
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "pf": 1341.5,
+      "pa": 1359.4
+    },
+    "Mott": {
+      "w": 8,
+      "l": 5,
+      "t": 0,
+      "pf": 1334.7,
+      "pa": 1198.7
+    },
+    "Brett": {
+      "w": 8,
+      "l": 5,
+      "t": 0,
+      "pf": 1375.4,
+      "pa": 1311.4
+    },
+    "Payton": {
+      "w": 8,
+      "l": 5,
+      "t": 0,
+      "pf": 1475.6,
+      "pa": 1390.9
+    },
+    "Zach B": {
+      "w": 9,
+      "l": 4,
+      "t": 0,
+      "pf": 1436.1,
+      "pa": 1297
+    },
+    "Shea": {
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "pf": 1428.3,
+      "pa": 1379.3
+    },
+    "Mason": {
+      "w": 5,
+      "l": 8,
+      "t": 0,
+      "pf": 1333,
+      "pa": 1385.5
+    },
+    "Ty/Molly": {
+      "w": 4,
+      "l": 9,
+      "t": 0,
+      "pf": 1278.9,
+      "pa": 1468.4
+    },
+    "Molly": {
+      "w": 3,
+      "l": 10,
+      "t": 0,
+      "pf": 1143,
+      "pa": 1452.1
+    },
+    "Diddles": {
+      "w": 7,
+      "l": 6,
+      "t": 0,
+      "pf": 1398.6,
+      "pa": 1429.5
+    },
+    "Dick": {
+      "w": 6,
+      "l": 7,
+      "t": 0,
+      "pf": 1273,
+      "pa": 1317.9
+    },
+    "Kevin": {
+      "w": 6,
+      "l": 7,
+      "t": 0,
+      "pf": 1414.6,
+      "pa": 1329.6
+    }
+  },
+  "reconciliation": {
+    "note": "ESPN historical weekly scoreboard values can differ from final season totals because later stat corrections are reflected in season stats/records. Preserve screenshot scores as displayed, but use officialSeasonRecords and data-scoring-2016-2018.json for final W-L/PF/PA.",
+    "outcomeChangingCorrections": [
+      {
+        "week": 10,
+        "manager": "Seth",
+        "opponent": "Mason",
+        "displayedScore": 106.6,
+        "opponentDisplayedScore": 108.8,
+        "effect": "Official records require this displayed Seth loss to become a Seth win / Mason loss after later stat correction.",
+        "exactCorrectedWeeklyScore": "Not uniquely recoverable from season totals alone; Seth's final season PF is +9.0 vs displayed-week sum, while Mason's final PA is +6.0."
+      }
+    ],
+    "seasonTotalAdjustments": {
+      "Seth": {
+        "pfDelta": 9,
+        "paDelta": 0
+      },
+      "Mott": {
+        "pfDelta": 3,
+        "paDelta": 0
+      },
+      "Zach B": {
+        "pfDelta": 0,
+        "paDelta": 3
+      },
+      "Shea": {
+        "pfDelta": 0,
+        "paDelta": 6
+      },
+      "Mason": {
+        "pfDelta": 0,
+        "paDelta": 6
+      },
+      "Ty/Molly": {
+        "pfDelta": 3,
+        "paDelta": 0
+      },
+      "Molly": {
+        "pfDelta": 0,
+        "paDelta": 6
+      },
+      "Diddles": {
+        "pfDelta": 9,
+        "paDelta": 0
+      },
+      "Dick": {
+        "pfDelta": 0,
+        "paDelta": 3
+      }
+    },
+    "unresolvedNote": "The remaining season-total stat corrections cannot be uniquely assigned to exact weeks from the screenshots alone. Only the Week 10 Seth–Mason outcome change is forced by the official final records."
+  }
 }
