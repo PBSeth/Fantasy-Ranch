@@ -1,7 +1,7 @@
 {
   "season": 2015,
   "source": "ESPN historical scoreboard screenshots supplied by user",
-  "status": "Partial: Weeks 1-9 logged",
+  "status": "Complete: Weeks 1-12 logged",
   "canonicalManagerMap": {
     "I'm a Burger": "Seth",
     "The Taylor Gang": "Mott",
@@ -507,6 +507,180 @@
           "score2": 100.5
         }
       ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "I'm a Burger",
+          "score1": 82,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 69.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "The Taylor Gang",
+          "score1": 91,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 72.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Chair Force",
+          "score1": 69.5,
+          "manager2": "Karscig",
+          "team2": "Gronky Kong",
+          "score2": 80
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 71,
+          "manager2": "Ty/Molly",
+          "team2": "Matt's Missing Ribs",
+          "score2": 86
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dummy No Dates",
+          "score1": 106,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 102.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "The Stellar Orb",
+          "score1": 113,
+          "manager2": "Brett",
+          "team2": "Disney No Dolla",
+          "score2": 85
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 90,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 88.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Gronky Kong",
+          "score1": 78,
+          "manager2": "Mott",
+          "team2": "The Taylor Gang",
+          "score2": 83
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 66.5,
+          "manager2": "Zach B",
+          "team2": "Chair Force",
+          "score2": 72
+        },
+        {
+          "manager1": "Brad",
+          "team1": "I Don't Fuck With You!",
+          "score1": 133,
+          "manager2": "Dick",
+          "team2": "Pants Up Dont Loot",
+          "score2": 52.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Disney No Dolla",
+          "score1": 50,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 76
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Molly's Master Plan",
+          "score1": 52.5,
+          "manager2": "Payton",
+          "team2": "The Stellar Orb",
+          "score2": 105.5
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "manager1": "Payton",
+          "team1": "The Stellar Orb",
+          "score1": 66,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 91
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Chair Force",
+          "score1": 84.5,
+          "manager2": "Mott",
+          "team2": "The Taylor Gang",
+          "score2": 107
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 109,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 81
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 76.5,
+          "manager2": "Dick",
+          "team2": "Pants Up Dont Loot",
+          "score2": 63
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Disney No Dolla",
+          "score1": 119,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 113
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Gronky Kong",
+          "score1": 101,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 91.5
+        }
+      ]
     }
-  ]
+  ],
+  "lineup": {
+    "starters": [
+      "QB",
+      "RB",
+      "RB",
+      "WR",
+      "WR",
+      "TE",
+      "FLEX",
+      "D/ST",
+      "K"
+    ],
+    "starterCount": 9,
+    "source": "ESPN 2015 Season Stats screenshot supplied by user"
+  }
 }
