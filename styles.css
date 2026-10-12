@@ -177,8 +177,8 @@ h1 { margin-bottom: 14px; font-family: Georgia, "Times New Roman", serif; font-s
 }
 .h2h-section .section-head > div { width: 100%; }
 .h2h-panel { padding: 18px; }
-.h2h-picker { display: flex; align-items: center; justify-content: center; gap: 12px; }
-.h2h-picker label { color: var(--muted); font-size: 10px; font-weight: 950; letter-spacing: .09em; text-transform: uppercase; }
+.h2h-picker { display: flex; align-items: center; justify-content: center; gap: 12px; text-align: center; }
+.h2h-picker label { width: 100%; color: var(--muted); font-size: 10px; font-weight: 950; letter-spacing: .09em; text-transform: uppercase; text-align: center; }
 .h2h-picker select {
   min-width: min(330px, 100%);
   min-height: 44px;
@@ -272,4 +272,16 @@ tbody tr:hover td { background: #fdf8f1; }
   .h2h-season-chip { flex: 0 0 auto; }
   .season-summary { grid-template-columns: 1fr; }
   .site-footer { flex-direction: column; }
+}
+
+
+.profile-year-section .section-head {
+  justify-content: center;
+  text-align: center;
+}
+.profile-year-section .section-head h2 { width: 100%; }
+@media (max-width: 680px) {
+  .h2h-picker { justify-items: center; }
+  .h2h-picker label { text-align: center; }
+  .profile-year-section .section-head { align-items: center; }
 }
