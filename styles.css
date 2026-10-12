@@ -307,6 +307,8 @@ tbody tr:hover td { background: #fdf8f1; }
   font-size: clamp(20px, 3vw, 31px);
   line-height: 1.02;
 }
+.h2h-faceoff-manager strong { display: block; }
+.h2h-faceoff-manager strong span { display: block; white-space: nowrap; }
 .h2h-faceoff-left { justify-content: flex-end; text-align: right; }
 .h2h-faceoff-right { justify-content: flex-start; text-align: left; }
 .h2h-faceoff-series {
