@@ -39,7 +39,7 @@ function h2hResultMarkup(m, opponentKey) {
     return `<div class="h2h-empty">No regular-season meetings logged with ${opponent ? managerDisplay(opponent) : 'this manager'}.</div>`;
   }
   const winPct=(r.w + (r.t || 0)*0.5) / r.games;
-  const seasons=(r.seasons || []).map(s=>`
+  const seasons=[...(r.seasons || [])].sort((a,b)=>a.year-b.year).map(s=>`
     <span class="h2h-season-chip">
       <b>${s.year}</b>
       <span>${s.t ? `${s.w}-${s.l}-${s.t}` : `${s.w}-${s.l}`}</span>
