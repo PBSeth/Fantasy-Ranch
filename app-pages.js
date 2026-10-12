@@ -52,12 +52,6 @@ function h2hLastFiveMarkup(series) {
   return last.map(x=>`<span class="h2h-result-pill h2h-result-${String(x.result).toLowerCase()}" title="${x.year} Week ${x.week}">${x.result}</span>`).join('');
 }
 
-function h2hSeriesStatus(m, opponent, r) {
-  if (r.w===r.l) return 'Series tied';
-  const leader=r.w>r.l ? managerDisplay(m) : managerDisplay(opponent);
-  return `${leader} leads by ${Math.abs(r.w-r.l)}`;
-}
-
 function h2hResultMarkup(m, opponentKey) {
   const currentKey=h2hManagerKey(m);
   const opponent=managerFromLabel(opponentKey);
@@ -79,9 +73,7 @@ function h2hResultMarkup(m, opponentKey) {
     <div class="h2h-faceoff">
       <div class="h2h-faceoff-manager h2h-faceoff-left"><strong>${managerDisplay(m)}</strong></div>
       <div class="h2h-faceoff-series">
-        <small>All-time series</small>
         <strong>${h2hRecordText(r)}</strong>
-        <span>${h2hSeriesStatus(m,opponent,r)}</span>
       </div>
       <div class="h2h-faceoff-manager h2h-faceoff-right"><strong>${managerDisplay(opponent)}</strong></div>
     </div>
