@@ -400,13 +400,13 @@ tbody tr:hover td { background: #1d1d1d; }
     text-transform: uppercase;
     text-align: left;
   }
-  .profile-grid + .section td:nth-child(1)::before { content: "Year"; }
-  .profile-grid + .section td:nth-child(2)::before { content: "Finish"; }
-  .profile-grid + .section td:nth-child(3)::before { content: "Reg. record"; }
-  .profile-grid + .section td:nth-child(4)::before { content: "Playoffs"; }
-  .profile-grid + .section td:nth-child(5)::before { content: "Legacy"; }
-  .profile-grid + .section td:nth-child(6)::before { content: "PF"; }
-  .profile-grid + .section td:nth-child(7)::before { content: "PA"; }
+  .profile-year-section td:nth-child(1)::before { content: "Year"; }
+  .profile-year-section td:nth-child(2)::before { content: "Finish"; }
+  .profile-year-section td:nth-child(3)::before { content: "Reg. record"; }
+  .profile-year-section td:nth-child(4)::before { content: "Playoffs"; }
+  .profile-year-section td:nth-child(5)::before { content: "Top Pick"; }
+  .profile-year-section td:nth-child(6)::before { content: "PF"; }
+  .profile-year-section td:nth-child(7)::before { content: "PA"; }
   .season-selector ~ .section td:nth-child(1)::before { content: "Finish"; }
   .season-selector ~ .section td:nth-child(2)::before { content: "Manager"; }
   .season-selector ~ .section td:nth-child(3)::before { content: "Record"; }
