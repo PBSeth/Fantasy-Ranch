@@ -25,7 +25,9 @@
           "score1": 122,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 105
+          "score2": 105,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Mott",
@@ -33,7 +35,9 @@
           "score1": 150,
           "manager2": "Zach B",
           "team2": "Double Enchromdres",
-          "score2": 112
+          "score2": 112,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         },
         {
           "manager1": "Ty/Molly",
@@ -41,7 +45,9 @@
           "score1": 142,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 133.5
+          "score2": 133.5,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Brad",
@@ -49,7 +55,9 @@
           "score1": 136,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 124.5
+          "score2": 124.5,
+          "displayedScoreWinner": "Brad",
+          "officialWinner": "Brad"
         },
         {
           "manager1": "Brett",
@@ -57,7 +65,10 @@
           "score1": 132.5,
           "manager2": "Kevin",
           "team2": "Gruden's Gang",
-          "score2": 122
+          "score2": 122,
+          "displayedScoreWinner": "Brett",
+          "officialWinner": "Kevin",
+          "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record."
         },
         {
           "manager1": "Diddles",
@@ -65,7 +76,9 @@
           "score1": 124.5,
           "manager2": "Karscig",
           "team2": "The J.J. Swatts",
-          "score2": 102.5
+          "score2": 102.5,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         }
       ]
     },
@@ -78,7 +91,9 @@
           "score1": 140.5,
           "manager2": "Brett",
           "team2": "Tom Raper",
-          "score2": 127.5
+          "score2": 127.5,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Ty/Molly",
@@ -86,7 +101,9 @@
           "score1": 156,
           "manager2": "Mott",
           "team2": "Fuck You, Kenny Britt",
-          "score2": 77.5
+          "score2": 77.5,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Zach B",
@@ -94,7 +111,9 @@
           "score1": 79.5,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 81.5
+          "score2": 81.5,
+          "displayedScoreWinner": "Brad",
+          "officialWinner": "Brad"
         },
         {
           "manager1": "Mason",
@@ -102,7 +121,9 @@
           "score1": 121.5,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 149
+          "score2": 149,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
         },
         {
           "manager1": "Kevin",
@@ -110,7 +131,9 @@
           "score1": 137.5,
           "manager2": "Diddles",
           "team2": "Dandy Daltons",
-          "score2": 125.5
+          "score2": 125.5,
+          "displayedScoreWinner": "Kevin",
+          "officialWinner": "Kevin"
         },
         {
           "manager1": "Payton",
@@ -118,7 +141,9 @@
           "score1": 129,
           "manager2": "Karscig",
           "team2": "The J.J. Swatts",
-          "score2": 157
+          "score2": 157,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         }
       ]
     },
@@ -131,7 +156,9 @@
           "score1": 106,
           "manager2": "Seth",
           "team2": "Sex Panther",
-          "score2": 71
+          "score2": 71,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         },
         {
           "manager1": "Mott",
@@ -139,7 +166,9 @@
           "score1": 144.5,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 122
+          "score2": 122,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         },
         {
           "manager1": "Dick",
@@ -147,7 +176,9 @@
           "score1": 140,
           "manager2": "Ty/Molly",
           "team2": "LOT LIZARDS",
-          "score2": 95.5
+          "score2": 95.5,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
         },
         {
           "manager1": "Mason",
@@ -155,7 +186,9 @@
           "score1": 147.5,
           "manager2": "Zach B",
           "team2": "Double Enchromdres",
-          "score2": 145
+          "score2": 145,
+          "displayedScoreWinner": "Mason",
+          "officialWinner": "Mason"
         },
         {
           "manager1": "Brett",
@@ -163,7 +196,9 @@
           "score1": 101.5,
           "manager2": "Diddles",
           "team2": "Dandy Daltons",
-          "score2": 150
+          "score2": 150,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         },
         {
           "manager1": "Payton",
@@ -171,7 +206,9 @@
           "score1": 121,
           "manager2": "Kevin",
           "team2": "Gruden's Gang",
-          "score2": 133.5
+          "score2": 133.5,
+          "displayedScoreWinner": "Kevin",
+          "officialWinner": "Kevin"
         }
       ]
     },
@@ -184,7 +221,9 @@
           "score1": 150,
           "manager2": "Kevin",
           "team2": "Gruden's Gang",
-          "score2": 104.5
+          "score2": 104.5,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Dick",
@@ -192,7 +231,9 @@
           "score1": 120,
           "manager2": "Mott",
           "team2": "Fuck You, Kenny Britt",
-          "score2": 121
+          "score2": 121,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         },
         {
           "manager1": "Brad",
@@ -200,7 +241,9 @@
           "score1": 136.5,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 133
+          "score2": 133,
+          "displayedScoreWinner": "Brad",
+          "officialWinner": "Brad"
         },
         {
           "manager1": "Ty/Molly",
@@ -208,7 +251,9 @@
           "score1": 147.5,
           "manager2": "Zach B",
           "team2": "Double Enchromdres",
-          "score2": 130
+          "score2": 130,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Karscig",
@@ -216,7 +261,9 @@
           "score1": 140.5,
           "manager2": "Brett",
           "team2": "Tom Raper",
-          "score2": 167.5
+          "score2": 167.5,
+          "displayedScoreWinner": "Brett",
+          "officialWinner": "Brett"
         },
         {
           "manager1": "Diddles",
@@ -224,7 +271,9 @@
           "score1": 136.5,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 92
+          "score2": 92,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         }
       ]
     },
@@ -237,7 +286,9 @@
           "score1": 154.5,
           "manager2": "Diddles",
           "team2": "Dandy Daltons",
-          "score2": 76.5
+          "score2": 76.5,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Mott",
@@ -245,7 +296,9 @@
           "score1": 138.5,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 142
+          "score2": 142,
+          "displayedScoreWinner": "Mason",
+          "officialWinner": "Mason"
         },
         {
           "manager1": "Zach B",
@@ -253,7 +306,9 @@
           "score1": 143.5,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 82
+          "score2": 82,
+          "displayedScoreWinner": "Zach B",
+          "officialWinner": "Zach B"
         },
         {
           "manager1": "Ty/Molly",
@@ -261,7 +316,9 @@
           "score1": 96.5,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 98
+          "score2": 98,
+          "displayedScoreWinner": "Brad",
+          "officialWinner": "Brad"
         },
         {
           "manager1": "Brett",
@@ -269,7 +326,9 @@
           "score1": 67,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 82.5
+          "score2": 82.5,
+          "displayedScoreWinner": "Payton",
+          "officialWinner": "Payton"
         },
         {
           "manager1": "Kevin",
@@ -277,7 +336,9 @@
           "score1": 109.5,
           "manager2": "Karscig",
           "team2": "The J.J. Swatts",
-          "score2": 143
+          "score2": 143,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         }
       ]
     },
@@ -290,7 +351,9 @@
           "score1": 93,
           "manager2": "Ty/Molly",
           "team2": "LOT LIZARDS",
-          "score2": 125.5
+          "score2": 125.5,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Brett",
@@ -298,7 +361,9 @@
           "score1": 137.5,
           "manager2": "Mott",
           "team2": "Fuck You, Kenny Britt",
-          "score2": 145
+          "score2": 145,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         },
         {
           "manager1": "Kevin",
@@ -306,7 +371,9 @@
           "score1": 96,
           "manager2": "Zach B",
           "team2": "Double Enchromdres",
-          "score2": 117.5
+          "score2": 117.5,
+          "displayedScoreWinner": "Zach B",
+          "officialWinner": "Zach B"
         },
         {
           "manager1": "Diddles",
@@ -314,7 +381,9 @@
           "score1": 144,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 109
+          "score2": 109,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         },
         {
           "manager1": "Karscig",
@@ -322,7 +391,9 @@
           "score1": 147,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 139
+          "score2": 139,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         },
         {
           "manager1": "Payton",
@@ -330,7 +401,9 @@
           "score1": 151,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 126.5
+          "score2": 126.5,
+          "displayedScoreWinner": "Payton",
+          "officialWinner": "Payton"
         }
       ]
     },
@@ -343,7 +416,9 @@
           "score1": 143,
           "manager2": "Seth",
           "team2": "Sex Panther",
-          "score2": 156
+          "score2": 156,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Zach B",
@@ -351,7 +426,9 @@
           "score1": 81,
           "manager2": "Brett",
           "team2": "Tom Raper",
-          "score2": 138.5
+          "score2": 138.5,
+          "displayedScoreWinner": "Brett",
+          "officialWinner": "Brett"
         },
         {
           "manager1": "Ty/Molly",
@@ -359,7 +436,9 @@
           "score1": 147,
           "manager2": "Kevin",
           "team2": "Gruden's Gang",
-          "score2": 74
+          "score2": 74,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Dick",
@@ -367,7 +446,10 @@
           "score1": 74,
           "manager2": "Diddles",
           "team2": "Dandy Daltons",
-          "score2": 102
+          "score2": 102,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Dick",
+          "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record."
         },
         {
           "manager1": "Mason",
@@ -375,7 +457,9 @@
           "score1": 111.5,
           "manager2": "Karscig",
           "team2": "The J.J. Swatts",
-          "score2": 98
+          "score2": 98,
+          "displayedScoreWinner": "Mason",
+          "officialWinner": "Mason"
         },
         {
           "manager1": "Mott",
@@ -383,7 +467,9 @@
           "score1": 152,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 84
+          "score2": 84,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         }
       ]
     },
@@ -396,7 +482,9 @@
           "score1": 115.5,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 124.5
+          "score2": 124.5,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
         },
         {
           "manager1": "Brett",
@@ -404,7 +492,9 @@
           "score1": 128,
           "manager2": "Ty/Molly",
           "team2": "LOT LIZARDS",
-          "score2": 114.5
+          "score2": 114.5,
+          "displayedScoreWinner": "Brett",
+          "officialWinner": "Brett"
         },
         {
           "manager1": "Kevin",
@@ -412,7 +502,9 @@
           "score1": 100.5,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 81.5
+          "score2": 81.5,
+          "displayedScoreWinner": "Kevin",
+          "officialWinner": "Kevin"
         },
         {
           "manager1": "Diddles",
@@ -420,7 +512,9 @@
           "score1": 105,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 126
+          "score2": 126,
+          "displayedScoreWinner": "Mason",
+          "officialWinner": "Mason"
         },
         {
           "manager1": "Karscig",
@@ -428,7 +522,9 @@
           "score1": 118,
           "manager2": "Mott",
           "team2": "Fuck You, Kenny Britt",
-          "score2": 117
+          "score2": 117,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         },
         {
           "manager1": "Payton",
@@ -436,7 +532,10 @@
           "score1": 91.5,
           "manager2": "Zach B",
           "team2": "Double Enchromdres",
-          "score2": 122.5
+          "score2": 122.5,
+          "displayedScoreWinner": "Zach B",
+          "officialWinner": "Payton",
+          "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record."
         }
       ]
     },
@@ -449,7 +548,9 @@
           "score1": 122.5,
           "manager2": "Seth",
           "team2": "Sex Panther",
-          "score2": 131
+          "score2": 131,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Brad",
@@ -457,7 +558,9 @@
           "score1": 112.5,
           "manager2": "Brett",
           "team2": "Tom Raper",
-          "score2": 109.5
+          "score2": 109.5,
+          "displayedScoreWinner": "Brad",
+          "officialWinner": "Brad"
         },
         {
           "manager1": "Dick",
@@ -465,7 +568,9 @@
           "score1": 146,
           "manager2": "Kevin",
           "team2": "Gruden's Gang",
-          "score2": 114.5
+          "score2": 114.5,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
         },
         {
           "manager1": "Mott",
@@ -473,7 +578,9 @@
           "score1": 156,
           "manager2": "Diddles",
           "team2": "Dandy Daltons",
-          "score2": 156.5
+          "score2": 156.5,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         },
         {
           "manager1": "Zach B",
@@ -481,7 +588,9 @@
           "score1": 76.5,
           "manager2": "Karscig",
           "team2": "The J.J. Swatts",
-          "score2": 133.5
+          "score2": 133.5,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         },
         {
           "manager1": "Ty/Molly",
@@ -489,7 +598,9 @@
           "score1": 105,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 139
+          "score2": 139,
+          "displayedScoreWinner": "Payton",
+          "officialWinner": "Payton"
         }
       ]
     },
@@ -502,7 +613,9 @@
           "score1": 132.5,
           "manager2": "Mott",
           "team2": "Fuck You, Kenny Britt",
-          "score2": 77.5
+          "score2": 77.5,
+          "displayedScoreWinner": "Seth",
+          "officialWinner": "Seth"
         },
         {
           "manager1": "Brett",
@@ -510,7 +623,9 @@
           "score1": 132.5,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 138
+          "score2": 138,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
         },
         {
           "manager1": "Kevin",
@@ -518,7 +633,9 @@
           "score1": 109,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 81.5
+          "score2": 81.5,
+          "displayedScoreWinner": "Kevin",
+          "officialWinner": "Kevin"
         },
         {
           "manager1": "Diddles",
@@ -526,7 +643,9 @@
           "score1": 182,
           "manager2": "Zach B",
           "team2": "Double Enchromdres",
-          "score2": 143.5
+          "score2": 143.5,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         },
         {
           "manager1": "Karscig",
@@ -534,7 +653,9 @@
           "score1": 69.5,
           "manager2": "Ty/Molly",
           "team2": "LOT LIZARDS",
-          "score2": 108.5
+          "score2": 108.5,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Payton",
@@ -542,7 +663,9 @@
           "score1": 125,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 117.5
+          "score2": 117.5,
+          "displayedScoreWinner": "Payton",
+          "officialWinner": "Payton"
         }
       ]
     },
@@ -555,7 +678,9 @@
           "score1": 124.5,
           "manager2": "Seth",
           "team2": "Sex Panther",
-          "score2": 102
+          "score2": 102,
+          "displayedScoreWinner": "Zach B",
+          "officialWinner": "Zach B"
         },
         {
           "manager1": "Mason",
@@ -563,7 +688,9 @@
           "score1": 145.5,
           "manager2": "Brett",
           "team2": "Tom Raper",
-          "score2": 139.5
+          "score2": 139.5,
+          "displayedScoreWinner": "Mason",
+          "officialWinner": "Mason"
         },
         {
           "manager1": "Mott",
@@ -571,7 +698,9 @@
           "score1": 156,
           "manager2": "Kevin",
           "team2": "Gruden's Gang",
-          "score2": 109.5
+          "score2": 109.5,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         },
         {
           "manager1": "Ty/Molly",
@@ -579,7 +708,9 @@
           "score1": 174.5,
           "manager2": "Diddles",
           "team2": "Dandy Daltons",
-          "score2": 87
+          "score2": 87,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Brad",
@@ -587,7 +718,9 @@
           "score1": 115,
           "manager2": "Karscig",
           "team2": "The J.J. Swatts",
-          "score2": 97
+          "score2": 97,
+          "displayedScoreWinner": "Brad",
+          "officialWinner": "Brad"
         },
         {
           "manager1": "Dick",
@@ -595,7 +728,9 @@
           "score1": 111,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 89
+          "score2": 89,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
         }
       ]
     },
@@ -608,7 +743,9 @@
           "score1": 147.5,
           "manager2": "Seth",
           "team2": "Sex Panther",
-          "score2": 99
+          "score2": 99,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
         },
         {
           "manager1": "Diddles",
@@ -616,7 +753,9 @@
           "score1": 172.5,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 115.5
+          "score2": 115.5,
+          "displayedScoreWinner": "Diddles",
+          "officialWinner": "Diddles"
         },
         {
           "manager1": "Zach B",
@@ -624,7 +763,9 @@
           "score1": 108.5,
           "manager2": "Dick",
           "team2": "Kiss My Hamas",
-          "score2": 83
+          "score2": 83,
+          "displayedScoreWinner": "Zach B",
+          "officialWinner": "Zach B"
         },
         {
           "manager1": "Karscig",
@@ -632,7 +773,9 @@
           "score1": 145.5,
           "manager2": "Mason",
           "team2": "Hometown Heros",
-          "score2": 109
+          "score2": 109,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         },
         {
           "manager1": "Kevin",
@@ -640,7 +783,9 @@
           "score1": 111.5,
           "manager2": "Brad",
           "team2": "Catfish McCoy",
-          "score2": 96.5
+          "score2": 96.5,
+          "displayedScoreWinner": "Kevin",
+          "officialWinner": "Kevin"
         },
         {
           "manager1": "Mott",
@@ -648,9 +793,26 @@
           "score1": 114,
           "manager2": "Brett",
           "team2": "Tom Raper",
-          "score2": 95
+          "score2": 95,
+          "displayedScoreWinner": "Mott",
+          "officialWinner": "Mott"
         }
       ]
     }
-  ]
+  ],
+  "officialSeasonRecords": {
+    "Seth": "7-5",
+    "Mott": "7-5",
+    "Payton": "5-7",
+    "Zach B": "4-8",
+    "Ty/Molly": "8-4",
+    "Mason": "5-7",
+    "Brad": "6-6",
+    "Dick": "7-5",
+    "Brett": "5-7",
+    "Kevin": "4-8",
+    "Diddles": "7-5",
+    "Karscig": "7-5"
+  },
+  "reconciliationNote": "The 72 displayed weekly scores do not reproduce six teams' preserved final W-L records. Exactly three matchup outcomes must differ from the displayed score comparison to reconcile every 2012 final record: Week 1 Kevin over Brett, Week 7 Dick over Diddles, and Week 8 Payton over Zach B. The cause of the historical score discrepancy is not yet confirmed, so both displayedScoreWinner and officialWinner are retained."
 }
