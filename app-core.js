@@ -120,6 +120,13 @@ function teamPpgForSeason(s) {
 }
 
 function starterCountForYear(year) {
+  const verifiedStarterCounts = {
+    2012: 14,
+    2013: 10,
+    2014: 9
+  };
+  if (verifiedStarterCounts[Number(year)]) return verifiedStarterCounts[Number(year)];
+
   const raw = DATA?.champions?.[String(year)]?.avgPPGPlayer;
   if (!raw || !String(raw).includes('/')) return null;
   const [avgTeamPpg, avgPpgPerPlayer] = String(raw).split('/').map(Number);
