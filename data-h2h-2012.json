@@ -1,0 +1,656 @@
+{
+  "season": 2012,
+  "source": "ESPN historical scoreboard screenshots supplied by user",
+  "canonicalManagerMap": {
+    "Sex Panther": "Seth",
+    "Fuck You, Kenny Britt": "Mott",
+    "Edward Scissorfans": "Payton",
+    "Double Enchromdres": "Zach B",
+    "LOT LIZARDS": "Ty/Molly",
+    "Hometown Heros": "Mason",
+    "Catfish McCoy": "Brad",
+    "Kiss My Hamas": "Dick",
+    "Tom Raper": "Brett",
+    "Gruden's Gang": "Kevin",
+    "Dandy Daltons": "Diddles",
+    "The J.J. Swatts": "Karscig"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 122,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 105
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 150,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 112
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 142,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 133.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Catfish McCoy",
+          "score1": 136,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 124.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 132.5,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 122
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dandy Daltons",
+          "score1": 124.5,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 102.5
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 140.5,
+          "manager2": "Brett",
+          "team2": "Tom Raper",
+          "score2": 127.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 156,
+          "manager2": "Mott",
+          "team2": "Fuck You, Kenny Britt",
+          "score2": 77.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Double Enchromdres",
+          "score1": 79.5,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 81.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Hometown Heros",
+          "score1": 121.5,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 149
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Gruden's Gang",
+          "score1": 137.5,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 125.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Edward Scissorfans",
+          "score1": 129,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 157
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "manager1": "Karscig",
+          "team1": "The J.J. Swatts",
+          "score1": 106,
+          "manager2": "Seth",
+          "team2": "Sex Panther",
+          "score2": 71
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 144.5,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 122
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Kiss My Hamas",
+          "score1": 140,
+          "manager2": "Ty/Molly",
+          "team2": "LOT LIZARDS",
+          "score2": 95.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Hometown Heros",
+          "score1": 147.5,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 145
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 101.5,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 150
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Edward Scissorfans",
+          "score1": 121,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 133.5
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 150,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 104.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Kiss My Hamas",
+          "score1": 120,
+          "manager2": "Mott",
+          "team2": "Fuck You, Kenny Britt",
+          "score2": 121
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Catfish McCoy",
+          "score1": 136.5,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 133
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 147.5,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 130
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "The J.J. Swatts",
+          "score1": 140.5,
+          "manager2": "Brett",
+          "team2": "Tom Raper",
+          "score2": 167.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dandy Daltons",
+          "score1": 136.5,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 92
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 154.5,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 76.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 138.5,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 142
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Double Enchromdres",
+          "score1": 143.5,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 82
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 96.5,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 98
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 67,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 82.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Gruden's Gang",
+          "score1": 109.5,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 143
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 93,
+          "manager2": "Ty/Molly",
+          "team2": "LOT LIZARDS",
+          "score2": 125.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 137.5,
+          "manager2": "Mott",
+          "team2": "Fuck You, Kenny Britt",
+          "score2": 145
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Gruden's Gang",
+          "score1": 96,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 117.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dandy Daltons",
+          "score1": 144,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 109
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "The J.J. Swatts",
+          "score1": 147,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 139
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Edward Scissorfans",
+          "score1": 151,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 126.5
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "manager1": "Brad",
+          "team1": "Catfish McCoy",
+          "score1": 143,
+          "manager2": "Seth",
+          "team2": "Sex Panther",
+          "score2": 156
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Double Enchromdres",
+          "score1": 81,
+          "manager2": "Brett",
+          "team2": "Tom Raper",
+          "score2": 138.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 147,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 74
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Kiss My Hamas",
+          "score1": 74,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 102
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Hometown Heros",
+          "score1": 111.5,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 98
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 152,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 84
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 115.5,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 124.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 128,
+          "manager2": "Ty/Molly",
+          "team2": "LOT LIZARDS",
+          "score2": 114.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Gruden's Gang",
+          "score1": 100.5,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 81.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dandy Daltons",
+          "score1": 105,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 126
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "The J.J. Swatts",
+          "score1": 118,
+          "manager2": "Mott",
+          "team2": "Fuck You, Kenny Britt",
+          "score2": 117
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Edward Scissorfans",
+          "score1": 91.5,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 122.5
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "manager1": "Mason",
+          "team1": "Hometown Heros",
+          "score1": 122.5,
+          "manager2": "Seth",
+          "team2": "Sex Panther",
+          "score2": 131
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Catfish McCoy",
+          "score1": 112.5,
+          "manager2": "Brett",
+          "team2": "Tom Raper",
+          "score2": 109.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Kiss My Hamas",
+          "score1": 146,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 114.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 156,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 156.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Double Enchromdres",
+          "score1": 76.5,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 133.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 105,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 139
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 132.5,
+          "manager2": "Mott",
+          "team2": "Fuck You, Kenny Britt",
+          "score2": 77.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 132.5,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 138
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Gruden's Gang",
+          "score1": 109,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 81.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dandy Daltons",
+          "score1": 182,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 143.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "The J.J. Swatts",
+          "score1": 69.5,
+          "manager2": "Ty/Molly",
+          "team2": "LOT LIZARDS",
+          "score2": 108.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Edward Scissorfans",
+          "score1": 125,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 117.5
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "manager1": "Zach B",
+          "team1": "Double Enchromdres",
+          "score1": 124.5,
+          "manager2": "Seth",
+          "team2": "Sex Panther",
+          "score2": 102
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Hometown Heros",
+          "score1": 145.5,
+          "manager2": "Brett",
+          "team2": "Tom Raper",
+          "score2": 139.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 156,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 109.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 174.5,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 87
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Catfish McCoy",
+          "score1": 115,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 97
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Kiss My Hamas",
+          "score1": 111,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 89
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 147.5,
+          "manager2": "Seth",
+          "team2": "Sex Panther",
+          "score2": 99
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dandy Daltons",
+          "score1": 172.5,
+          "manager2": "Payton",
+          "team2": "Edward Scissorfans",
+          "score2": 115.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Double Enchromdres",
+          "score1": 108.5,
+          "manager2": "Dick",
+          "team2": "Kiss My Hamas",
+          "score2": 83
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "The J.J. Swatts",
+          "score1": 145.5,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 109
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Gruden's Gang",
+          "score1": 111.5,
+          "manager2": "Brad",
+          "team2": "Catfish McCoy",
+          "score2": 96.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck You, Kenny Britt",
+          "score1": 114,
+          "manager2": "Brett",
+          "team2": "Tom Raper",
+          "score2": 95
+        }
+      ]
+    }
+  ]
+}
