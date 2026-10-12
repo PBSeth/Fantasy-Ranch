@@ -682,5 +682,41 @@
     ],
     "starterCount": 9,
     "source": "ESPN 2015 Season Stats screenshot supplied by user"
+  },
+  "reconciliation": {
+    "note": "ESPN historical weekly scoreboard values can differ from final season totals because later stat corrections are reflected in season stats/records. Preserve screenshot scores as displayed, but use officialSeasonRecords for final W-L.",
+    "knownOutcomeChangingCorrections": [
+      {
+        "week": 3,
+        "manager": "Kevin",
+        "displayedScore": 89,
+        "correctedScore": 92,
+        "opponent": "Mason",
+        "opponentScore": 91.5,
+        "effect": "Kevin win / Mason loss"
+      },
+      {
+        "week": 7,
+        "manager": "Payton",
+        "displayedScore": 88.5,
+        "correctedScore": 91.5,
+        "opponent": "Ty/Molly",
+        "opponentScore": 89,
+        "effect": "Payton win / Ty/Molly loss"
+      }
+    ],
+    "remainingSeasonTotalAdjustments": {
+      "Seth": 3,
+      "Zach B": 3,
+      "Mott": 3,
+      "Karscig": 6
+    },
+    "remainingOpponentPAAdjustments": {
+      "Diddles": 6,
+      "Kevin": 3,
+      "Brett": 3,
+      "Dick": 3
+    },
+    "unresolvedNote": "The remaining +15 points of season-total stat corrections cannot be assigned to exact weeks from the screenshots alone; none change the official final records."
   }
 }
