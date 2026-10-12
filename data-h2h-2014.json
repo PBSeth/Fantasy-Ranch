@@ -1,7 +1,7 @@
 {
   "season": 2014,
   "source": "ESPN historical scoreboard screenshots supplied by user",
-  "status": "Weeks 1-9 logged; awaiting Weeks 10-12",
+  "status": "Complete: Weeks 1-12 logged",
   "canonicalManagerMap": {
     "The Final Member": "Seth",
     "Fuck the Semis": "Mott",
@@ -507,6 +507,184 @@
           "score2": 94
         }
       ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "The Final Member",
+          "score1": 107.5,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 83
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck the Semis",
+          "score1": 93.5,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 90.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Can't Seem to Find Molly",
+          "score1": 47.5,
+          "manager2": "Karscig",
+          "team2": "Ferguson Frenzies",
+          "score2": 83
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 116,
+          "manager2": "Ty/Molly",
+          "team2": "Seasons Over",
+          "score2": 101.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Crimson Carps",
+          "score1": 117.5,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 117.5,
+          "displayedScoreWinner": "Tie",
+          "officialWinner": "Mason",
+          "reconciliationNote": "ESPN displays 117.5-117.5 but marks African Flow as the winner; official 2014 records also require Mason to receive the win."
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Raelinn's Tailbone",
+          "score1": 78,
+          "manager2": "Brett",
+          "team2": "Straight Cash Homie",
+          "score2": 108
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 100.5,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 125
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Ferguson Frenzies",
+          "score1": 134,
+          "manager2": "Mott",
+          "team2": "Fuck the Semis",
+          "score2": 86
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 44,
+          "manager2": "Zach B",
+          "team2": "I Can't Seem to Find Molly",
+          "score2": 32.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Coach Harris",
+          "score1": 56,
+          "manager2": "Dick",
+          "team2": "Shut Up Dick Nobody Cares",
+          "score2": 58
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Straight Cash Homie",
+          "score1": 135.5,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 66.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Sugar Ray Rice",
+          "score1": 91.5,
+          "manager2": "Payton",
+          "team2": "Raelinn's Tailbone",
+          "score2": 105
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        {
+          "manager1": "Payton",
+          "team1": "Raelinn's Tailbone",
+          "score1": 102,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 121
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Can't Seem to Find Molly",
+          "score1": 59,
+          "manager2": "Mott",
+          "team2": "Fuck the Semis",
+          "score2": 129
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 94,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 53.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 103,
+          "manager2": "Dick",
+          "team2": "Shut Up Dick Nobody Cares",
+          "score2": 55.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Straight Cash Homie",
+          "score1": 110,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 111
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Ferguson Frenzies",
+          "score1": 117.5,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 68
+        }
+      ]
     }
-  ]
+  ],
+  "starterConfiguration": {
+    "count": 9,
+    "slots": [
+      "QB",
+      "RB",
+      "RB",
+      "WR",
+      "WR",
+      "TE",
+      "FLEX",
+      "D/ST",
+      "K"
+    ],
+    "source": "2014 ESPN team overview screenshot supplied by user",
+    "note": "Use team PPG / 9 for 2014 PPG-per-starter calculations."
+  }
 }
