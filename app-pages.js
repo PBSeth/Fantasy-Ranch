@@ -31,6 +31,33 @@ function h2hRecordText(r) {
   return r.t ? `${r.w}-${r.l}-${r.t}` : `${r.w}-${r.l}`;
 }
 
+function h2hOrderedSeries(currentKey, opponentKey) {
+  return DATA.h2hSeries?.series?.[currentKey]?.[opponentKey] || [];
+}
+
+function h2hCurrentStreak(series) {
+  if (!series.length) return '—';
+  const last=series[series.length-1]?.result;
+  let count=0;
+  for(let i=series.length-1;i>=0;i--) {
+    if(series[i]?.result!==last) break;
+    count+=1;
+  }
+  return `${last}${count}`;
+}
+
+function h2hLastFiveMarkup(series) {
+  const last=series.slice(-5);
+  if (!last.length) return '<span class="h2h-last-empty">—</span>';
+  return last.map(x=>`<span class="h2h-result-pill h2h-result-${String(x.result).toLowerCase()}" title="${x.year} Week ${x.week}">${x.result}</span>`).join('');
+}
+
+function h2hSeriesStatus(m, opponent, r) {
+  if (r.w===r.l) return 'Series tied';
+  const leader=r.w>r.l ? managerDisplay(m) : managerDisplay(opponent);
+  return `${leader} leads by ${Math.abs(r.w-r.l)}`;
+}
+
 function h2hResultMarkup(m, opponentKey) {
   const currentKey=h2hManagerKey(m);
   const opponent=managerFromLabel(opponentKey);
@@ -38,21 +65,31 @@ function h2hResultMarkup(m, opponentKey) {
   if (!opponent || !r || !r.games) {
     return `<div class="h2h-empty">No regular-season meetings logged with ${opponent ? managerDisplay(opponent) : 'this manager'}.</div>`;
   }
+
   const winPct=(r.w + (r.t || 0)*0.5) / r.games;
+  const ordered=h2hOrderedSeries(currentKey,opponentKey);
+  const streak=h2hCurrentStreak(ordered);
   const seasons=[...(r.seasons || [])].sort((a,b)=>a.year-b.year).map(s=>`
     <span class="h2h-season-chip">
       <b>${s.year}</b>
       <span>${s.t ? `${s.w}-${s.l}-${s.t}` : `${s.w}-${s.l}`}</span>
     </span>`).join('');
+
   return `
-    <div class="h2h-summary">
-      <div class="h2h-record">
+    <div class="h2h-faceoff">
+      <div class="h2h-faceoff-manager h2h-faceoff-left"><strong>${managerDisplay(m)}</strong></div>
+      <div class="h2h-faceoff-series">
+        <small>All-time series</small>
         <strong>${h2hRecordText(r)}</strong>
+        <span>${h2hSeriesStatus(m,opponent,r)}</span>
       </div>
-      <div class="h2h-meta">
-        <div><strong>${r.games}</strong><span>Meetings</span></div>
-        <div><strong>${(winPct*100).toFixed(1)}%</strong><span>Win%</span></div>
-      </div>
+      <div class="h2h-faceoff-manager h2h-faceoff-right"><strong>${managerDisplay(opponent)}</strong></div>
+    </div>
+    <div class="h2h-rivalry-stats">
+      <div class="h2h-rivalry-stat"><strong>${r.games}</strong><span>Meetings</span></div>
+      <div class="h2h-rivalry-stat"><strong>${(winPct*100).toFixed(1)}%</strong><span>Win%</span></div>
+      <div class="h2h-rivalry-stat"><strong>${streak}</strong><span>Current streak</span></div>
+      <div class="h2h-rivalry-stat h2h-last-five-stat"><div class="h2h-last-five">${h2hLastFiveMarkup(ordered)}</div><span>Last 5</span></div>
     </div>
     ${seasons ? `<div class="h2h-season-list">${seasons}</div>` : ''}`;
 }
@@ -168,10 +205,10 @@ async function boot(){
       '/data-core.json',
       '/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json',
       '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json',
-      '/data-h2h-summary.json'
+      '/data-h2h-summary.json','/data-h2h-series.json'
     ];
     const parts=await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok)throw new Error(`Data ${r.status}: ${f}`);return r.json();})));
-    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2h:parts[10]};
+    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2h:parts[10],h2hSeries:parts[11]};
     const scoringHistory=Object.assign({},...parts.slice(6,10));
     applyScoringHistory(scoringHistory);
     normalizeCareerAggregates();
