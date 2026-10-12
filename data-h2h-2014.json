@@ -1,0 +1,512 @@
+{
+  "season": 2014,
+  "source": "ESPN historical scoreboard screenshots supplied by user",
+  "status": "Weeks 1-9 logged; awaiting Weeks 10-12",
+  "canonicalManagerMap": {
+    "The Final Member": "Seth",
+    "Fuck the Semis": "Mott",
+    "Raelinn's Tailbone": "Payton",
+    "I Can't Seem to Find Molly": "Zach B",
+    "Seasons Over": "Ty/Molly",
+    "African Flow": "Mason",
+    "Coach Harris": "Brad",
+    "Shut Up Dick Nobody Cares": "Dick",
+    "Straight Cash Homie": "Brett",
+    "Sugar Ray Rice": "Kevin",
+    "Crimson Carps": "Diddles",
+    "Ferguson Frenzies": "Karscig"
+  },
+  "officialSeasonRecords": {
+    "Seth": "8-4",
+    "Mott": "9-3",
+    "Payton": "6-6",
+    "Zach B": "2-10",
+    "Ty/Molly": "3-9",
+    "Mason": "5-7",
+    "Brad": "4-8",
+    "Dick": "4-8",
+    "Brett": "8-4",
+    "Kevin": "8-4",
+    "Diddles": "7-5",
+    "Karscig": "8-4"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "The Final Member",
+          "score1": 107.5,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 113.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 84.5,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 96.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 80.5,
+          "manager2": "Karscig",
+          "team2": "Ferguson Frenzies",
+          "score2": 109
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Straight Cash Homie",
+          "score1": 63,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 86.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck the Semis",
+          "score1": 105.5,
+          "manager2": "Zach B",
+          "team2": "I Can't Seem to Find Molly",
+          "score2": 91.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 92,
+          "manager2": "Payton",
+          "team2": "Raelinn's Tailbone",
+          "score2": 101
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "manager1": "Zach B",
+          "team1": "I Can't Seem to Find Molly",
+          "score1": 78,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 89
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 115.5,
+          "manager2": "Ty/Molly",
+          "team2": "Seasons Over",
+          "score2": 55.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Coach Harris",
+          "score1": 80,
+          "manager2": "Brett",
+          "team2": "Straight Cash Homie",
+          "score2": 97.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Ferguson Frenzies",
+          "score1": 66,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 88.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 107,
+          "manager2": "Mott",
+          "team2": "Fuck the Semis",
+          "score2": 103.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Raelinn's Tailbone",
+          "score1": 59,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 91
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "manager1": "Mott",
+          "team1": "Fuck the Semis",
+          "score1": 91.5,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 85.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 52.5,
+          "manager2": "Brett",
+          "team2": "Straight Cash Homie",
+          "score2": 90.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Sugar Ray Rice",
+          "score1": 63.5,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 54
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Ferguson Frenzies",
+          "score1": 91,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 103
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Crimson Carps",
+          "score1": 81.5,
+          "manager2": "Dick",
+          "team2": "Shut Up Dick Nobody Cares",
+          "score2": 92.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Raelinn's Tailbone",
+          "score1": 91.5,
+          "manager2": "Zach B",
+          "team2": "I Can't Seem to Find Molly",
+          "score2": 60
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "The Final Member",
+          "score1": 84.5,
+          "manager2": "Payton",
+          "team2": "Raelinn's Tailbone",
+          "score2": 60.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Sugar Ray Rice",
+          "score1": 123.5,
+          "manager2": "Ty/Molly",
+          "team2": "Seasons Over",
+          "score2": 82
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Straight Cash Homie",
+          "score1": 133,
+          "manager2": "Karscig",
+          "team2": "Ferguson Frenzies",
+          "score2": 73
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 85.5,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 131
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Crimson Carps",
+          "score1": 65.5,
+          "manager2": "Mott",
+          "team2": "Fuck the Semis",
+          "score2": 96.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 46.5,
+          "manager2": "Zach B",
+          "team2": "I Can't Seem to Find Molly",
+          "score2": 49.5
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 95.5,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 106.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 92,
+          "manager2": "Karscig",
+          "team2": "Ferguson Frenzies",
+          "score2": 90.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Coach Harris",
+          "score1": 77.5,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 91
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 58.5,
+          "manager2": "Brett",
+          "team2": "Straight Cash Homie",
+          "score2": 90
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck the Semis",
+          "score1": 104.5,
+          "manager2": "Payton",
+          "team2": "Raelinn's Tailbone",
+          "score2": 79
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Can't Seem to Find Molly",
+          "score1": 92,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 111.5
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "The Final Member",
+          "score1": 98,
+          "manager2": "Brett",
+          "team2": "Straight Cash Homie",
+          "score2": 92
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck the Semis",
+          "score1": 119.5,
+          "manager2": "Ty/Molly",
+          "team2": "Seasons Over",
+          "score2": 96.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Can't Seem to Find Molly",
+          "score1": 39.5,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 93
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 67,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 76
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Crimson Carps",
+          "score1": 118,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 92.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Raelinn's Tailbone",
+          "score1": 78,
+          "manager2": "Karscig",
+          "team2": "Ferguson Frenzies",
+          "score2": 99.5
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "manager1": "Kevin",
+          "team1": "Sugar Ray Rice",
+          "score1": 104.5,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 96
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Coach Harris",
+          "score1": 50.5,
+          "manager2": "Mott",
+          "team2": "Fuck the Semis",
+          "score2": 87.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 82,
+          "manager2": "Zach B",
+          "team2": "I Can't Seem to Find Molly",
+          "score2": 83.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Straight Cash Homie",
+          "score1": 104,
+          "manager2": "Dick",
+          "team2": "Shut Up Dick Nobody Cares",
+          "score2": 76.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Ferguson Frenzies",
+          "score1": 110,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 97
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 80.5,
+          "manager2": "Payton",
+          "team2": "Raelinn's Tailbone",
+          "score2": 83.5
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "The Final Member",
+          "score1": 82.5,
+          "manager2": "Karscig",
+          "team2": "Ferguson Frenzies",
+          "score2": 121
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Fuck the Semis",
+          "score1": 98.5,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 110.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Can't Seem to Find Molly",
+          "score1": 94,
+          "manager2": "Brett",
+          "team2": "Straight Cash Homie",
+          "score2": 110.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Shut Up Dick Nobody Cares",
+          "score1": 75,
+          "manager2": "Kevin",
+          "team2": "Sugar Ray Rice",
+          "score2": 95.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Crimson Carps",
+          "score1": 124,
+          "manager2": "Ty/Molly",
+          "team2": "Seasons Over",
+          "score2": 116
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Raelinn's Tailbone",
+          "score1": 104.5,
+          "manager2": "Brad",
+          "team2": "Coach Harris",
+          "score2": 75
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Seasons Over",
+          "score1": 52,
+          "manager2": "Seth",
+          "team2": "The Final Member",
+          "score2": 76
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Straight Cash Homie",
+          "score1": 92.5,
+          "manager2": "Mott",
+          "team2": "Fuck the Semis",
+          "score2": 103.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Sugar Ray Rice",
+          "score1": 69,
+          "manager2": "Zach B",
+          "team2": "I Can't Seem to Find Molly",
+          "score2": 65
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Ferguson Frenzies",
+          "score1": 122.5,
+          "manager2": "Dick",
+          "team2": "Shut Up Dick Nobody Cares",
+          "score2": 89.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Coach Harris",
+          "score1": 54.5,
+          "manager2": "Diddles",
+          "team2": "Crimson Carps",
+          "score2": 131.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 79.5,
+          "manager2": "Payton",
+          "team2": "Raelinn's Tailbone",
+          "score2": 94
+        }
+      ]
+    }
+  ]
+}
