@@ -52,6 +52,12 @@ function h2hLastFiveMarkup(series) {
   return last.map(x=>`<span class="h2h-result-pill h2h-result-${String(x.result).toLowerCase()}" title="${x.year} Week ${x.week}">${x.result}</span>`).join('');
 }
 
+function h2hNameMarkup(manager) {
+  const parts=String(managerDisplay(manager) || '').trim().split(/\s+/);
+  if (parts.length < 2) return `<span>${parts[0] || '—'}</span><span>&nbsp;</span>`;
+  return `<span>${parts[0]}</span><span>${parts.slice(1).join(' ')}</span>`;
+}
+
 function h2hResultMarkup(m, opponentKey) {
   const currentKey=h2hManagerKey(m);
   const opponent=managerFromLabel(opponentKey);
@@ -71,11 +77,11 @@ function h2hResultMarkup(m, opponentKey) {
 
   return `
     <div class="h2h-faceoff">
-      <div class="h2h-faceoff-manager h2h-faceoff-left"><strong>${managerDisplay(m)}</strong></div>
+      <div class="h2h-faceoff-manager h2h-faceoff-left"><strong>${h2hNameMarkup(m)}</strong></div>
       <div class="h2h-faceoff-series">
         <strong>${h2hRecordText(r)}</strong>
       </div>
-      <div class="h2h-faceoff-manager h2h-faceoff-right"><strong>${managerDisplay(opponent)}</strong></div>
+      <div class="h2h-faceoff-manager h2h-faceoff-right"><strong>${h2hNameMarkup(opponent)}</strong></div>
     </div>
     <div class="h2h-rivalry-stats">
       <div class="h2h-rivalry-stat"><strong>${r.games}</strong><span>Meetings</span></div>
