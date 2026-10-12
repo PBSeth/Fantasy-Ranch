@@ -171,8 +171,13 @@ h1 { margin-bottom: 14px; font-family: Georgia, "Times New Roman", serif; font-s
 .big-stat span { color: var(--muted); font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
 
 .h2h-section { margin-top: 28px; }
+.h2h-section .section-head {
+  justify-content: center;
+  text-align: center;
+}
+.h2h-section .section-head > div { width: 100%; }
 .h2h-panel { padding: 18px; }
-.h2h-picker { display: flex; align-items: center; gap: 12px; }
+.h2h-picker { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .h2h-picker label { color: var(--muted); font-size: 10px; font-weight: 950; letter-spacing: .09em; text-transform: uppercase; }
 .h2h-picker select {
   min-width: min(330px, 100%);
@@ -184,15 +189,17 @@ h1 { margin-bottom: 14px; font-family: Georgia, "Times New Roman", serif; font-s
   color: var(--ink);
   font-weight: 850;
 }
-.h2h-result { margin-top: 18px; }
-.h2h-summary { display: flex; justify-content: space-between; align-items: end; gap: 18px; }
+.h2h-result { margin-top: 18px; text-align: center; }
+.h2h-summary { display: grid; justify-items: center; gap: 16px; }
+.h2h-record { text-align: center; }
 .h2h-record strong { display: block; font-family: Georgia, serif; font-size: clamp(38px, 6vw, 58px); line-height: .95; }
 .h2h-record span { display: block; margin-top: 7px; color: var(--muted); font-size: 13px; font-weight: 800; }
-.h2h-meta { display: flex; gap: 8px; }
+.h2h-meta { display: flex; justify-content: center; gap: 8px; }
 .h2h-meta div { min-width: 92px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 11px; background: var(--card-2, #f3eee6); }
 .h2h-meta strong { display: block; font-family: Georgia, serif; font-size: 21px; }
 .h2h-meta span { display: block; margin-top: 2px; color: var(--muted); font-size: 9px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
-.h2h-season-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; padding-top: 15px; border-top: 1px solid var(--line); }
+.h2h-season-list { display: flex; flex-wrap: nowrap; justify-content: flex-start; gap: 7px; margin-top: 16px; padding: 15px 2px 4px; border-top: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+.h2h-season-list::-webkit-scrollbar { display: none; }
 .h2h-season-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 31px; padding: 0 9px; border: 1px solid var(--line); border-radius: 999px; background: var(--card-2, #f3eee6); font-size: 11px; }
 .h2h-season-chip b { color: var(--muted); font-size: 10px; }
 .h2h-season-chip span { font-weight: 900; }
@@ -258,11 +265,10 @@ tbody tr:hover td { background: #fdf8f1; }
   .h2h-panel { padding: 14px; }
   .h2h-picker { display: grid; gap: 7px; }
   .h2h-picker select { width: 100%; min-width: 0; }
-  .h2h-summary { display: grid; gap: 13px; align-items: start; }
-  .h2h-meta { width: 100%; }
-  .h2h-meta div { flex: 1 1 0; min-width: 0; }
-  .h2h-season-list { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
-  .h2h-season-list::-webkit-scrollbar { display: none; }
+  .h2h-summary { display: grid; gap: 13px; justify-items: center; }
+  .h2h-meta { width: 100%; justify-content: center; }
+  .h2h-meta div { flex: 0 1 160px; min-width: 0; }
+  .h2h-season-list { overflow-x: auto; padding-bottom: 4px; }
   .h2h-season-chip { flex: 0 0 auto; }
   .season-summary { grid-template-columns: 1fr; }
   .site-footer { flex-direction: column; }
