@@ -1,0 +1,512 @@
+{
+  "season": 2013,
+  "source": "ESPN historical scoreboard screenshots supplied by user",
+  "status": "Weeks 1-9 logged; awaiting Weeks 10-13",
+  "canonicalManagerMap": {
+    "Dong in a Dude": "Seth",
+    "Wildcard Bitches": "Mott",
+    "Buzz's Girlfriend": "Payton",
+    "Team Laptop Breakers": "Zach B",
+    "Sacko Bowl Bound": "Ty/Molly",
+    "African Flow": "Mason",
+    "Brad Ditty": "Brad",
+    "Do you think I care Paul?": "Dick",
+    "I dont like Syrup": "Brett",
+    "Team Tiny Hands": "Kevin",
+    "I Didn't Say Shots!!!!": "Diddles",
+    "Anne Harold Gallagher": "Karscig"
+  },
+  "officialSeasonRecords": {
+    "Seth": "9-4",
+    "Mott": "8-5",
+    "Payton": "5-8",
+    "Zach B": "6-7",
+    "Ty/Molly": "4-9",
+    "Mason": "12-1",
+    "Brad": "10-3",
+    "Dick": "2-11",
+    "Brett": "7-6",
+    "Kevin": "5-8",
+    "Diddles": "5-8",
+    "Karscig": "5-8"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Dong in a Dude",
+          "score1": 94,
+          "manager2": "Payton",
+          "team2": "Buzz's Girlfriend",
+          "score2": 125.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Wildcard Bitches",
+          "score1": 144.5,
+          "manager2": "Zach B",
+          "team2": "Team Laptop Breakers",
+          "score2": 163.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Sacko Bowl Bound",
+          "score1": 116,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 133
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Brad Ditty",
+          "score1": 141.5,
+          "manager2": "Dick",
+          "team2": "Do you think I care Paul?",
+          "score2": 127.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "I dont like Syrup",
+          "score1": 143,
+          "manager2": "Kevin",
+          "team2": "Team Tiny Hands",
+          "score2": 139
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "I Didn't Say Shots!!!!",
+          "score1": 103.5,
+          "manager2": "Karscig",
+          "team2": "Anne Harold Gallagher",
+          "score2": 125.5
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Dong in a Dude",
+          "score1": 93.5,
+          "manager2": "Brett",
+          "team2": "I dont like Syrup",
+          "score2": 89
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Sacko Bowl Bound",
+          "score1": 93.5,
+          "manager2": "Mott",
+          "team2": "Wildcard Bitches",
+          "score2": 113.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Team Laptop Breakers",
+          "score1": 108,
+          "manager2": "Brad",
+          "team2": "Brad Ditty",
+          "score2": 130
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 170,
+          "manager2": "Dick",
+          "team2": "Do you think I care Paul?",
+          "score2": 81
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Team Tiny Hands",
+          "score1": 92,
+          "manager2": "Diddles",
+          "team2": "I Didn't Say Shots!!!!",
+          "score2": 157
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Buzz's Girlfriend",
+          "score1": 114,
+          "manager2": "Karscig",
+          "team2": "Anne Harold Gallagher",
+          "score2": 142
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "manager1": "Karscig",
+          "team1": "Anne Harold Gallagher",
+          "score1": 72,
+          "manager2": "Seth",
+          "team2": "Dong in a Dude",
+          "score2": 114.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Wildcard Bitches",
+          "score1": 124,
+          "manager2": "Brad",
+          "team2": "Brad Ditty",
+          "score2": 114.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Do you think I care Paul?",
+          "score1": 63,
+          "manager2": "Ty/Molly",
+          "team2": "Sacko Bowl Bound",
+          "score2": 112
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 141.5,
+          "manager2": "Zach B",
+          "team2": "Team Laptop Breakers",
+          "score2": 120
+        },
+        {
+          "manager1": "Brett",
+          "team1": "I dont like Syrup",
+          "score1": 81.5,
+          "manager2": "Diddles",
+          "team2": "I Didn't Say Shots!!!!",
+          "score2": 107
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Buzz's Girlfriend",
+          "score1": 80.5,
+          "manager2": "Kevin",
+          "team2": "Team Tiny Hands",
+          "score2": 92
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Dong in a Dude",
+          "score1": 153,
+          "manager2": "Kevin",
+          "team2": "Team Tiny Hands",
+          "score2": 99.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Do you think I care Paul?",
+          "score1": 86,
+          "manager2": "Mott",
+          "team2": "Wildcard Bitches",
+          "score2": 140
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Brad Ditty",
+          "score1": 102,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 116.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Sacko Bowl Bound",
+          "score1": 123,
+          "manager2": "Zach B",
+          "team2": "Team Laptop Breakers",
+          "score2": 106.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Anne Harold Gallagher",
+          "score1": 140,
+          "manager2": "Brett",
+          "team2": "I dont like Syrup",
+          "score2": 148.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "I Didn't Say Shots!!!!",
+          "score1": 109,
+          "manager2": "Payton",
+          "team2": "Buzz's Girlfriend",
+          "score2": 77.5
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Dong in a Dude",
+          "score1": 99,
+          "manager2": "Diddles",
+          "team2": "I Didn't Say Shots!!!!",
+          "score2": 107.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Wildcard Bitches",
+          "score1": 87,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 145
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Team Laptop Breakers",
+          "score1": 100.5,
+          "manager2": "Dick",
+          "team2": "Do you think I care Paul?",
+          "score2": 135
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Sacko Bowl Bound",
+          "score1": 105,
+          "manager2": "Brad",
+          "team2": "Brad Ditty",
+          "score2": 106
+        },
+        {
+          "manager1": "Brett",
+          "team1": "I dont like Syrup",
+          "score1": 123,
+          "manager2": "Payton",
+          "team2": "Buzz's Girlfriend",
+          "score2": 118.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Team Tiny Hands",
+          "score1": 115.5,
+          "manager2": "Karscig",
+          "team2": "Anne Harold Gallagher",
+          "score2": 91.5
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Dong in a Dude",
+          "score1": 126.5,
+          "manager2": "Ty/Molly",
+          "team2": "Sacko Bowl Bound",
+          "score2": 109
+        },
+        {
+          "manager1": "Brett",
+          "team1": "I dont like Syrup",
+          "score1": 87,
+          "manager2": "Mott",
+          "team2": "Wildcard Bitches",
+          "score2": 130
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Team Tiny Hands",
+          "score1": 105.5,
+          "manager2": "Zach B",
+          "team2": "Team Laptop Breakers",
+          "score2": 87
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "I Didn't Say Shots!!!!",
+          "score1": 99,
+          "manager2": "Brad",
+          "team2": "Brad Ditty",
+          "score2": 146
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Anne Harold Gallagher",
+          "score1": 110,
+          "manager2": "Dick",
+          "team2": "Do you think I care Paul?",
+          "score2": 59.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Buzz's Girlfriend",
+          "score1": 99.5,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 94.5
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "manager1": "Brad",
+          "team1": "Brad Ditty",
+          "score1": 118,
+          "manager2": "Seth",
+          "team2": "Dong in a Dude",
+          "score2": 114
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Team Laptop Breakers",
+          "score1": 107,
+          "manager2": "Brett",
+          "team2": "I dont like Syrup",
+          "score2": 106
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Sacko Bowl Bound",
+          "score1": 87,
+          "manager2": "Kevin",
+          "team2": "Team Tiny Hands",
+          "score2": 96
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Do you think I care Paul?",
+          "score1": 111,
+          "manager2": "Diddles",
+          "team2": "I Didn't Say Shots!!!!",
+          "score2": 73.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 139,
+          "manager2": "Karscig",
+          "team2": "Anne Harold Gallagher",
+          "score2": 96
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Wildcard Bitches",
+          "score1": 104.5,
+          "manager2": "Payton",
+          "team2": "Buzz's Girlfriend",
+          "score2": 135
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Dong in a Dude",
+          "score1": 136.5,
+          "manager2": "Dick",
+          "team2": "Do you think I care Paul?",
+          "score2": 91
+        },
+        {
+          "manager1": "Brett",
+          "team1": "I dont like Syrup",
+          "score1": 101,
+          "manager2": "Ty/Molly",
+          "team2": "Sacko Bowl Bound",
+          "score2": 78.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Team Tiny Hands",
+          "score1": 105.5,
+          "manager2": "Brad",
+          "team2": "Brad Ditty",
+          "score2": 167.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "I Didn't Say Shots!!!!",
+          "score1": 82.5,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 138.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Anne Harold Gallagher",
+          "score1": 86,
+          "manager2": "Mott",
+          "team2": "Wildcard Bitches",
+          "score2": 111
+        },
+        {
+          "manager1": "Payton",
+          "team1": "Buzz's Girlfriend",
+          "score1": 129.5,
+          "manager2": "Zach B",
+          "team2": "Team Laptop Breakers",
+          "score2": 112.5
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 177.5,
+          "manager2": "Seth",
+          "team2": "Dong in a Dude",
+          "score2": 110
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Brad Ditty",
+          "score1": 82,
+          "manager2": "Brett",
+          "team2": "I dont like Syrup",
+          "score2": 92.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Do you think I care Paul?",
+          "score1": 79.5,
+          "manager2": "Kevin",
+          "team2": "Team Tiny Hands",
+          "score2": 156
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Wildcard Bitches",
+          "score1": 135,
+          "manager2": "Diddles",
+          "team2": "I Didn't Say Shots!!!!",
+          "score2": 85
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Team Laptop Breakers",
+          "score1": 133.5,
+          "manager2": "Karscig",
+          "team2": "Anne Harold Gallagher",
+          "score2": 117.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Sacko Bowl Bound",
+          "score1": 170.5,
+          "manager2": "Payton",
+          "team2": "Buzz's Girlfriend",
+          "score2": 93
+        }
+      ]
+    }
+  ]
+}
