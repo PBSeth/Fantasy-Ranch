@@ -288,3 +288,114 @@ tbody tr:hover td { background: #fdf8f1; }
   .h2h-picker label { text-align: center; }
   .profile-year-section .section-head { align-items: center; }
 }
+
+
+/* ESPN-inspired manager rivalry display */
+.h2h-faceoff {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+  align-items: center;
+  gap: 18px;
+  padding: 18px 4px 20px;
+}
+.h2h-faceoff-manager {
+  min-width: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 3vw, 31px);
+  line-height: 1.05;
+}
+.h2h-faceoff-left { text-align: right; }
+.h2h-faceoff-right { text-align: left; }
+.h2h-faceoff-series {
+  min-width: 156px;
+  text-align: center;
+}
+.h2h-faceoff-series small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.h2h-faceoff-series strong {
+  display: block;
+  margin-top: 4px;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 58px);
+  line-height: .95;
+}
+.h2h-faceoff-series span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 850;
+}
+.h2h-rivalry-stats {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 8px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.h2h-rivalry-stat {
+  min-width: 0;
+  padding: 11px 10px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--card-2, #f3eee6);
+  text-align: center;
+}
+.h2h-rivalry-stat > strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.05;
+}
+.h2h-rivalry-stat > span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.h2h-last-five {
+  min-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.h2h-result-pill {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 950;
+  border: 1px solid var(--line);
+}
+.h2h-result-w { background: rgba(95,180,136,.16); color: var(--green); }
+.h2h-result-l { background: rgba(201,40,48,.14); color: #ef7277; }
+.h2h-result-t { background: rgba(255,255,255,.06); color: var(--muted); }
+.h2h-last-empty { color: var(--muted); }
+
+@media (max-width: 680px) {
+  .h2h-faceoff {
+    grid-template-columns: minmax(0,1fr) auto minmax(0,1fr);
+    gap: 8px;
+    padding: 15px 0 17px;
+  }
+  .h2h-faceoff-manager {
+    font-size: clamp(16px, 5vw, 21px);
+    overflow-wrap: anywhere;
+  }
+  .h2h-faceoff-series { min-width: 100px; }
+  .h2h-faceoff-series strong { font-size: clamp(31px, 10vw, 42px); }
+  .h2h-faceoff-series span { font-size: 9px; }
+  .h2h-rivalry-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
