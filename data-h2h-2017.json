@@ -1,0 +1,471 @@
+{
+  "season": 2017,
+  "source": "ESPN historical scoreboard screenshots supplied by user",
+  "status": "Partial: Weeks 1-7 of 13 logged",
+  "canonicalManagerMap": {
+    "Show Me Your Ditties": "Kevin",
+    "Gurleys Gone Wild": "Ty/Molly",
+    "Baton Rouge On Daddy's Dolla": "Diddles",
+    "Dilly Dilly": "Dick",
+    "Midwest Mailers": "Seth",
+    "Private Diddle": "Brett",
+    "Florida State Cinnamon Rolls": "Mason",
+    "Pissing the Season Away": "Nickster",
+    "Clay Co. Mock Draft Champ": "Mott",
+    "Dip Shits": "Brad",
+    "I Voted Shayne": "Zach B",
+    "Willie the Wombat": "Sean",
+    "What's The Deal With Fantasy": "Payton",
+    "Tax Waste 2017": "Shea"
+  },
+  "officialSeasonRecords": {
+    "Kevin": "9-4",
+    "Ty/Molly": "8-5",
+    "Diddles": "9-4",
+    "Dick": "10-3",
+    "Seth": "7-6",
+    "Brett": "7-6",
+    "Mason": "8-5",
+    "Nickster": "6-7",
+    "Mott": "6-7",
+    "Brad": "3-10",
+    "Zach B": "4-9",
+    "Sean": "5-8",
+    "Payton": "5-8",
+    "Shea": "4-9"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Gurleys Gone Wild",
+          "score1": 92.2,
+          "manager2": "Seth",
+          "team2": "Midwest Mailers",
+          "score2": 128.5
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Tax Waste 2017",
+          "score1": 84,
+          "manager2": "Sean",
+          "team2": "Willie the Wombat",
+          "score2": 103.8
+        },
+        {
+          "manager1": "Payton",
+          "team1": "What's The Deal With Fantasy",
+          "score1": 73.5,
+          "manager2": "Mott",
+          "team2": "Clay Co. Mock Draft Champ",
+          "score2": 81.6
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Dilly Dilly",
+          "score1": 93.8,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 66.9
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Dip Shits",
+          "score1": 89.1,
+          "manager2": "Mason",
+          "team2": "Florida State Cinnamon Rolls",
+          "score2": 111.2
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Baton Rouge On Daddy's Dolla",
+          "score1": 139.8,
+          "manager2": "Kevin",
+          "team2": "Show Me Your Ditties",
+          "score2": 153
+        },
+        {
+          "manager1": "Nickster",
+          "team1": "Pissing the Season Away",
+          "score1": 72.8,
+          "manager2": "Brett",
+          "team2": "Private Diddle",
+          "score2": 63.5
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Midwest Mailers",
+          "score1": 78.1,
+          "manager2": "Kevin",
+          "team2": "Show Me Your Ditties",
+          "score2": 102.4
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Dilly Dilly",
+          "score1": 126.5,
+          "manager2": "Payton",
+          "team2": "What's The Deal With Fantasy",
+          "score2": 80.1
+        },
+        {
+          "manager1": "Sean",
+          "team1": "Willie the Wombat",
+          "score1": 108.7,
+          "manager2": "Ty/Molly",
+          "team2": "Gurleys Gone Wild",
+          "score2": 75.2
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Tax Waste 2017",
+          "score1": 104.9,
+          "manager2": "Brad",
+          "team2": "Dip Shits",
+          "score2": 81
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Clay Co. Mock Draft Champ",
+          "score1": 90.4,
+          "manager2": "Diddles",
+          "team2": "Baton Rouge On Daddy's Dolla",
+          "score2": 86.2
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Voted Shayne",
+          "score1": 119.3,
+          "manager2": "Nickster",
+          "team2": "Pissing the Season Away",
+          "score2": 93.4
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Florida State Cinnamon Rolls",
+          "score1": 93.6,
+          "manager2": "Brett",
+          "team2": "Private Diddle",
+          "score2": 97
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Midwest Mailers",
+          "score1": 48,
+          "manager2": "Mott",
+          "team2": "Clay Co. Mock Draft Champ",
+          "score2": 91
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Dip Shits",
+          "score1": 93.5,
+          "manager2": "Ty/Molly",
+          "team2": "Gurleys Gone Wild",
+          "score2": 136.7
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Baton Rouge On Daddy's Dolla",
+          "score1": 131.7,
+          "manager2": "Payton",
+          "team2": "What's The Deal With Fantasy",
+          "score2": 110.6
+        },
+        {
+          "manager1": "Nickster",
+          "team1": "Pissing the Season Away",
+          "score1": 114.1,
+          "manager2": "Dick",
+          "team2": "Dilly Dilly",
+          "score2": 119.3
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Show Me Your Ditties",
+          "score1": 111.7,
+          "manager2": "Sean",
+          "team2": "Willie the Wombat",
+          "score2": 64
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Private Diddle",
+          "score1": 127.5,
+          "manager2": "Shea",
+          "team2": "Tax Waste 2017",
+          "score2": 92.8
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Florida State Cinnamon Rolls",
+          "score1": 84.5,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 74.3
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "manager1": "Payton",
+          "team1": "What's The Deal With Fantasy",
+          "score1": 118.8,
+          "manager2": "Seth",
+          "team2": "Midwest Mailers",
+          "score2": 94.6
+        },
+        {
+          "manager1": "Nickster",
+          "team1": "Pissing the Season Away",
+          "score1": 94.1,
+          "manager2": "Diddles",
+          "team2": "Baton Rouge On Daddy's Dolla",
+          "score2": 78.1
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Gurleys Gone Wild",
+          "score1": 118.2,
+          "manager2": "Kevin",
+          "team2": "Show Me Your Ditties",
+          "score2": 71.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Dip Shits",
+          "score1": 85.4,
+          "manager2": "Brett",
+          "team2": "Private Diddle",
+          "score2": 101.2
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Dilly Dilly",
+          "score1": 105,
+          "manager2": "Mason",
+          "team2": "Florida State Cinnamon Rolls",
+          "score2": 128.7
+        },
+        {
+          "manager1": "Sean",
+          "team1": "Willie the Wombat",
+          "score1": 55.2,
+          "manager2": "Mott",
+          "team2": "Clay Co. Mock Draft Champ",
+          "score2": 111.9
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Tax Waste 2017",
+          "score1": 82.4,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 81.1
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "Midwest Mailers",
+          "score1": 70.5,
+          "manager2": "Diddles",
+          "team2": "Baton Rouge On Daddy's Dolla",
+          "score2": 132.7
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Private Diddle",
+          "score1": 73.7,
+          "manager2": "Kevin",
+          "team2": "Show Me Your Ditties",
+          "score2": 101.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "Florida State Cinnamon Rolls",
+          "score1": 95.1,
+          "manager2": "Nickster",
+          "team2": "Pissing the Season Away",
+          "score2": 83.7
+        },
+        {
+          "manager1": "Mott",
+          "team1": "Clay Co. Mock Draft Champ",
+          "score1": 95.8,
+          "manager2": "Ty/Molly",
+          "team2": "Gurleys Gone Wild",
+          "score2": 106.1
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Voted Shayne",
+          "score1": 86.1,
+          "manager2": "Brad",
+          "team2": "Dip Shits",
+          "score2": 79
+        },
+        {
+          "manager1": "Sean",
+          "team1": "Willie the Wombat",
+          "score1": 87.5,
+          "manager2": "Payton",
+          "team2": "What's The Deal With Fantasy",
+          "score2": 116.3
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Tax Waste 2017",
+          "score1": 93.7,
+          "manager2": "Dick",
+          "team2": "Dilly Dilly",
+          "score2": 138
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "manager1": "Mason",
+          "team1": "Florida State Cinnamon Rolls",
+          "score1": 92.5,
+          "manager2": "Seth",
+          "team2": "Midwest Mailers",
+          "score2": 87.7
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Show Me Your Ditties",
+          "score1": 116.5,
+          "manager2": "Mott",
+          "team2": "Clay Co. Mock Draft Champ",
+          "score2": 70
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Private Diddle",
+          "score1": 100.5,
+          "manager2": "Zach B",
+          "team2": "I Voted Shayne",
+          "score2": 86
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Baton Rouge On Daddy's Dolla",
+          "score1": 125.5,
+          "manager2": "Sean",
+          "team2": "Willie the Wombat",
+          "score2": 95.1
+        },
+        {
+          "manager1": "Nickster",
+          "team1": "Pissing the Season Away",
+          "score1": 74.3,
+          "manager2": "Shea",
+          "team2": "Tax Waste 2017",
+          "score2": 80.2
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Gurleys Gone Wild",
+          "score1": 105.9,
+          "manager2": "Payton",
+          "team2": "What's The Deal With Fantasy",
+          "score2": 87.9
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Dip Shits",
+          "score1": 120.1,
+          "manager2": "Dick",
+          "team2": "Dilly Dilly",
+          "score2": 143
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "manager1": "Sean",
+          "team1": "Willie the Wombat",
+          "score1": 86,
+          "manager2": "Seth",
+          "team2": "Midwest Mailers",
+          "score2": 111.3
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "I Voted Shayne",
+          "score1": 105.4,
+          "manager2": "Mott",
+          "team2": "Clay Co. Mock Draft Champ",
+          "score2": 60.7
+        },
+        {
+          "manager1": "Shea",
+          "team1": "Tax Waste 2017",
+          "score1": 93.6,
+          "manager2": "Mason",
+          "team2": "Florida State Cinnamon Rolls",
+          "score2": 163.3
+        },
+        {
+          "manager1": "Payton",
+          "team1": "What's The Deal With Fantasy",
+          "score1": 82.1,
+          "manager2": "Kevin",
+          "team2": "Show Me Your Ditties",
+          "score2": 91.9
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Dilly Dilly",
+          "score1": 95.9,
+          "manager2": "Brett",
+          "team2": "Private Diddle",
+          "score2": 68.2
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Gurleys Gone Wild",
+          "score1": 85.4,
+          "manager2": "Diddles",
+          "team2": "Baton Rouge On Daddy's Dolla",
+          "score2": 102.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Dip Shits",
+          "score1": 81.5,
+          "manager2": "Nickster",
+          "team2": "Pissing the Season Away",
+          "score2": 94.9
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "14-team season; 7 head-to-head matchups per week.",
+    "Midwest Mailers maps to Seth; it is absent from the Opposing Teams menu because it is the user's own team, and the existing Ranch 2017 scoring data confirms the mapping.",
+    "Manager mappings were cross-referenced against data-scoring-2016-2018.json."
+  ]
+}
