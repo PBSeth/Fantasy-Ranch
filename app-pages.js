@@ -10,6 +10,54 @@ function managerMetricTabMarkup(tab) {
   return `<button class="metric-tab ${tab.twoLine ? 'metric-tab-two-line ' : ''}${tab.key==='legacy'?'active':''}" data-metric="${tab.key}" aria-label="${tab.key==='winpct' ? 'Career Win%' : tab.label}">${tab.label}</button>`;
 }
 
+function h2hManagerKey(m) {
+  return Object.entries(DATA.managers || {}).find(([,manager])=>manager===m)?.[0] || null;
+}
+
+function h2hOpponents(m) {
+  const currentKey=h2hManagerKey(m);
+  return Object.entries(DATA.managers || {})
+    .filter(([key])=>key!==currentKey)
+    .map(([key,manager])=>({
+      key,
+      manager,
+      games:DATA.h2h?.records?.[currentKey]?.[key]?.games || 0
+    }))
+    .sort((a,b)=>managerDisplay(a.manager).localeCompare(managerDisplay(b.manager)));
+}
+
+function h2hRecordText(r) {
+  if (!r) return '—';
+  return r.t ? `${r.w}-${r.l}-${r.t}` : `${r.w}-${r.l}`;
+}
+
+function h2hResultMarkup(m, opponentKey) {
+  const currentKey=h2hManagerKey(m);
+  const opponent=managerFromLabel(opponentKey);
+  const r=DATA.h2h?.records?.[currentKey]?.[opponentKey];
+  if (!opponent || !r || !r.games) {
+    return `<div class="h2h-empty">No regular-season meetings logged with ${opponent ? managerDisplay(opponent) : 'this manager'}.</div>`;
+  }
+  const winPct=(r.w + (r.t || 0)*0.5) / r.games;
+  const seasons=(r.seasons || []).map(s=>`
+    <span class="h2h-season-chip">
+      <b>${s.year}</b>
+      <span>${s.t ? `${s.w}-${s.l}-${s.t}` : `${s.w}-${s.l}`}</span>
+    </span>`).join('');
+  return `
+    <div class="h2h-summary">
+      <div class="h2h-record">
+        <strong>${h2hRecordText(r)}</strong>
+        <span>vs ${managerDisplay(opponent)}</span>
+      </div>
+      <div class="h2h-meta">
+        <div><strong>${r.games}</strong><span>Meetings</span></div>
+        <div><strong>${(winPct*100).toFixed(1)}%</strong><span>Win%</span></div>
+      </div>
+    </div>
+    ${seasons ? `<div class="h2h-season-list">${seasons}</div>` : ''}`;
+}
+
 function renderManager(id) {
   setActiveNav('managers');
   const m=managerById(id);
@@ -18,6 +66,8 @@ function renderManager(id) {
   const careerPA=(m.seasons || []).reduce((sum,s)=>sum+(Number.isFinite(Number(s.pa))?Number(s.pa):0),0);
   const hasCareerPF=(m.seasons || []).some(s=>s.pf!=null && Number.isFinite(Number(s.pf)));
   const hasCareerPA=(m.seasons || []).some(s=>s.pa!=null && Number.isFinite(Number(s.pa)));
+  const h2hOpps=h2hOpponents(m);
+  const defaultH2HOpponent=[...h2hOpps].sort((a,b)=>b.games-a.games || managerDisplay(a.manager).localeCompare(managerDisplay(b.manager)))[0]?.key || '';
   app.innerHTML = `
     <section class="profile-hero">
       <div>
@@ -43,6 +93,23 @@ function renderManager(id) {
         <div class="big-stat"><strong>${hasCareerPA ? fmt1.format(careerPA) : '—'}</strong><span>Career PA</span></div>
       </div>
     </section>
+    <section class="section h2h-section">
+      <div class="section-head">
+        <div>
+          <h2>Head to Head</h2>
+          <p>Regular season</p>
+        </div>
+      </div>
+      <div class="panel h2h-panel">
+        <div class="h2h-picker">
+          <label for="h2hOpponent">Opponent</label>
+          <select id="h2hOpponent">
+            ${h2hOpps.map(o=>`<option value="${o.key}" ${o.key===defaultH2HOpponent?'selected':''}>${managerDisplay(o.manager)}</option>`).join('')}
+          </select>
+        </div>
+        <div id="h2hResult" class="h2h-result">${defaultH2HOpponent ? h2hResultMarkup(m,defaultH2HOpponent) : '<div class="h2h-empty">No opponents available.</div>'}</div>
+      </div>
+    </section>
     <section class="section">
       <div class="section-head"><h2>Year by year</h2></div>
       <div class="table-wrap"><table><thead><tr><th>Year</th><th>Finish</th><th>Reg. record</th><th>Playoffs</th><th>Top Pick</th><th>PF</th><th>PA</th></tr></thead><tbody>${profileTable(m)}</tbody></table></div>
@@ -52,6 +119,9 @@ function renderManager(id) {
     const b=e.target.closest('[data-metric]'); if(!b) return;
     document.querySelectorAll('.metric-tab[data-metric]').forEach(x=>x.classList.toggle('active',x===b));
     document.getElementById('chartWrap').innerHTML=chartSVG(m,b.dataset.metric);
+  });
+  document.getElementById('h2hOpponent')?.addEventListener('change',e=>{
+    document.getElementById('h2hResult').innerHTML=h2hResultMarkup(m,e.target.value);
   });
 }
 
@@ -98,11 +168,12 @@ async function boot(){
     const files=[
       '/data-core.json',
       '/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json',
-      '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json'
+      '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json',
+      '/data-h2h-summary.json'
     ];
     const parts=await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok)throw new Error(`Data ${r.status}: ${f}`);return r.json();})));
-    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6))};
-    const scoringHistory=Object.assign({},...parts.slice(6));
+    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2h:parts[10]};
+    const scoringHistory=Object.assign({},...parts.slice(6,10));
     applyScoringHistory(scoringHistory);
     normalizeCareerAggregates();
     router();
