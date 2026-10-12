@@ -48,7 +48,6 @@ function h2hResultMarkup(m, opponentKey) {
     <div class="h2h-summary">
       <div class="h2h-record">
         <strong>${h2hRecordText(r)}</strong>
-        <span>vs ${managerDisplay(opponent)}</span>
       </div>
       <div class="h2h-meta">
         <div><strong>${r.games}</strong><span>Meetings</span></div>
@@ -110,7 +109,7 @@ function renderManager(id) {
         <div id="h2hResult" class="h2h-result">${defaultH2HOpponent ? h2hResultMarkup(m,defaultH2HOpponent) : '<div class="h2h-empty">No opponents available.</div>'}</div>
       </div>
     </section>
-    <section class="section">
+    <section class="section profile-year-section">
       <div class="section-head"><h2>Year by year</h2></div>
       <div class="table-wrap"><table><thead><tr><th>Year</th><th>Finish</th><th>Reg. record</th><th>Playoffs</th><th>Top Pick</th><th>PF</th><th>PA</th></tr></thead><tbody>${profileTable(m)}</tbody></table></div>
       ${m.topPick2026 ? `<div class="notice top-pick-current"><strong>2026 Top Pick:</strong> ${m.topPick2026}</div>` : ''}
