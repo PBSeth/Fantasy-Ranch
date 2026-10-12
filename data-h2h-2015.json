@@ -1,0 +1,512 @@
+{
+  "season": 2015,
+  "source": "ESPN historical scoreboard screenshots supplied by user",
+  "status": "Partial: Weeks 1-9 logged",
+  "canonicalManagerMap": {
+    "I'm a Burger": "Seth",
+    "The Taylor Gang": "Mott",
+    "The Stellar Orb": "Payton",
+    "Chair Force": "Zach B",
+    "Matt's Missing Ribs": "Ty/Molly",
+    "African Flow": "Mason",
+    "I Don't Fuck With You!": "Brad",
+    "Pants Up Dont Loot": "Dick",
+    "Disney No Dolla": "Brett",
+    "Molly's Master Plan": "Kevin",
+    "Dummy No Dates": "Diddles",
+    "Gronky Kong": "Karscig"
+  },
+  "officialSeasonRecords": {
+    "Seth": "7-5",
+    "Mott": "8-4",
+    "Payton": "9-3",
+    "Zach B": "6-6",
+    "Ty/Molly": "8-4",
+    "Mason": "6-6",
+    "Brad": "3-9",
+    "Dick": "2-10",
+    "Brett": "4-8",
+    "Kevin": "5-7",
+    "Diddles": "9-3",
+    "Karscig": "5-7"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "I'm a Burger",
+          "score1": 90.5,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 115.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 89,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 92
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 86.5,
+          "manager2": "Karscig",
+          "team2": "Gronky Kong",
+          "score2": 82.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Disney No Dolla",
+          "score1": 101.5,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 120.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "The Taylor Gang",
+          "score1": 81,
+          "manager2": "Zach B",
+          "team2": "Chair Force",
+          "score2": 59.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 93.5,
+          "manager2": "Payton",
+          "team2": "The Stellar Orb",
+          "score2": 130.5
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matchups": [
+        {
+          "manager1": "Zach B",
+          "team1": "Chair Force",
+          "score1": 92,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 113
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 62,
+          "manager2": "Ty/Molly",
+          "team2": "Matt's Missing Ribs",
+          "score2": 75
+        },
+        {
+          "manager1": "Brad",
+          "team1": "I Don't Fuck With You!",
+          "score1": 90.5,
+          "manager2": "Brett",
+          "team2": "Disney No Dolla",
+          "score2": 104.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Gronky Kong",
+          "score1": 81,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 82
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 58.5,
+          "manager2": "Mott",
+          "team2": "The Taylor Gang",
+          "score2": 74
+        },
+        {
+          "manager1": "Payton",
+          "team1": "The Stellar Orb",
+          "score1": 59,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 89
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matchups": [
+        {
+          "manager1": "Mott",
+          "team1": "The Taylor Gang",
+          "score1": 139.5,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 79
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 159.5,
+          "manager2": "Brett",
+          "team2": "Disney No Dolla",
+          "score2": 78
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Molly's Master Plan",
+          "score1": 89,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 91.5
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Gronky Kong",
+          "score1": 127,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 85.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dummy No Dates",
+          "score1": 82,
+          "manager2": "Dick",
+          "team2": "Pants Up Dont Loot",
+          "score2": 79.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "The Stellar Orb",
+          "score1": 98,
+          "manager2": "Zach B",
+          "team2": "Chair Force",
+          "score2": 83.5
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "I'm a Burger",
+          "score1": 62.5,
+          "manager2": "Payton",
+          "team2": "The Stellar Orb",
+          "score2": 92.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Molly's Master Plan",
+          "score1": 59,
+          "manager2": "Ty/Molly",
+          "team2": "Matt's Missing Ribs",
+          "score2": 103
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Disney No Dolla",
+          "score1": 70,
+          "manager2": "Karscig",
+          "team2": "Gronky Kong",
+          "score2": 82
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 42.5,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 91.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dummy No Dates",
+          "score1": 112,
+          "manager2": "Mott",
+          "team2": "The Taylor Gang",
+          "score2": 80.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 46,
+          "manager2": "Zach B",
+          "team2": "Chair Force",
+          "score2": 66
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matchups": [
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 47,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 125.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 75,
+          "manager2": "Karscig",
+          "team2": "Gronky Kong",
+          "score2": 81.5
+        },
+        {
+          "manager1": "Brad",
+          "team1": "I Don't Fuck With You!",
+          "score1": 78,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 79
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 78,
+          "manager2": "Brett",
+          "team2": "Disney No Dolla",
+          "score2": 79
+        },
+        {
+          "manager1": "Mott",
+          "team1": "The Taylor Gang",
+          "score1": 114.5,
+          "manager2": "Payton",
+          "team2": "The Stellar Orb",
+          "score2": 118.5
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Chair Force",
+          "score1": 94,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 77.5
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "I'm a Burger",
+          "score1": 129,
+          "manager2": "Brett",
+          "team2": "Disney No Dolla",
+          "score2": 80.5
+        },
+        {
+          "manager1": "Mott",
+          "team1": "The Taylor Gang",
+          "score1": 96.5,
+          "manager2": "Ty/Molly",
+          "team2": "Matt's Missing Ribs",
+          "score2": 133
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Chair Force",
+          "score1": 91.5,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 79.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 83,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 69
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dummy No Dates",
+          "score1": 98,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 93.5
+        },
+        {
+          "manager1": "Payton",
+          "team1": "The Stellar Orb",
+          "score1": 108,
+          "manager2": "Karscig",
+          "team2": "Gronky Kong",
+          "score2": 62.5
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        {
+          "manager1": "Kevin",
+          "team1": "Molly's Master Plan",
+          "score1": 111.5,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 128
+        },
+        {
+          "manager1": "Brad",
+          "team1": "I Don't Fuck With You!",
+          "score1": 46,
+          "manager2": "Mott",
+          "team2": "The Taylor Gang",
+          "score2": 96
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 106.5,
+          "manager2": "Zach B",
+          "team2": "Chair Force",
+          "score2": 75
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Disney No Dolla",
+          "score1": 116,
+          "manager2": "Dick",
+          "team2": "Pants Up Dont Loot",
+          "score2": 73
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Gronky Kong",
+          "score1": 101,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 114.5
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 89,
+          "manager2": "Payton",
+          "team2": "The Stellar Orb",
+          "score2": 88.5
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        {
+          "manager1": "Seth",
+          "team1": "I'm a Burger",
+          "score1": 100,
+          "manager2": "Karscig",
+          "team2": "Gronky Kong",
+          "score2": 83
+        },
+        {
+          "manager1": "Mott",
+          "team1": "The Taylor Gang",
+          "score1": 72,
+          "manager2": "Mason",
+          "team2": "African Flow",
+          "score2": 112
+        },
+        {
+          "manager1": "Zach B",
+          "team1": "Chair Force",
+          "score1": 150,
+          "manager2": "Brett",
+          "team2": "Disney No Dolla",
+          "score2": 107.5
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Pants Up Dont Loot",
+          "score1": 51.5,
+          "manager2": "Kevin",
+          "team2": "Molly's Master Plan",
+          "score2": 101.5
+        },
+        {
+          "manager1": "Diddles",
+          "team1": "Dummy No Dates",
+          "score1": 72,
+          "manager2": "Ty/Molly",
+          "team2": "Matt's Missing Ribs",
+          "score2": 107
+        },
+        {
+          "manager1": "Payton",
+          "team1": "The Stellar Orb",
+          "score1": 89.5,
+          "manager2": "Brad",
+          "team2": "I Don't Fuck With You!",
+          "score2": 52.5
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        {
+          "manager1": "Ty/Molly",
+          "team1": "Matt's Missing Ribs",
+          "score1": 89.5,
+          "manager2": "Seth",
+          "team2": "I'm a Burger",
+          "score2": 81.5
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Disney No Dolla",
+          "score1": 73.5,
+          "manager2": "Mott",
+          "team2": "The Taylor Gang",
+          "score2": 102.5
+        },
+        {
+          "manager1": "Kevin",
+          "team1": "Molly's Master Plan",
+          "score1": 77.5,
+          "manager2": "Zach B",
+          "team2": "Chair Force",
+          "score2": 88
+        },
+        {
+          "manager1": "Karscig",
+          "team1": "Gronky Kong",
+          "score1": 88,
+          "manager2": "Dick",
+          "team2": "Pants Up Dont Loot",
+          "score2": 138
+        },
+        {
+          "manager1": "Brad",
+          "team1": "I Don't Fuck With You!",
+          "score1": 73,
+          "manager2": "Diddles",
+          "team2": "Dummy No Dates",
+          "score2": 139.5
+        },
+        {
+          "manager1": "Mason",
+          "team1": "African Flow",
+          "score1": 108,
+          "manager2": "Payton",
+          "team2": "The Stellar Orb",
+          "score2": 100.5
+        }
+      ]
+    }
+  ]
+}
