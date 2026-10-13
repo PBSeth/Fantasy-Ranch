@@ -17,7 +17,7 @@
       <div class="wall-high-label">${row.title}</div>
       <div class="wall-high-value">${scoreText}</div>
       <div class="wall-high-name">${manager ? compactManagerName(manager) : row.manager}</div>
-      <div class="wall-high-detail">${row.season} Week ${row.week} • vs ${opponent ? compactManagerName(opponent) : row.opponent}</div>
+      <div class="wall-high-detail">${row.season} Week ${row.week}</div>
     </div>`;
   }
 
