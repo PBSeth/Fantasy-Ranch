@@ -1,24 +1,24 @@
 {
   "version": 1,
   "scope": "regular-season",
-  "note": "Canonical one-row-per-matchup H2H ledger. Results are complete for 2012-2025. Exact score fields are populated from archived weekly scoreboards as normalized; 2026 contains only explicitly supplied in-season rows until the full season import.",
+  "note": "Canonical one-row-per-matchup regular-season H2H ledger. 2012-2025 is 100% score-complete and score-verified. 2026 contains only explicitly supplied in-season rows until the full season import.",
   "throughCompleteSeason": 2025,
   "scoreCoverage": {
-    "2012": "complete",
-    "2013": "complete",
-    "2014": "complete",
-    "2015": "complete",
-    "2016": "complete",
-    "2017": "complete exact numeric scores",
-    "2018": "complete exact numeric scores",
+    "2012": "complete exact numeric scores; results score-verified",
+    "2013": "complete exact numeric scores; results score-verified",
+    "2014": "complete exact numeric scores; results score-verified",
+    "2015": "complete exact numeric scores; results score-verified",
+    "2016": "complete exact numeric scores; results score-verified",
+    "2017": "complete exact numeric scores; results score-verified",
+    "2018": "complete exact numeric scores; results score-verified",
     "2019": "complete exact numeric scores; results score-verified",
     "2020": "complete exact numeric scores; results score-verified",
     "2021": "complete exact numeric scores; results score-verified",
     "2022": "complete exact numeric scores; results score-verified; Week 13 full-league bye/no H2H",
     "2023": "complete exact numeric scores; results score-verified",
     "2024": "complete exact numeric scores; results score-verified",
-    "2025": "complete exact numeric scores",
-    "2026": "partial; only explicitly supplied games are included"
+    "2025": "complete exact numeric scores; results score-verified",
+    "2026": "partial; only explicitly supplied in-season games are included"
   },
   "records": {
     "singleGameHigh": {
@@ -28,7 +28,7 @@
       "season": 2016,
       "week": 3,
       "scope": "regular-season",
-      "verification": "Verified against structured 2012-2017 data and audited uploaded regular-season scoreboards through 2025."
+      "verification": "Computed from 100% exact regular-season H2H scores through 2025."
     },
     "singleGameLow": {
       "score": 13.24,
