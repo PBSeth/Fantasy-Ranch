@@ -38,6 +38,72 @@
       "week": 5,
       "scope": "regular-season",
       "provisionalSeason": true
+    },
+    "longestWinningStreak": {
+      "count": 8,
+      "leaders": [
+        {
+          "manager": "Kevin",
+          "count": 8,
+          "start": {
+            "season": 2019,
+            "week": 8,
+            "result": "W"
+          },
+          "end": {
+            "season": 2020,
+            "week": 2,
+            "result": "W"
+          }
+        },
+        {
+          "manager": "Mason",
+          "count": 8,
+          "start": {
+            "season": 2024,
+            "week": 12,
+            "result": "W"
+          },
+          "end": {
+            "season": 2025,
+            "week": 5,
+            "result": "W"
+          }
+        }
+      ]
+    },
+    "longestLosingStreak": {
+      "count": 9,
+      "leaders": [
+        {
+          "manager": "Nickster",
+          "count": 9,
+          "start": {
+            "season": 2024,
+            "week": 11,
+            "result": "L"
+          },
+          "end": {
+            "season": 2025,
+            "week": 5,
+            "result": "L"
+          }
+        },
+        {
+          "manager": "Sean",
+          "count": 9,
+          "start": {
+            "season": 2018,
+            "week": 8,
+            "result": "L"
+          },
+          "end": {
+            "season": 2019,
+            "week": 3,
+            "result": "L"
+          }
+        }
+      ]
     }
   },
   "sourceImages": {
