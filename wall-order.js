@@ -13,6 +13,7 @@
     // Season-rate profile
     ['Highest Winning Season Rate','Lowest Winning Season Rate'],
     // Scoring environment / production
+    ['Highest Score','Lowest Score'],
     ['Highest team PPG','Lowest team PPG','Highest PPG / starter','Lowest PPG / starter'],
     // Scoring margin
     ['Best scoring margin / game','Worst scoring margin / game'],
