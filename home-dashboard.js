@@ -139,13 +139,22 @@ function leagueHighlights() {
   const biggestDrop=[...legacyMoves].sort((a,b)=>a.delta-b.delta)[0];
   const lowestCareer=[...managers].filter(m=>(m.serviceTime||0)>=3 && m.winPct!=null).sort((a,b)=>a.winPct-b.winPct)[0];
 
-  const scoringRows=seasonRows.filter(x=>x.s.pfGame!=null).map(x=>({
-    ...x,
-    ppg:x.s.pfGame,
-    papg:x.s.paGame,
-    diffGame:x.s.diffGame!=null ? x.s.diffGame : (x.s.pfGame-x.s.paGame),
-    ppgPlayer:ppgPerPlayerForSeason(x.s)
-  }));
+  const scoringRows=seasonRows.filter(x=>x.s.pfGame!=null || x.s.pf!=null).map(x=>{
+    const games=x.games || recordGames(x.s.record);
+    const ppg=(x.s.pf!=null && games) ? Number(x.s.pf)/games : Number(x.s.pfGame);
+    const papg=(x.s.pa!=null && games) ? Number(x.s.pa)/games : Number(x.s.paGame);
+    const diffGame=(x.s.pf!=null && x.s.pa!=null && games)
+      ? (Number(x.s.pf)-Number(x.s.pa))/games
+      : (x.s.diffGame!=null ? Number(x.s.diffGame) : ppg-papg);
+    const starters=starterCountForYear(x.s.year);
+    return {
+      ...x,
+      ppg,
+      papg,
+      diffGame,
+      ppgPlayer:(starters && Number.isFinite(ppg)) ? ppg/starters : null
+    };
+  });
   const highestPpg=[...scoringRows].sort((a,b)=>b.ppg-a.ppg)[0];
   const lowestPpg=[...scoringRows].sort((a,b)=>a.ppg-b.ppg)[0];
   const bestMargin=[...scoringRows].sort((a,b)=>b.diffGame-a.diffGame)[0];
@@ -216,17 +225,22 @@ renderHome = function() {
   const losingStreakYears=h.losingSeasonStreakLeaders.map(x=>`${x.startYear}–${x.endYear}`).join(' / ');
   const rateNames=rows=>rows.map(x=>compactManagerName(x.m)).join(' / ');
   const rateDetail=(rows,kind)=>rows.map(x=>`${kind==='winning' ? x.winning : x.losing} of ${x.total} seasons`).join(' / ');
+  const sr=DATA.scoringRecords?.records || {};
+  const srName=row=>{
+    const manager=row ? managerFromLabel(row.manager) : null;
+    return manager ? compactManagerName(manager) : (row?.manager || '—');
+  };
 
   app.innerHTML = `
     <section class="home-lead highlights-lead">
       <div class="home-lead-head"><h1>Wall of Fame</h1></div>
       <div class="wall-high-grid highlights-grid">
-        ${highCard('Highest team PPG', fmt1.format(h.highestPpg.ppg), compactManagerName(h.highestPpg.m), h.highestPpg.s.year)}
-        ${highCard('Lowest team PPG', fmt1.format(h.lowestPpg.ppg), compactManagerName(h.lowestPpg.m), h.lowestPpg.s.year)}
-        ${highCard('Best scoring margin / game', `+${fmt1.format(h.bestMargin.diffGame)}`, compactManagerName(h.bestMargin.m), h.bestMargin.s.year)}
-        ${highCard('Worst scoring margin / game', fmt1.format(h.worstMargin.diffGame), compactManagerName(h.worstMargin.m), h.worstMargin.s.year)}
-        ${highCard('Highest PPG / starter', fmt1.format(h.highestPpgPlayer.ppgPlayer), compactManagerName(h.highestPpgPlayer.m), h.highestPpgPlayer.s.year)}
-        ${highCard('Lowest PPG / starter', fmt1.format(h.lowestPpgPlayer.ppgPlayer), compactManagerName(h.lowestPpgPlayer.m), h.lowestPpgPlayer.s.year)}
+        ${highCard('Highest team PPG', fmt1.format(sr.highestTeamPpg?.displayValue ?? h.highestPpg.ppg), sr.highestTeamPpg ? srName(sr.highestTeamPpg) : compactManagerName(h.highestPpg.m), sr.highestTeamPpg?.season ?? h.highestPpg.s.year)}
+        ${highCard('Lowest team PPG', fmt1.format(sr.lowestTeamPpg?.displayValue ?? h.lowestPpg.ppg), sr.lowestTeamPpg ? srName(sr.lowestTeamPpg) : compactManagerName(h.lowestPpg.m), sr.lowestTeamPpg?.season ?? h.lowestPpg.s.year)}
+        ${highCard('Best scoring margin / game', `+${fmt1.format(sr.bestScoringMarginPerGame?.displayValue ?? h.bestMargin.diffGame)}`, sr.bestScoringMarginPerGame ? srName(sr.bestScoringMarginPerGame) : compactManagerName(h.bestMargin.m), sr.bestScoringMarginPerGame?.season ?? h.bestMargin.s.year)}
+        ${highCard('Worst scoring margin / game', fmt1.format(sr.worstScoringMarginPerGame?.displayValue ?? h.worstMargin.diffGame), sr.worstScoringMarginPerGame ? srName(sr.worstScoringMarginPerGame) : compactManagerName(h.worstMargin.m), sr.worstScoringMarginPerGame?.season ?? h.worstMargin.s.year)}
+        ${highCard('Highest PPG / starter', fmt1.format(sr.highestPpgPerStarter?.displayValue ?? h.highestPpgPlayer.ppgPlayer), sr.highestPpgPerStarter ? srName(sr.highestPpgPerStarter) : compactManagerName(h.highestPpgPlayer.m), sr.highestPpgPerStarter?.season ?? h.highestPpgPlayer.s.year)}
+        ${highCard('Lowest PPG / starter', fmt1.format(sr.lowestPpgPerStarter?.displayValue ?? h.lowestPpgPlayer.ppgPlayer), sr.lowestPpgPerStarter ? srName(sr.lowestPpgPerStarter) : compactManagerName(h.lowestPpgPlayer.m), sr.lowestPpgPerStarter?.season ?? h.lowestPpgPlayer.s.year)}
         ${highCard('Priciest Top Pick', '$' + h.biggestBet.price, compactManagerName(h.biggestBet.m), h.biggestBet.player + ' · ' + h.biggestBet.year)}
         ${highCard('Cheapest Top Pick', '$' + h.bargainBin.price, compactManagerName(h.bargainBin.m), h.bargainBin.player + ' · ' + h.bargainBin.year)}
         ${highCard('Highest Avg. Top Pick', '$' + fmt1.format(h.bigSpender.avg) + ' avg', compactManagerName(h.bigSpender.m), h.bigSpender.count + ' auction seasons')}
