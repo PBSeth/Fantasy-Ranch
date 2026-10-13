@@ -18,3 +18,9 @@ Playoff byes count as playoff wins. Cumulative win percentage is rounded to four
 
 ## Local development
 Serve the directory with any static server, e.g. `python3 -m http.server 4173`.
+
+## H2H completeness
+- The 2012–2025 regular-season H2H ledger is 100% score-complete: 1,133 matchups with both scores stored.
+- Results are score-verified except explicit historical official-result overrides where the archived official outcome differs from the displayed score.
+- H2H summary, ordered series, rivalry extremes, scoring records, and regular-season streak records derive from the canonical ledger.
+- 2026 remains intentionally partial until the full season import.
