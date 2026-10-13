@@ -73,9 +73,11 @@ function h2hMarginText(value) {
 
 function h2hScoringExtremes(currentKey, opponentKey, expectedGames) {
   const through=Number(DATA.h2hLedger?.throughCompleteSeason || 0);
+  const currentSeason=Number(DATA.h2hLedger?.currentSeason?.season || 0);
+  const currentThroughWeek=Number(DATA.h2hLedger?.currentSeason?.throughWeek || 0);
   const meetings=(DATA.h2hLedger?.games || []).filter(g=>
     g.phase==='regular-season' &&
-    Number(g.season)<=through &&
+    (Number(g.season)<=through || (Number(g.season)===currentSeason && Number(g.week)<=currentThroughWeek)) &&
     ((g.managerA===currentKey && g.managerB===opponentKey) ||
      (g.managerA===opponentKey && g.managerB===currentKey))
   );
