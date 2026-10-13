@@ -4,8 +4,9 @@ Standalone league-history website for Fantasy Ranch. This project is intentional
 
 ## Source hierarchy
 1. Google Sheets is authoritative for league history and Legacy Score inputs.
-2. ESPN/Sleeper screenshots enrich scoring and historical team-name data.
-3. Discrepancies are reconciled rather than guessed.
+2. `data-h2h-ledger.json` is the canonical one-row-per-matchup regular-season H2H source. H2H records, streaks, recent form and single-game scoring records are derived from it.
+3. ESPN/Sleeper screenshots are retained as matchup/score evidence and indexed from the H2H ledger where numeric transcription is still pending.
+4. Discrepancies are reconciled rather than guessed. The 2026 ledger remains partial until the full season import.
 
 ## Legacy Score
 `Win% × 1000 × [1 + (0.05 × playoff wins) + (0.05 × service time) + (0.50 × championships)]`
