@@ -58,6 +58,59 @@ function h2hNameMarkup(manager) {
   return `<span>${parts[0]}</span><span>${parts.slice(1).join(' ')}</span>`;
 }
 
+function h2hScoreText(value) {
+  const n=Number(value);
+  if (!Number.isFinite(n)) return '—';
+  return Number(n.toFixed(2)).toString();
+}
+
+function h2hMarginText(value) {
+  const n=Number(value);
+  if (!Number.isFinite(n)) return '—';
+  const rounded=Number(n.toFixed(2));
+  return `${rounded>0?'+':''}${rounded}`;
+}
+
+function h2hScoringExtremes(currentKey, opponentKey, expectedGames) {
+  const through=Number(DATA.h2hLedger?.throughCompleteSeason || 0);
+  const meetings=(DATA.h2hLedger?.games || []).filter(g=>
+    g.phase==='regular-season' &&
+    Number(g.season)<=through &&
+    ((g.managerA===currentKey && g.managerB===opponentKey) ||
+     (g.managerA===opponentKey && g.managerB===currentKey))
+  );
+  const scored=meetings.filter(g=>
+    g.scoreStatus==='exact' &&
+    Number.isFinite(Number(g.scoreA)) &&
+    Number.isFinite(Number(g.scoreB))
+  );
+
+  if (meetings.length!==expectedGames || scored.length!==expectedGames) {
+    return {complete:false,scored:scored.length,total:expectedGames};
+  }
+
+  const rows=scored.map(g=>{
+    const left=g.managerA===currentKey;
+    const myScore=Number(left ? g.scoreA : g.scoreB);
+    const oppScore=Number(left ? g.scoreB : g.scoreA);
+    return {...g,myScore,oppScore,margin:myScore-oppScore};
+  });
+  const wins=rows.filter(x=>x.margin>0).sort((a,b)=>b.margin-a.margin);
+  const losses=rows.filter(x=>x.margin<0).sort((a,b)=>a.margin-b.margin);
+  return {complete:true,scored:scored.length,total:expectedGames,biggestWin:wins[0]||null,biggestLoss:losses[0]||null};
+}
+
+function h2hExtremeTile(label,row) {
+  if (!row) {
+    return `<div class="h2h-rivalry-stat"><strong>—</strong><span>${label}</span></div>`;
+  }
+  return `<div class="h2h-rivalry-stat">
+    <strong>${h2hMarginText(row.margin)}</strong>
+    <span>${label}</span>
+    <small class="h2h-rivalry-detail">${row.season} W${row.week} • ${h2hScoreText(row.myScore)}–${h2hScoreText(row.oppScore)}</small>
+  </div>`;
+}
+
 function h2hResultMarkup(m, opponentKey) {
   const currentKey=h2hManagerKey(m);
   const opponent=managerFromLabel(opponentKey);
@@ -69,6 +122,7 @@ function h2hResultMarkup(m, opponentKey) {
   const winPct=(r.w + (r.t || 0)*0.5) / r.games;
   const ordered=h2hOrderedSeries(currentKey,opponentKey);
   const streak=h2hCurrentStreak(ordered);
+  const scoring=h2hScoringExtremes(currentKey,opponentKey,r.games);
   const seasons=[...(r.seasons || [])].sort((a,b)=>a.year-b.year).map(s=>`
     <span class="h2h-season-chip">
       <b>${s.year}</b>
@@ -88,6 +142,10 @@ function h2hResultMarkup(m, opponentKey) {
       <div class="h2h-rivalry-stat"><strong>${(winPct*100).toFixed(1)}%</strong><span>Win%</span></div>
       <div class="h2h-rivalry-stat"><strong>${streak}</strong><span>Current streak</span></div>
       <div class="h2h-rivalry-stat h2h-last-five-stat"><div class="h2h-last-five">${h2hLastFiveMarkup(ordered)}</div><span>Last 5</span></div>
+      ${scoring.complete
+        ? h2hExtremeTile('Biggest win',scoring.biggestWin) + h2hExtremeTile('Biggest loss',scoring.biggestLoss)
+        : `<div class="h2h-rivalry-stat"><strong>—</strong><span>Biggest win</span><small class="h2h-rivalry-detail">${scoring.scored}/${scoring.total} scores filed</small></div>
+           <div class="h2h-rivalry-stat"><strong>—</strong><span>Biggest loss</span><small class="h2h-rivalry-detail">${scoring.scored}/${scoring.total} scores filed</small></div>`}
     </div>
     ${seasons ? `<div class="h2h-season-list">${seasons}</div>` : ''}`;
 }
@@ -260,12 +318,13 @@ async function boot(){
       '/data-core.json',
       '/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json',
       '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json',
-      '/data-h2h-ledger.json'
+      '/data-h2h-ledger.json','/data-scoring-records.json'
     ];
     const parts=await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok)throw new Error(`Data ${r.status}: ${f}`);return r.json();})));
     const h2hLedger=parts[10];
+    const scoringRecords=parts[11];
     const h2hViews=buildH2HViewsFromLedger(h2hLedger);
-    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2hLedger,...h2hViews};
+    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2hLedger,scoringRecords,...h2hViews};
     const scoringHistory=Object.assign({},...parts.slice(6,10));
     applyScoringHistory(scoringHistory);
     normalizeCareerAggregates();
