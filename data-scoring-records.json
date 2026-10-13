@@ -2,7 +2,7 @@
   "version": 1,
   "scope": "regular-season",
   "throughCompleteSeason": 2025,
-  "note": "Canonical Wall of Fame scoring records. Season-rate records are computed from raw PF/PA and exact regular-season game counts, not from subtraction of rounded per-game display fields. Single-game records are anchored to the canonical H2H ledger and archived weekly scoreboards.",
+  "note": "Canonical Wall of Fame scoring records. Season-rate records are computed from raw PF/PA and exact regular-season game counts. Single-game records are computed from the 100% score-complete 2012-2025 H2H ledger, with the explicitly supplied 2026 low retained provisionally.",
   "method": {
     "teamPpg": "PF / regular-season games",
     "scoringMarginPerGame": "(PF - PA) / regular-season games",
@@ -81,8 +81,9 @@
       "opponent": "Diddles",
       "season": 2016,
       "week": 3,
-      "source": "data-h2h-ledger.json",
-      "verification": "Verified against structured 2012-2017 data and audited uploaded regular-season scoreboards through 2025."
+      "scope": "regular-season",
+      "verification": "Computed from 100% exact regular-season H2H scores through 2025.",
+      "source": "data-h2h-ledger.json"
     },
     "lowestScore": {
       "score": 13.24,
@@ -90,8 +91,9 @@
       "opponent": "Kevin",
       "season": 2026,
       "week": 5,
-      "source": "data-h2h-ledger.json",
-      "provisionalSeason": true
+      "scope": "regular-season",
+      "provisionalSeason": true,
+      "source": "data-h2h-ledger.json"
     }
   }
 }
