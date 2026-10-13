@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "scope": "regular-season",
+  "throughCompleteSeason": 2025,
+  "note": "Canonical Wall of Fame scoring records. Season-rate records are computed from raw PF/PA and exact regular-season game counts, not from subtraction of rounded per-game display fields. Single-game records are anchored to the canonical H2H ledger and archived weekly scoreboards.",
+  "method": {
+    "teamPpg": "PF / regular-season games",
+    "scoringMarginPerGame": "(PF - PA) / regular-season games",
+    "ppgPerStarter": "(PF / regular-season games) / verified starter count",
+    "displayRounding": "One decimal for season-rate records; source precision retained for single-game scores."
+  },
+  "records": {
+    "highestTeamPpg": {
+      "manager": "Ty/Molly",
+      "season": 2012,
+      "pf": 1626,
+      "pa": 1279,
+      "games": 12,
+      "exactValue": 135.5,
+      "displayValue": 135.5,
+      "source": "data-scoring-2012-2015.json"
+    },
+    "lowestTeamPpg": {
+      "manager": "Zach B",
+      "season": 2014,
+      "pf": 792,
+      "pa": 1054.5,
+      "games": 12,
+      "exactValue": 66,
+      "displayValue": 66,
+      "source": "data-scoring-2012-2015.json"
+    },
+    "highestPpgPerStarter": {
+      "manager": "Metz",
+      "season": 2024,
+      "pf": 1495.3,
+      "pa": 1329.7,
+      "games": 14,
+      "starters": 7,
+      "exactTeamPpg": 106.80714285714285,
+      "exactValue": 15.258163265306122,
+      "displayValue": 15.3,
+      "source": "data-scoring-2022-2024.json"
+    },
+    "lowestPpgPerStarter": {
+      "manager": "Zach B",
+      "season": 2014,
+      "pf": 792,
+      "pa": 1054.5,
+      "games": 12,
+      "starters": 9,
+      "exactTeamPpg": 66,
+      "exactValue": 7.333333333333333,
+      "displayValue": 7.3,
+      "source": "data-scoring-2012-2015.json"
+    },
+    "bestScoringMarginPerGame": {
+      "manager": "Mason",
+      "season": 2013,
+      "pf": 1684.5,
+      "pa": 1209.5,
+      "games": 13,
+      "exactValue": 36.53846153846154,
+      "displayValue": 36.5,
+      "source": "data-scoring-2012-2015.json",
+      "correction": "Previously displayed as +36.6 because rounded PF/G and PA/G were subtracted. Exact raw totals yield +36.538..., which rounds to +36.5."
+    },
+    "worstScoringMarginPerGame": {
+      "manager": "Dick",
+      "season": 2013,
+      "pf": 1161,
+      "pa": 1562.5,
+      "games": 13,
+      "exactValue": -30.884615384615383,
+      "displayValue": -30.9,
+      "source": "data-scoring-2012-2015.json"
+    },
+    "highestScore": {
+      "score": 198.5,
+      "manager": "Payton",
+      "opponent": "Diddles",
+      "season": 2016,
+      "week": 3,
+      "source": "data-h2h-ledger.json",
+      "verification": "Verified against structured 2012-2017 data and audited uploaded regular-season scoreboards through 2025."
+    },
+    "lowestScore": {
+      "score": 13.24,
+      "manager": "Ty/Molly",
+      "opponent": "Kevin",
+      "season": 2026,
+      "week": 5,
+      "source": "data-h2h-ledger.json",
+      "provisionalSeason": true
+    }
+  }
+}
