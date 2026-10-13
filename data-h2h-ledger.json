@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scope": "regular-season",
-  "note": "Canonical one-row-per-matchup regular-season H2H ledger. 2012-2025 is 100% score-complete. Results are score-verified except explicit historical official-result overrides retained where the archived official result conflicts with the displayed score. 2026 contains only explicitly supplied in-season rows until the full season import.",
+  "note": "Canonical one-row-per-matchup regular-season H2H ledger. Every matchup from 2012-2025 has exact scores and score-verified results. 2026 is complete through Week 5 and remains in-season/partial.",
   "throughCompleteSeason": 2025,
   "scoreCoverage": {
     "2012": "complete exact numeric scores; results score-verified",
@@ -14,8 +14,8 @@
     "2019": "complete exact numeric scores; results score-verified",
     "2020": "complete exact numeric scores; results score-verified",
     "2021": "complete exact numeric scores; results score-verified",
-    "2022": "complete exact numeric scores; results score-verified; Week 13 full-league bye/no H2H",
-    "2023": "Weeks 1-10 complete exact numeric scores; Weeks 11-14 pending score transcription",
+    "2022": "complete exact numeric scores; results score-verified",
+    "2023": "complete exact numeric scores; results score-verified",
     "2024": "complete exact numeric scores; results score-verified",
     "2025": "complete exact numeric scores; results score-verified",
     "2026": "Weeks 1-5 complete exact numeric scores; current season partial"
@@ -28,7 +28,7 @@
       "season": 2016,
       "week": 3,
       "scope": "regular-season",
-      "verification": "Computed from 100% exact regular-season H2H scores through 2025."
+      "verification": "Computed from the canonical exact-score H2H ledger."
     },
     "singleGameLow": {
       "score": 13.24,
@@ -37,6 +37,7 @@
       "season": 2026,
       "week": 5,
       "scope": "regular-season",
+      "verification": "Computed from the canonical exact-score H2H ledger.",
       "provisionalSeason": true
     },
     "longestWinningStreak": {
