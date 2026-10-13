@@ -8,6 +8,8 @@
     ['Most Rivalry Wins','Fewest Rivalry Wins'],
     // Playoff résumé
     ['Most Playoff Wins','Most Playoff Appearances','Highest Playoff %','Lowest Playoff %'],
+    // Regular-season game streaks
+    ['Longest Winning Streak','Longest Losing Streak'],
     // Season-level wins / consistency
     ['Most Single Season Wins','Fewest Single Season Wins','Consecutive Winning Seasons','Consecutive Losing Seasons'],
     // Season-rate profile
