@@ -197,16 +197,75 @@ function router(){
   window.scrollTo({top:0,behavior:'auto'});
 }
 
+function buildH2HViewsFromLedger(ledger) {
+  const records={};
+  const series={};
+  const through=Number(ledger?.throughCompleteSeason || 0);
+  const games=(ledger?.games || [])
+    .filter(g=>g.phase==='regular-season' && Number(g.season)<=through)
+    .slice()
+    .sort((a,b)=>Number(a.season)-Number(b.season) || Number(a.week)-Number(b.week) || String(a.managerA).localeCompare(String(b.managerA)));
+
+  const add=(manager,opponent,result,year,week)=>{
+    records[manager] ||= {};
+    const r=records[manager][opponent] ||= {w:0,l:0,t:0,games:0,seasons:[]};
+    r.games+=1;
+    if(result==='W') r.w+=1;
+    else if(result==='L') r.l+=1;
+    else r.t+=1;
+
+    let s=r.seasons.find(x=>x.year===Number(year));
+    if(!s) {
+      s={year:Number(year),w:0,l:0,t:0,games:0};
+      r.seasons.push(s);
+    }
+    s.games+=1;
+    if(result==='W') s.w+=1;
+    else if(result==='L') s.l+=1;
+    else s.t+=1;
+
+    series[manager] ||= {};
+    series[manager][opponent] ||= [];
+    series[manager][opponent].push({year:Number(year),week:Number(week),result});
+  };
+
+  games.forEach(g=>{
+    add(g.managerA,g.managerB,g.resultA,g.season,g.week);
+    add(g.managerB,g.managerA,g.resultB,g.season,g.week);
+  });
+
+  Object.values(records).forEach(opps=>{
+    Object.values(opps).forEach(r=>r.seasons.sort((a,b)=>b.year-a.year));
+  });
+
+  return {
+    h2h:{
+      scope:'regular-season',
+      throughSeason:through,
+      source:'data-h2h-ledger.json',
+      records
+    },
+    h2hSeries:{
+      scope:'regular-season',
+      throughSeason:through,
+      source:'data-h2h-ledger.json',
+      series
+    }
+  };
+}
+
 async function boot(){
   try {
     const files=[
       '/data-core.json',
       '/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json',
       '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json',
-      '/data-h2h-summary.json','/data-h2h-series.json'
+      '/data-h2h-ledger.json'
     ];
     const parts=await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok)throw new Error(`Data ${r.status}: ${f}`);return r.json();})));
-    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2h:parts[10],h2hSeries:parts[11]};
+    const h2hLedger=parts[10];
+    const h2hViews=buildH2HViewsFromLedger(h2hLedger);
+    DATA={...parts[0],managers:Object.assign({},...parts.slice(1,6)),h2hLedger,...h2hViews};
     const scoringHistory=Object.assign({},...parts.slice(6,10));
     applyScoringHistory(scoringHistory);
     normalizeCareerAggregates();
