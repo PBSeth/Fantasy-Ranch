@@ -259,8 +259,13 @@ function buildH2HViewsFromLedger(ledger) {
   const records={};
   const series={};
   const through=Number(ledger?.throughCompleteSeason || 0);
+  const currentSeason=Number(ledger?.currentSeason?.season || 0);
+  const currentThroughWeek=Number(ledger?.currentSeason?.throughWeek || 0);
   const games=(ledger?.games || [])
-    .filter(g=>g.phase==='regular-season' && Number(g.season)<=through)
+    .filter(g=>g.phase==='regular-season' && (
+      Number(g.season)<=through ||
+      (Number(g.season)===currentSeason && Number(g.week)<=currentThroughWeek)
+    ))
     .slice()
     .sort((a,b)=>Number(a.season)-Number(b.season) || Number(a.week)-Number(b.week) || String(a.managerA).localeCompare(String(b.managerA)));
 
@@ -299,13 +304,13 @@ function buildH2HViewsFromLedger(ledger) {
   return {
     h2h:{
       scope:'regular-season',
-      throughSeason:through,
+      throughSeason:currentSeason || through,
       source:'data-h2h-ledger.json',
       records
     },
     h2hSeries:{
       scope:'regular-season',
-      throughSeason:through,
+      throughSeason:currentSeason || through,
       source:'data-h2h-ledger.json',
       series
     }
