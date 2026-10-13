@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scope": "regular-season",
-  "note": "Canonical one-row-per-matchup regular-season H2H ledger. 2012-2025 is 100% score-complete and score-verified. 2026 contains only explicitly supplied in-season rows until the full season import.",
+  "note": "Canonical one-row-per-matchup regular-season H2H ledger. 2012-2025 is 100% score-complete. Results are score-verified except explicit historical official-result overrides retained where the archived official result conflicts with the displayed score. 2026 contains only explicitly supplied in-season rows until the full season import.",
   "throughCompleteSeason": 2025,
   "scoreCoverage": {
     "2012": "complete exact numeric scores; results score-verified",
@@ -263,9 +263,10 @@
       "resultA": "L",
       "resultB": "W",
       "scoreStatus": "exact",
-      "resultStatus": "official-result",
+      "resultStatus": "official-override",
       "source": "data-h2h-2012.json",
-      "scoreResultConflict": true
+      "scoreResultConflict": true,
+      "officialOverrideNote": "Official recorded result retained over displayed score."
     },
     {
       "season": 2012,
@@ -892,9 +893,10 @@
       "resultA": "W",
       "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "official-result",
+      "resultStatus": "official-override",
       "source": "data-h2h-2012.json",
-      "scoreResultConflict": true
+      "scoreResultConflict": true,
+      "officialOverrideNote": "Official recorded result retained over displayed score."
     },
     {
       "season": 2012,
@@ -1045,9 +1047,10 @@
       "resultA": "W",
       "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "official-result",
+      "resultStatus": "official-override",
       "source": "data-h2h-2012.json",
-      "scoreResultConflict": true
+      "scoreResultConflict": true,
+      "officialOverrideNote": "Official recorded result retained over displayed score."
     },
     {
       "season": 2012,
@@ -3630,9 +3633,10 @@
       "resultA": "L",
       "resultB": "W",
       "scoreStatus": "exact",
-      "resultStatus": "official-result",
+      "resultStatus": "official-override",
       "source": "data-h2h-2014.json",
-      "scoreResultConflict": false
+      "scoreResultConflict": false,
+      "officialOverrideNote": "Official recorded result retained over displayed score."
     },
     {
       "season": 2014,
@@ -7987,12 +7991,12 @@
       "managerB": "Ty/Molly",
       "scoreA": 95.7,
       "scoreB": 91.6,
-      "winner": "Ty/Molly",
+      "winner": "Nickster",
       "tie": false,
-      "resultA": "L",
-      "resultB": "W",
+      "resultA": "W",
+      "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "exact",
+      "resultStatus": "score-verified",
       "source": "archived ESPN weekly scoreboard",
       "sourceImage": "1000029501.jpg"
     },
@@ -17844,12 +17848,12 @@
       "managerB": "Ryan",
       "scoreA": 88.86,
       "scoreB": 110.36,
-      "winner": "Mott",
+      "winner": "Ryan",
       "tie": false,
-      "resultA": "W",
-      "resultB": "L",
+      "resultA": "L",
+      "resultB": "W",
       "scoreStatus": "exact",
-      "resultStatus": "exact",
+      "resultStatus": "score-verified",
       "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
