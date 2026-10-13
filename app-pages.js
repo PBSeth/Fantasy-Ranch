@@ -318,7 +318,7 @@ async function boot(){
       '/data-core.json',
       '/data-managers-1.json','/data-managers-2.json','/data-managers-3.json','/data-managers-4.json','/data-managers-5.json',
       '/data-scoring-2012-2015.json','/data-scoring-2016-2018.json','/data-scoring-2019-2021.json','/data-scoring-2022-2024.json',
-      '/data-h2h-ledger.json?v=2','/data-scoring-records.json'
+      '/data-h2h-ledger.json?v=3','/data-scoring-records.json'
     ];
     const parts=await Promise.all(files.map(f=>fetch(f).then(r=>{if(!r.ok)throw new Error(`Data ${r.status}: ${f}`);return r.json();})));
     const h2hLedger=parts[10];
