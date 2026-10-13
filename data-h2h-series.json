@@ -1,7 +1,8 @@
 {
   "scope": "regular-season",
   "throughSeason": 2025,
-  "note": "Ordered H2H outcomes used for rivalry streak/last-five display. Results align with the current Fantasy Ranch H2H ledger.",
+  "source": "data-h2h-ledger.json",
+  "note": "Derived ordered H2H outcomes from the canonical ledger.",
   "series": {
     "Brad": {
       "Dick": [
@@ -2729,7 +2730,7 @@
         {
           "year": 2022,
           "week": 11,
-          "result": "L"
+          "result": "W"
         },
         {
           "year": 2023,
@@ -2958,7 +2959,7 @@
         {
           "year": 2019,
           "week": 13,
-          "result": "L"
+          "result": "W"
         },
         {
           "year": 2020,
@@ -4259,6 +4260,1890 @@
         }
       ]
     },
+    "Mason": {
+      "Ty/Molly": [
+        {
+          "year": 2012,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 11,
+          "result": "L"
+        }
+      ],
+      "Dick": [
+        {
+          "year": 2012,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 12,
+          "result": "W"
+        }
+      ],
+      "Zach B": [
+        {
+          "year": 2012,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 3,
+          "result": "W"
+        }
+      ],
+      "Brad": [
+        {
+          "year": 2012,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 14,
+          "result": "L"
+        }
+      ],
+      "Mott": [
+        {
+          "year": 2012,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 5,
+          "result": "W"
+        }
+      ],
+      "Payton": [
+        {
+          "year": 2012,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 9,
+          "result": "L"
+        }
+      ],
+      "Karscig": [
+        {
+          "year": 2012,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2012,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 1,
+          "result": "W"
+        }
+      ],
+      "Diddles": [
+        {
+          "year": 2012,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 6,
+          "result": "L"
+        }
+      ],
+      "Seth": [
+        {
+          "year": 2012,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 10,
+          "result": "L"
+        }
+      ],
+      "Kevin": [
+        {
+          "year": 2012,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 7,
+          "result": "W"
+        }
+      ],
+      "Brett": [
+        {
+          "year": 2012,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 8,
+          "result": "W"
+        }
+      ],
+      "Molly": [
+        {
+          "year": 2016,
+          "week": 1,
+          "result": "W"
+        }
+      ],
+      "Sean": [
+        {
+          "year": 2016,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 1,
+          "result": "W"
+        }
+      ],
+      "Shea": [
+        {
+          "year": 2016,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 14,
+          "result": "W"
+        }
+      ],
+      "Nickster": [
+        {
+          "year": 2017,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 13,
+          "result": "W"
+        }
+      ],
+      "Kyle S": [
+        {
+          "year": 2018,
+          "week": 1,
+          "result": "W"
+        }
+      ],
+      "Mark S": [
+        {
+          "year": 2018,
+          "week": 3,
+          "result": "L"
+        }
+      ],
+      "Metz": [
+        {
+          "year": 2018,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 12,
+          "result": "L"
+        }
+      ],
+      "Luke": [
+        {
+          "year": 2020,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 14,
+          "result": "L"
+        }
+      ],
+      "Ryan": [
+        {
+          "year": 2025,
+          "week": 4,
+          "result": "W"
+        }
+      ]
+    },
+    "Ty/Molly": {
+      "Mason": [
+        {
+          "year": 2012,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 11,
+          "result": "W"
+        }
+      ],
+      "Mott": [
+        {
+          "year": 2012,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 13,
+          "result": "W"
+        }
+      ],
+      "Dick": [
+        {
+          "year": 2012,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 6,
+          "result": "L"
+        }
+      ],
+      "Zach B": [
+        {
+          "year": 2012,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 10,
+          "result": "W"
+        }
+      ],
+      "Brad": [
+        {
+          "year": 2012,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 3,
+          "result": "W"
+        }
+      ],
+      "Seth": [
+        {
+          "year": 2012,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2012,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 12,
+          "result": "L"
+        }
+      ],
+      "Kevin": [
+        {
+          "year": 2012,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 14,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 4,
+          "result": "W"
+        }
+      ],
+      "Brett": [
+        {
+          "year": 2012,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 7,
+          "result": "W"
+        }
+      ],
+      "Payton": [
+        {
+          "year": 2012,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 6,
+          "result": "L"
+        }
+      ],
+      "Karscig": [
+        {
+          "year": 2012,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 5,
+          "result": "L"
+        }
+      ],
+      "Diddles": [
+        {
+          "year": 2012,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 5,
+          "result": "L"
+        }
+      ],
+      "Sean": [
+        {
+          "year": 2016,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 12,
+          "result": "W"
+        }
+      ],
+      "Molly": [
+        {
+          "year": 2016,
+          "week": 9,
+          "result": "W"
+        }
+      ],
+      "Shea": [
+        {
+          "year": 2016,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 12,
+          "result": "W"
+        }
+      ],
+      "Nickster": [
+        {
+          "year": 2017,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 9,
+          "result": "L"
+        }
+      ],
+      "Kyle S": [
+        {
+          "year": 2018,
+          "week": 3,
+          "result": "L"
+        }
+      ],
+      "Metz": [
+        {
+          "year": 2018,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 14,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 10,
+          "result": "W"
+        }
+      ],
+      "Mark S": [
+        {
+          "year": 2018,
+          "week": 10,
+          "result": "L"
+        }
+      ],
+      "Luke": [
+        {
+          "year": 2020,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 8,
+          "result": "W"
+        }
+      ],
+      "Ryan": [
+        {
+          "year": 2025,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 14,
+          "result": "W"
+        }
+      ]
+    },
     "Mott": {
       "Zach B": [
         {
@@ -5192,7 +7077,7 @@
         {
           "year": 2025,
           "week": 1,
-          "result": "W"
+          "result": "L"
         },
         {
           "year": 2025,
@@ -5604,6 +7489,948 @@
         {
           "year": 2017,
           "week": 2,
+          "result": "W"
+        }
+      ]
+    },
+    "Payton": {
+      "Seth": [
+        {
+          "year": 2012,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 7,
+          "result": "L"
+        }
+      ],
+      "Karscig": [
+        {
+          "year": 2012,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 6,
+          "result": "W"
+        }
+      ],
+      "Kevin": [
+        {
+          "year": 2012,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 13,
+          "result": "W"
+        }
+      ],
+      "Diddles": [
+        {
+          "year": 2012,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2012,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 14,
+          "result": "W"
+        }
+      ],
+      "Brett": [
+        {
+          "year": 2012,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 13,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 12,
+          "result": "L"
+        }
+      ],
+      "Mason": [
+        {
+          "year": 2012,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 9,
+          "result": "W"
+        }
+      ],
+      "Mott": [
+        {
+          "year": 2012,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2015,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 10,
+          "result": "W"
+        }
+      ],
+      "Zach B": [
+        {
+          "year": 2012,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 9,
+          "result": "L"
+        }
+      ],
+      "Ty/Molly": [
+        {
+          "year": 2012,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2016,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 5,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 4,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 6,
+          "result": "W"
+        }
+      ],
+      "Brad": [
+        {
+          "year": 2012,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2013,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2014,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 12,
+          "result": "W"
+        }
+      ],
+      "Dick": [
+        {
+          "year": 2012,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2013,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2014,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2015,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2016,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2020,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 2,
+          "result": "W"
+        }
+      ],
+      "Sean": [
+        {
+          "year": 2016,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2018,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 9,
+          "result": "W"
+        }
+      ],
+      "Molly": [
+        {
+          "year": 2016,
+          "week": 11,
+          "result": "W"
+        }
+      ],
+      "Shea": [
+        {
+          "year": 2016,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 7,
+          "result": "W"
+        }
+      ],
+      "Nickster": [
+        {
+          "year": 2017,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2018,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 5,
+          "result": "W"
+        }
+      ],
+      "Metz": [
+        {
+          "year": 2018,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2019,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2019,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2020,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 2,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 14,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2025,
+          "week": 8,
+          "result": "L"
+        }
+      ],
+      "Mark S": [
+        {
+          "year": 2018,
+          "week": 9,
+          "result": "L"
+        }
+      ],
+      "Kyle S": [
+        {
+          "year": 2018,
+          "week": 13,
+          "result": "L"
+        }
+      ],
+      "Luke": [
+        {
+          "year": 2020,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 3,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 6,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 14,
+          "result": "W"
+        },
+        {
+          "year": 2025,
+          "week": 4,
+          "result": "W"
+        }
+      ],
+      "Ryan": [
+        {
+          "year": 2025,
+          "week": 11,
           "result": "W"
         }
       ]
@@ -6550,422 +9377,34 @@
         }
       ]
     },
-    "Payton": {
-      "Seth": [
-        {
-          "year": 2012,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 12,
-          "result": "L"
-        },
+    "Shea": {
+      "Brad": [
         {
           "year": 2016,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2022,
           "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 7,
-          "result": "L"
-        }
-      ],
-      "Karscig": [
-        {
-          "year": 2012,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 6,
-          "result": "W"
-        }
-      ],
-      "Kevin": [
-        {
-          "year": 2012,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 9,
           "result": "L"
         },
         {
           "year": 2017,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2025,
           "week": 2,
           "result": "W"
         },
         {
-          "year": 2025,
-          "week": 13,
+          "year": 2023,
+          "week": 7,
           "result": "W"
         }
       ],
       "Diddles": [
         {
-          "year": 2012,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2012,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 2,
-          "result": "L"
-        },
-        {
           "year": 2016,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2019,
           "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 14,
-          "result": "W"
-        }
-      ],
-      "Brett": [
-        {
-          "year": 2012,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 12,
-          "result": "L"
-        }
-      ],
-      "Mason": [
-        {
-          "year": 2012,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 6,
           "result": "W"
         },
         {
           "year": 2017,
           "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 10,
-          "result": "W"
+          "result": "L"
         },
         {
           "year": 2021,
@@ -6974,589 +9413,7 @@
         },
         {
           "year": 2022,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 9,
-          "result": "W"
-        }
-      ],
-      "Mott": [
-        {
-          "year": 2012,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2021,
           "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 10,
-          "result": "W"
-        }
-      ],
-      "Zach B": [
-        {
-          "year": 2012,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 9,
-          "result": "L"
-        }
-      ],
-      "Ty/Molly": [
-        {
-          "year": 2012,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 6,
-          "result": "W"
-        }
-      ],
-      "Brad": [
-        {
-          "year": 2012,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 12,
-          "result": "W"
-        }
-      ],
-      "Dick": [
-        {
-          "year": 2012,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 2,
-          "result": "W"
-        }
-      ],
-      "Sean": [
-        {
-          "year": 2016,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 9,
-          "result": "W"
-        }
-      ],
-      "Molly": [
-        {
-          "year": 2016,
-          "week": 11,
-          "result": "W"
-        }
-      ],
-      "Shea": [
-        {
-          "year": 2016,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 7,
-          "result": "W"
-        }
-      ],
-      "Nickster": [
-        {
-          "year": 2017,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 5,
-          "result": "W"
-        }
-      ],
-      "Metz": [
-        {
-          "year": 2018,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 14,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 8,
-          "result": "L"
-        }
-      ],
-      "Mark S": [
-        {
-          "year": 2018,
-          "week": 9,
-          "result": "L"
-        }
-      ],
-      "Kyle S": [
-        {
-          "year": 2018,
-          "week": 13,
-          "result": "L"
-        }
-      ],
-      "Luke": [
-        {
-          "year": 2020,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 14,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 4,
-          "result": "W"
-        }
-      ],
-      "Ryan": [
-        {
-          "year": 2025,
-          "week": 11,
-          "result": "W"
-        }
-      ]
-    },
-    "Ty/Molly": {
-      "Mason": [
-        {
-          "year": 2012,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 1,
           "result": "L"
         },
         {
@@ -7566,346 +9423,82 @@
         },
         {
           "year": 2024,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 11,
-          "result": "W"
-        }
-      ],
-      "Mott": [
-        {
-          "year": 2012,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2023,
           "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 13,
-          "result": "W"
-        }
-      ],
-      "Dick": [
-        {
-          "year": 2012,
-          "week": 3,
           "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 6,
-          "result": "L"
-        }
-      ],
-      "Zach B": [
-        {
-          "year": 2012,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 10,
-          "result": "W"
-        }
-      ],
-      "Brad": [
-        {
-          "year": 2012,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 3,
-          "result": "W"
         }
       ],
       "Seth": [
         {
-          "year": 2012,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2012,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 9,
-          "result": "W"
-        },
-        {
           "year": 2016,
-          "week": 12,
+          "week": 3,
           "result": "L"
         },
         {
           "year": 2017,
-          "week": 1,
+          "week": 12,
           "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 11,
-          "result": "W"
         },
         {
           "year": 2021,
-          "week": 10,
+          "week": 7,
           "result": "L"
         },
         {
           "year": 2022,
-          "week": 9,
+          "week": 4,
           "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 12,
-          "result": "L"
         },
         {
           "year": 2023,
-          "week": 12,
-          "result": "L"
+          "week": 3,
+          "result": "W"
         },
         {
           "year": 2024,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 12,
+          "week": 6,
           "result": "L"
         }
       ],
       "Kevin": [
         {
-          "year": 2012,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 7,
+          "year": 2016,
+          "week": 4,
           "result": "L"
         },
         {
-          "year": 2013,
+          "year": 2017,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 5,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 2,
+          "result": "W"
+        },
+        {
+          "year": 2024,
           "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 4,
           "result": "L"
-        },
+        }
+      ],
+      "Molly": [
         {
-          "year": 2014,
-          "week": 12,
+          "year": 2016,
+          "week": 5,
           "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 12,
-          "result": "W"
-        },
+        }
+      ],
+      "Brett": [
         {
           "year": 2016,
           "week": 6,
@@ -7913,887 +9506,287 @@
         },
         {
           "year": 2017,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2019,
           "week": 3,
           "result": "L"
         },
         {
-          "year": 2020,
-          "week": 3,
-          "result": "W"
-        },
-        {
           "year": 2021,
-          "week": 2,
+          "week": 6,
           "result": "W"
         },
         {
           "year": 2022,
+          "week": 10,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 12,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 8,
+          "result": "L"
+        }
+      ],
+      "Dick": [
+        {
+          "year": 2016,
+          "week": 7,
+          "result": "L"
+        },
+        {
+          "year": 2017,
           "week": 5,
           "result": "L"
         },
         {
           "year": 2023,
-          "week": 1,
+          "week": 10,
           "result": "W"
         },
         {
           "year": 2023,
           "week": 14,
           "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 4,
-          "result": "W"
         }
       ],
-      "Brett": [
-        {
-          "year": 2012,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 3,
-          "result": "W"
-        },
+      "Mason": [
         {
           "year": 2016,
-          "week": 11,
-          "result": "L"
+          "week": 8,
+          "result": "W"
         },
         {
           "year": 2017,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 10,
+          "week": 7,
           "result": "L"
         },
         {
           "year": 2021,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 4,
+          "week": 11,
           "result": "W"
         },
         {
-          "year": 2023,
+          "year": 2022,
           "week": 8,
           "result": "L"
         },
         {
+          "year": 2023,
+          "week": 6,
+          "result": "W"
+        },
+        {
           "year": 2024,
-          "week": 10,
+          "week": 3,
           "result": "L"
         },
         {
-          "year": 2025,
-          "week": 7,
+          "year": 2024,
+          "week": 14,
+          "result": "L"
+        }
+      ],
+      "Zach B": [
+        {
+          "year": 2016,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2017,
+          "week": 4,
+          "result": "W"
+        }
+      ],
+      "Ty/Molly": [
+        {
+          "year": 2016,
+          "week": 10,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 9,
+          "result": "L"
+        },
+        {
+          "year": 2021,
+          "week": 3,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 12,
+          "result": "L"
+        }
+      ],
+      "Mott": [
+        {
+          "year": 2016,
+          "week": 11,
+          "result": "W"
+        },
+        {
+          "year": 2017,
+          "week": 13,
+          "result": "W"
+        },
+        {
+          "year": 2021,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 9,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 12,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 4,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 4,
           "result": "W"
         }
       ],
       "Payton": [
         {
-          "year": 2012,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 7,
-          "result": "W"
-        },
-        {
           "year": 2016,
-          "week": 5,
+          "week": 12,
           "result": "L"
         },
         {
           "year": 2017,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 6,
+          "week": 8,
           "result": "L"
         },
         {
-          "year": 2019,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2020,
+          "year": 2021,
           "week": 5,
           "result": "L"
         },
         {
           "year": 2021,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 6,
-          "result": "L"
-        }
-      ],
-      "Karscig": [
-        {
-          "year": 2012,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 5,
-          "result": "L"
-        }
-      ],
-      "Diddles": [
-        {
-          "year": 2012,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2014,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 7,
+          "week": 12,
           "result": "W"
         },
         {
           "year": 2022,
-          "week": 7,
+          "week": 5,
           "result": "L"
         },
         {
           "year": 2023,
-          "week": 11,
+          "week": 9,
           "result": "W"
         },
         {
           "year": 2024,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 5,
+          "week": 7,
           "result": "L"
         }
       ],
       "Sean": [
         {
           "year": 2016,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 12,
-          "result": "W"
-        }
-      ],
-      "Molly": [
-        {
-          "year": 2016,
-          "week": 9,
-          "result": "W"
-        }
-      ],
-      "Shea": [
-        {
-          "year": 2016,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2023,
           "week": 13,
-          "result": "L"
+          "result": "W"
         },
         {
-          "year": 2024,
+          "year": 2017,
           "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 12,
-          "result": "W"
+          "result": "L"
         }
       ],
       "Nickster": [
         {
           "year": 2017,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2024,
           "week": 6,
           "result": "W"
         },
         {
-          "year": 2025,
-          "week": 9,
+          "year": 2021,
+          "week": 2,
           "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 6,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 7,
+          "result": "W"
+        },
+        {
+          "year": 2023,
+          "week": 8,
+          "result": "L"
+        },
+        {
+          "year": 2024,
+          "week": 11,
+          "result": "W"
         }
       ],
-      "Kyle S": [
+      "Luke": [
         {
-          "year": 2018,
-          "week": 3,
+          "year": 2021,
+          "week": 8,
+          "result": "W"
+        },
+        {
+          "year": 2022,
+          "week": 1,
+          "result": "L"
+        },
+        {
+          "year": 2022,
+          "week": 11,
+          "result": "L"
+        },
+        {
+          "year": 2023,
+          "week": 1,
+          "result": "W"
+        },
+        {
+          "year": 2024,
+          "week": 10,
           "result": "L"
         }
       ],
       "Metz": [
         {
-          "year": 2018,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 14,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 10,
-          "result": "W"
-        }
-      ],
-      "Mark S": [
-        {
-          "year": 2018,
-          "week": 10,
-          "result": "L"
-        }
-      ],
-      "Luke": [
-        {
-          "year": 2020,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 8,
-          "result": "W"
-        }
-      ],
-      "Ryan": [
-        {
-          "year": 2025,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 14,
-          "result": "W"
-        }
-      ]
-    },
-    "Mason": {
-      "Ty/Molly": [
-        {
-          "year": 2012,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 11,
-          "result": "L"
-        }
-      ],
-      "Dick": [
-        {
-          "year": 2012,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 12,
-          "result": "W"
-        }
-      ],
-      "Zach B": [
-        {
-          "year": 2012,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 3,
-          "result": "W"
-        }
-      ],
-      "Brad": [
-        {
-          "year": 2012,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 13,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 14,
-          "result": "L"
-        }
-      ],
-      "Mott": [
-        {
-          "year": 2012,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 9,
-          "result": "W"
-        },
-        {
           "year": 2021,
           "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 5,
-          "result": "W"
-        }
-      ],
-      "Payton": [
-        {
-          "year": 2012,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 10,
           "result": "W"
         },
         {
           "year": 2022,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 12,
+          "week": 3,
           "result": "W"
         },
         {
@@ -8804,574 +9797,6 @@
         {
           "year": 2024,
           "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 9,
-          "result": "L"
-        }
-      ],
-      "Karscig": [
-        {
-          "year": 2012,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2012,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 1,
-          "result": "W"
-        }
-      ],
-      "Diddles": [
-        {
-          "year": 2012,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2015,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2020,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 6,
-          "result": "L"
-        }
-      ],
-      "Seth": [
-        {
-          "year": 2012,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2019,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 10,
-          "result": "L"
-        }
-      ],
-      "Kevin": [
-        {
-          "year": 2012,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2013,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2016,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 7,
-          "result": "W"
-        }
-      ],
-      "Brett": [
-        {
-          "year": 2012,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2013,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2014,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2015,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2016,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2018,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2025,
-          "week": 8,
-          "result": "W"
-        }
-      ],
-      "Molly": [
-        {
-          "year": 2016,
-          "week": 1,
-          "result": "W"
-        }
-      ],
-      "Sean": [
-        {
-          "year": 2016,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 1,
-          "result": "W"
-        }
-      ],
-      "Shea": [
-        {
-          "year": 2016,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 14,
-          "result": "W"
-        }
-      ],
-      "Nickster": [
-        {
-          "year": 2017,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2018,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 13,
-          "result": "W"
-        }
-      ],
-      "Kyle S": [
-        {
-          "year": 2018,
-          "week": 1,
-          "result": "W"
-        }
-      ],
-      "Mark S": [
-        {
-          "year": 2018,
-          "week": 3,
-          "result": "L"
-        }
-      ],
-      "Metz": [
-        {
-          "year": 2018,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2019,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2020,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 12,
-          "result": "L"
-        }
-      ],
-      "Luke": [
-        {
-          "year": 2020,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2025,
-          "week": 14,
-          "result": "L"
-        }
-      ],
-      "Ryan": [
-        {
-          "year": 2025,
-          "week": 4,
           "result": "W"
         }
       ]
@@ -9762,430 +10187,6 @@
           "year": 2018,
           "week": 12,
           "result": "L"
-        }
-      ]
-    },
-    "Shea": {
-      "Brad": [
-        {
-          "year": 2016,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 7,
-          "result": "W"
-        }
-      ],
-      "Diddles": [
-        {
-          "year": 2016,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 9,
-          "result": "L"
-        }
-      ],
-      "Seth": [
-        {
-          "year": 2016,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 4,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 6,
-          "result": "L"
-        }
-      ],
-      "Kevin": [
-        {
-          "year": 2016,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 11,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 5,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 2,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 13,
-          "result": "L"
-        }
-      ],
-      "Molly": [
-        {
-          "year": 2016,
-          "week": 5,
-          "result": "W"
-        }
-      ],
-      "Brett": [
-        {
-          "year": 2016,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 10,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 8,
-          "result": "L"
-        }
-      ],
-      "Dick": [
-        {
-          "year": 2016,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 14,
-          "result": "W"
-        }
-      ],
-      "Mason": [
-        {
-          "year": 2016,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 7,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 3,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 14,
-          "result": "L"
-        }
-      ],
-      "Zach B": [
-        {
-          "year": 2016,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 4,
-          "result": "W"
-        }
-      ],
-      "Ty/Molly": [
-        {
-          "year": 2016,
-          "week": 10,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 9,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 12,
-          "result": "L"
-        }
-      ],
-      "Mott": [
-        {
-          "year": 2016,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 4,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 4,
-          "result": "W"
-        }
-      ],
-      "Payton": [
-        {
-          "year": 2016,
-          "week": 12,
-          "result": "L"
-        },
-        {
-          "year": 2017,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2021,
-          "week": 12,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 5,
-          "result": "L"
-        },
-        {
-          "year": 2023,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 7,
-          "result": "L"
-        }
-      ],
-      "Sean": [
-        {
-          "year": 2016,
-          "week": 13,
-          "result": "W"
-        },
-        {
-          "year": 2017,
-          "week": 1,
-          "result": "L"
-        }
-      ],
-      "Nickster": [
-        {
-          "year": 2017,
-          "week": 6,
-          "result": "W"
-        },
-        {
-          "year": 2021,
-          "week": 2,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 6,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 7,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 8,
-          "result": "L"
-        },
-        {
-          "year": 2024,
-          "week": 11,
-          "result": "W"
-        }
-      ],
-      "Luke": [
-        {
-          "year": 2021,
-          "week": 8,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 1,
-          "result": "L"
-        },
-        {
-          "year": 2022,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 1,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 10,
-          "result": "L"
-        }
-      ],
-      "Metz": [
-        {
-          "year": 2021,
-          "week": 9,
-          "result": "W"
-        },
-        {
-          "year": 2022,
-          "week": 3,
-          "result": "W"
-        },
-        {
-          "year": 2023,
-          "week": 11,
-          "result": "W"
-        },
-        {
-          "year": 2024,
-          "week": 5,
-          "result": "W"
         }
       ]
     },
@@ -10663,7 +10664,7 @@
         {
           "year": 2017,
           "week": 13,
-          "result": "L"
+          "result": "W"
         },
         {
           "year": 2018,
@@ -11358,7 +11359,7 @@
         {
           "year": 2019,
           "week": 13,
-          "result": "W"
+          "result": "L"
         },
         {
           "year": 2020,
@@ -11961,7 +11962,7 @@
         {
           "year": 2022,
           "week": 11,
-          "result": "L"
+          "result": "W"
         },
         {
           "year": 2023,
@@ -11994,7 +11995,7 @@
         {
           "year": 2025,
           "week": 1,
-          "result": "L"
+          "result": "W"
         },
         {
           "year": 2025,
