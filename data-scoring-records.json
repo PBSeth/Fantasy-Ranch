@@ -81,9 +81,8 @@
       "opponent": "Diddles",
       "season": 2016,
       "week": 3,
-      "scope": "regular-season",
-      "verification": "Computed from 100% exact regular-season H2H scores through 2025.",
-      "source": "data-h2h-ledger.json"
+      "source": "data-h2h-ledger.json",
+      "verification": "Computed from complete exact regular-season matchup ledger."
     },
     "lowestScore": {
       "score": 13.24,
@@ -91,9 +90,9 @@
       "opponent": "Kevin",
       "season": 2026,
       "week": 5,
-      "scope": "regular-season",
-      "provisionalSeason": true,
-      "source": "data-h2h-ledger.json"
+      "source": "data-h2h-ledger.json",
+      "verification": "Computed from complete exact regular-season matchup ledger.",
+      "provisionalSeason": true
     }
   }
 }
