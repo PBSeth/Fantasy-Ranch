@@ -1,10 +1,10 @@
 (function () {
   function scoringRecords() {
-    const high=DATA.h2hLedger?.records?.singleGameHigh;
-    const low=DATA.h2hLedger?.records?.singleGameLow;
+    const high=DATA.scoringRecords?.records?.highestScore;
+    const low=DATA.scoringRecords?.records?.lowestScore;
     return [
-      high && { title:'Highest Scoring Game', ...high },
-      low && { title:'Lowest Scoring Game', ...low }
+      high && { title:'Highest Score', ...high },
+      low && { title:'Lowest Score', ...low }
     ].filter(Boolean);
   }
 
