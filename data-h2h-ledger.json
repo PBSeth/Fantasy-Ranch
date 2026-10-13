@@ -17,7 +17,7 @@
     "2022": "archived screenshots indexed; numeric transcription pending; Week 13 is full-league bye/no H2H",
     "2023": "archived screenshots indexed; numeric transcription pending",
     "2024": "archived screenshots indexed; numeric transcription pending",
-    "2025": "results complete; exact scores retained in source archive, numeric ledger transcription pending",
+    "2025": "complete exact numeric scores",
     "2026": "partial; only explicitly supplied games are included"
   },
   "records": {
@@ -17712,15 +17712,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 93.72,
+      "scoreB": 78.22,
       "winner": "Brett",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17728,15 +17728,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Kevin",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 123.52,
+      "scoreB": 92.08,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17744,15 +17744,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 101.32,
+      "scoreB": 69.42,
       "winner": "Luke",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17760,15 +17760,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 116.32,
+      "scoreB": 108.78,
       "winner": "Mason",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17776,15 +17776,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 88.86,
+      "scoreB": 110.36,
       "winner": "Mott",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17792,15 +17792,15 @@
       "phase": "regular-season",
       "managerA": "Seth",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 81.92,
+      "scoreB": 89.54,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17808,15 +17808,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Diddles",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 67.74,
+      "scoreB": 110.98,
       "winner": "Diddles",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17824,15 +17824,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 98.5,
+      "scoreB": 106.74,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17840,15 +17840,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 101.3,
+      "scoreB": 83.84,
       "winner": "Luke",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17856,15 +17856,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 116.08,
+      "scoreB": 81.6,
       "winner": "Mason",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17872,15 +17872,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 96.22,
+      "scoreB": 129.64,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17888,15 +17888,15 @@
       "phase": "regular-season",
       "managerA": "Ryan",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 100.2,
+      "scoreB": 76.08,
       "winner": "Ryan",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17904,15 +17904,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Kevin",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 88.66,
+      "scoreB": 118.52,
       "winner": "Kevin",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17920,15 +17920,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 81.48,
+      "scoreB": 104.44,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17936,15 +17936,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Mason",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 81.86,
+      "scoreB": 100.76,
       "winner": "Mason",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17952,15 +17952,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 127.14,
+      "scoreB": 93.52,
       "winner": "Metz",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17968,15 +17968,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 99.72,
+      "scoreB": 101.9,
       "winner": "Seth",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -17984,15 +17984,15 @@
       "phase": "regular-season",
       "managerA": "Ryan",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 91.32,
+      "scoreB": 100.22,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18000,15 +18000,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 132.3,
+      "scoreB": 88.88,
       "winner": "Brett",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18016,15 +18016,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 111.24,
+      "scoreB": 109.08,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18032,15 +18032,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 78.56,
+      "scoreB": 104.48,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18048,15 +18048,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 80,
+      "scoreB": 117.46,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18064,15 +18064,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 137.3,
+      "scoreB": 95.32,
       "winner": "Mason",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18080,15 +18080,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Mott",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 109.1,
+      "scoreB": 84.06,
       "winner": "Metz",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18096,15 +18096,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Luke",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 103.9,
+      "scoreB": 110.4,
       "winner": "Luke",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18112,15 +18112,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 161.52,
+      "scoreB": 119.48,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18128,15 +18128,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 151.58,
+      "scoreB": 111.74,
       "winner": "Kevin",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18144,15 +18144,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Mott",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 91.52,
+      "scoreB": 89.42,
       "winner": "Mason",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18160,15 +18160,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 96.3,
+      "scoreB": 101.04,
       "winner": "Ryan",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18176,15 +18176,15 @@
       "phase": "regular-season",
       "managerA": "Nickster",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 82.84,
+      "scoreB": 100.28,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18192,15 +18192,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 97.74,
+      "scoreB": 94.1,
       "winner": "Brett",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18208,15 +18208,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Mason",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 120.62,
+      "scoreB": 63.36,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18224,15 +18224,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 119.24,
+      "scoreB": 101.6,
       "winner": "Kevin",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18240,15 +18240,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Mott",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 93.04,
+      "scoreB": 60.62,
       "winner": "Luke",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18256,15 +18256,15 @@
       "phase": "regular-season",
       "managerA": "Nickster",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 116.84,
+      "scoreB": 101.56,
       "winner": "Nickster",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18272,15 +18272,15 @@
       "phase": "regular-season",
       "managerA": "Payton",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 125.1,
+      "scoreB": 96.08,
       "winner": "Payton",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18288,15 +18288,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 106.18,
+      "scoreB": 107.82,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18304,15 +18304,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 109.14,
+      "scoreB": 120.24,
       "winner": "Metz",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18320,15 +18320,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Mason",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 95.14,
+      "scoreB": 117.96,
       "winner": "Mason",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18336,15 +18336,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 84.9,
+      "scoreB": 94.38,
       "winner": "Ryan",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18352,15 +18352,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 101.54,
+      "scoreB": 84.92,
       "winner": "Mott",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18368,15 +18368,15 @@
       "phase": "regular-season",
       "managerA": "Payton",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 117.56,
+      "scoreB": 119.38,
       "winner": "Seth",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18384,15 +18384,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Mason",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 75.86,
+      "scoreB": 147.76,
       "winner": "Mason",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18400,15 +18400,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 124.08,
+      "scoreB": 88.68,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18416,15 +18416,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Mott",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 54.08,
+      "scoreB": 104.08,
       "winner": "Mott",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18432,15 +18432,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 118.68,
+      "scoreB": 141.72,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18448,15 +18448,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 90.46,
+      "scoreB": 70.72,
       "winner": "Metz",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18464,15 +18464,15 @@
       "phase": "regular-season",
       "managerA": "Nickster",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 77.3,
+      "scoreB": 110.52,
       "winner": "Seth",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18480,15 +18480,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 91.44,
+      "scoreB": 92.36,
       "winner": "Metz",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18496,15 +18496,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Mott",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 84.94,
+      "scoreB": 97.52,
       "winner": "Mott",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18512,15 +18512,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 78.92,
+      "scoreB": 96.16,
       "winner": "Ryan",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18528,15 +18528,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 103.5,
+      "scoreB": 145.56,
       "winner": "Seth",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18544,15 +18544,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 72.7,
+      "scoreB": 149.1,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18560,15 +18560,15 @@
       "phase": "regular-season",
       "managerA": "Nickster",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 89.02,
+      "scoreB": 71.52,
       "winner": "Nickster",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18576,15 +18576,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 104.4,
+      "scoreB": 113.5,
       "winner": "Ryan",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18592,15 +18592,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 145.58,
+      "scoreB": 104.1,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18608,15 +18608,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Luke",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 124.22,
+      "scoreB": 104.6,
       "winner": "Kevin",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18624,15 +18624,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 79.22,
+      "scoreB": 92.44,
       "winner": "Seth",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18640,15 +18640,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 93.82,
+      "scoreB": 105.14,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18656,15 +18656,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 82.6,
+      "scoreB": 86.52,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18672,15 +18672,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Mott",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 119,
+      "scoreB": 73.06,
       "winner": "Brett",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18688,15 +18688,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Luke",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 63.5,
+      "scoreB": 45.74,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18704,15 +18704,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 105.12,
+      "scoreB": 66.22,
       "winner": "Kevin",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18720,15 +18720,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 102.04,
+      "scoreB": 112.68,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18736,15 +18736,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 87.3,
+      "scoreB": 47.52,
       "winner": "Metz",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18752,15 +18752,15 @@
       "phase": "regular-season",
       "managerA": "Payton",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 150.82,
+      "scoreB": 136.14,
       "winner": "Payton",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18768,15 +18768,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 119.12,
+      "scoreB": 115.96,
       "winner": "Brett",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18784,15 +18784,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Kevin",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 84.08,
+      "scoreB": 61.04,
       "winner": "Diddles",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18800,15 +18800,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 67.44,
+      "scoreB": 75.86,
       "winner": "Nickster",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18816,15 +18816,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 135.18,
+      "scoreB": 168.86,
       "winner": "Metz",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18832,15 +18832,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Ryan",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 62.12,
+      "scoreB": 89.26,
       "winner": "Ryan",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18848,15 +18848,15 @@
       "phase": "regular-season",
       "managerA": "Seth",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 107.72,
+      "scoreB": 45.72,
       "winner": "Seth",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18864,15 +18864,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Diddles",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 75.12,
+      "scoreB": 91.74,
       "winner": "Diddles",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18880,15 +18880,15 @@
       "phase": "regular-season",
       "managerA": "Kevin",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 90.26,
+      "scoreB": 99.4,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18896,15 +18896,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Metz",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 80.04,
+      "scoreB": 77.6,
       "winner": "Luke",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18912,15 +18912,15 @@
       "phase": "regular-season",
       "managerA": "Mason",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 116.64,
+      "scoreB": 81.66,
       "winner": "Mason",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18928,15 +18928,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 74.74,
+      "scoreB": 79.52,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18944,15 +18944,15 @@
       "phase": "regular-season",
       "managerA": "Ryan",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 126.68,
+      "scoreB": 84.64,
       "winner": "Ryan",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18960,15 +18960,15 @@
       "phase": "regular-season",
       "managerA": "Brett",
       "managerB": "Kevin",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 92.34,
+      "scoreB": 99.96,
       "winner": "Kevin",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18976,15 +18976,15 @@
       "phase": "regular-season",
       "managerA": "Diddles",
       "managerB": "Payton",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 82.74,
+      "scoreB": 103.24,
       "winner": "Payton",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -18992,15 +18992,15 @@
       "phase": "regular-season",
       "managerA": "Luke",
       "managerB": "Mason",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 73.76,
+      "scoreB": 73.4,
       "winner": "Luke",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -19008,15 +19008,15 @@
       "phase": "regular-season",
       "managerA": "Metz",
       "managerB": "Nickster",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 122.3,
+      "scoreB": 76.62,
       "winner": "Metz",
       "tie": false,
       "resultA": "W",
       "resultB": "L",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -19024,15 +19024,15 @@
       "phase": "regular-season",
       "managerA": "Mott",
       "managerB": "Seth",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 64.38,
+      "scoreB": 88.26,
       "winner": "Seth",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2025,
@@ -19040,15 +19040,15 @@
       "phase": "regular-season",
       "managerA": "Ryan",
       "managerB": "Ty/Molly",
-      "scoreA": null,
-      "scoreB": null,
+      "scoreA": 78.74,
+      "scoreB": 115.64,
       "winner": "Ty/Molly",
       "tie": false,
       "resultA": "L",
       "resultB": "W",
-      "scoreStatus": "pending-transcription",
+      "scoreStatus": "exact",
       "resultStatus": "exact",
-      "source": "historical weekly scoreboard archive"
+      "source": "2025 Sleeper weekly matchup screenshot archive"
     },
     {
       "season": 2026,
