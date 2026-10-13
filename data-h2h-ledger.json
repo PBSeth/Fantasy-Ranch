@@ -15,7 +15,7 @@
     "2020": "complete exact numeric scores; results score-verified",
     "2021": "complete exact numeric scores; results score-verified",
     "2022": "complete exact numeric scores; results score-verified; Week 13 full-league bye/no H2H",
-    "2023": "complete exact numeric scores; results score-verified",
+    "2023": "Weeks 1-10 complete exact numeric scores; Weeks 11-14 pending score transcription",
     "2024": "complete exact numeric scores; results score-verified",
     "2025": "complete exact numeric scores; results score-verified",
     "2026": "Weeks 1-5 complete exact numeric scores; current season partial"
@@ -15164,7 +15164,7 @@
       "managerA": "Brett",
       "managerB": "Dick",
       "scoreA": 102.1,
-      "scoreB": 77.7,
+      "scoreB": 77.1,
       "winner": "Brett",
       "tie": false,
       "resultA": "W",
