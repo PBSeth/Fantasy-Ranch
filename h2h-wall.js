@@ -30,7 +30,7 @@
       <div class="wall-high-label wall-high-label-stacked"><span>${title}</span><small>(10 meeting min.)</small></div>
       <div class="wall-high-value">${row.wins} ${row.wins===1 ? 'win' : 'wins'}</div>
       <div class="wall-high-name">${manager ? compactManagerName(manager) : row.manager}</div>
-      <div class="wall-high-detail">${record} vs ${opponent ? compactManagerName(opponent) : row.opponent} • ${row.games} meetings</div>
+      <div class="wall-high-detail">${record} vs ${opponent ? compactManagerName(opponent) : row.opponent}</div>
     </div>`;
   }
 
