@@ -9,11 +9,11 @@
 
   function streakCard(title,record) {
     if (!record?.leaders?.length) return '';
-    const names=record.leaders.map(x=>{
+    const entries=record.leaders.map(x=>{
       const m=managerFromLabel(x.manager);
-      return m ? compactManagerName(m) : x.manager;
-    }).join(' / ');
-    const details=record.leaders.map(spanText).join(' / ');
+      const name=m ? compactManagerName(m) : x.manager;
+      return `<div class="wall-streak-entry"><div class="wall-high-name">${name}</div><div class="wall-high-detail">${spanText(x)}</div></div>`;
+    }).join('<div class="wall-streak-separator">/</div>');
     return `<div class="wall-high-card">
       <div class="wall-high-label">${title}</div>
       <div class="wall-high-value">${record.count}</div>
@@ -21,6 +21,10 @@
       <div class="wall-high-detail">${details}</div>
     </div>`;
   }
+
+  const style=document.createElement('style');
+  style.textContent=`.wall-streak-entries{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center}.wall-streak-entry{display:flex;flex-direction:column;align-items:center;gap:4px}.wall-streak-entry .wall-high-name,.wall-streak-entry .wall-high-detail{margin:0}.wall-streak-separator{font-size:13px;color:#999;line-height:1.1}`;
+  document.head.appendChild(style);
 
   const baseRenderHome=renderHome;
   renderHome=function () {
