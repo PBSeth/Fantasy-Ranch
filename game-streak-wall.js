@@ -22,7 +22,7 @@
   }
 
   const style=document.createElement('style');
-  style.textContent=`.wall-streak-entries{display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center}.wall-streak-entry{display:flex;flex-direction:column;align-items:center;gap:4px}.wall-streak-entry .wall-high-name,.wall-streak-entry .wall-high-detail{margin:0}.wall-streak-separator{font-size:13px;color:#999;line-height:1.1}`;
+  style.textContent=`.wall-streak-entries{display:flex;flex-direction:column;align-items:center;gap:5px;margin-top:18px;text-align:center}.wall-streak-entry{display:flex;flex-direction:column;align-items:center;gap:1px}.wall-streak-entry .wall-high-name,.wall-streak-entry .wall-high-detail{margin:0;line-height:1.15}.wall-streak-separator{font-size:13px;color:#999;line-height:1.1}`;
   document.head.appendChild(style);
 
   const baseRenderHome=renderHome;
