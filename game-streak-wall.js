@@ -17,8 +17,7 @@
     return `<div class="wall-high-card">
       <div class="wall-high-label">${title}</div>
       <div class="wall-high-value">${record.count}</div>
-      <div class="wall-high-name">${names}</div>
-      <div class="wall-high-detail">${details}</div>
+      <div class="wall-streak-entries">${entries}</div>
     </div>`;
   }
 
