@@ -1,18 +1,14 @@
-// Keep the three-season eligibility rule in the calculations, but simplify the public labels.
+// Remove redundant winning/losing season rate awards from the Wall of Fame.
+// Underlying league history and calculations remain untouched.
 (function () {
-  function cleanWinningSeasonRateLabels() {
-    const grid=document.querySelector('.highlights-grid');
-    if (!grid) return;
-    grid.querySelectorAll('.wall-high-label').forEach(label=>{
-      const text=label.textContent.trim();
-      if (text.startsWith('Highest Winning Season Rate')) label.textContent='Highest Winning Season Rate';
-      if (text.startsWith('Lowest Winning Season Rate')) label.textContent='Lowest Winning Season Rate';
-    });
-  }
-
   const baseRenderHome=renderHome;
   renderHome=function () {
     baseRenderHome();
-    cleanWinningSeasonRateLabels();
+    const grid=document.querySelector('.highlights-grid');
+    if (!grid) return;
+    grid.querySelectorAll('.wall-high-card').forEach(card=>{
+      const label=card.querySelector('.wall-high-label')?.textContent.trim() || '';
+      if (/^(Highest|Lowest) (Winning|Losing) Season Rate\b/i.test(label)) card.remove();
+    });
   };
 })();
