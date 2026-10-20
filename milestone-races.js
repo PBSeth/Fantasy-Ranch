@@ -3,8 +3,6 @@
   const categories=[
     {id:'wins',label:'Wins',step:10,unit:'wins',basis:'games'},
     {id:'losses',label:'Losses',step:10,unit:'losses',basis:'games'},
-    {id:'century',label:'≥100 Point Games',step:10,unit:'≥100 point games',basis:'games'},
-    {id:'sub50',label:'≤50 Point Games',step:1,unit:'≤50 point games',basis:'games'},
     {id:'points',label:'Points',step:1000,unit:'points',basis:'games'},
     {id:'winning',label:'Winning Seasons',step:1,unit:'winning seasons',basis:'seasons'}
   ];
@@ -26,17 +24,15 @@
             score,result:g['result'+side]});
         }
       });
-    const results={wins:[],losses:[],century:[],sub50:[],points:[],winning:[]};
+    const results={wins:[],losses:[],points:[],winning:[]};
     for(const [key,games] of Object.entries(byManager)){
-      let wins=0,losses=0,points=0,century=0,sub50=0;
-      const milestones={wins:{},losses:{},century:{},sub50:{},points:{},winning:{}};
+      let wins=0,losses=0,points=0;
+      const milestones={wins:{},losses:{},points:{},winning:{}};
       games.forEach((g,i)=>{
         if(g.result==='W')wins++;
         if(g.result==='L')losses++;
         points=Math.round((points+g.score)*100)/100;
-        if(g.score>=100)century++;
-        if(g.score<=50)sub50++;
-        for(const [type,value,step] of [['wins',wins,10],['losses',losses,10],['century',century,10],['sub50',sub50,1],['points',points,1000]]){
+        for(const [type,value,step] of [['wins',wins,10],['losses',losses,10],['points',points,1000]]){
           const limit=Math.floor(value/step)*step;
           for(let n=step;n<=limit;n+=step)if(!milestones[type][n])
             milestones[type][n]={key,games:i+1,year:g.year,week:g.week};
