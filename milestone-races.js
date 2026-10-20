@@ -60,7 +60,7 @@
     const all=data(),cat=categories.find(c=>c.id===selected);
     const entries=all[selected]||[];
     const max=Math.max(0,...entries.map(x=>x.threshold));
-    const options=Array.from({length:max/cat.step},(_,i)=>(i+1)*cat.step);
+    const options=Array.from({length:max/cat.step},(_,i)=>max-i*cat.step);
     if(!options.length){root.innerHTML='<p class="milestone-empty">No completed milestones yet.</p>';return;}
     if(!options.includes(selectedThreshold))selectedThreshold=max;
     const ranked=entries.filter(x=>x.threshold===selectedThreshold).sort((a,b)=>a.games-b.games||a.year-b.year||a.week-b.week||a.key.localeCompare(b.key));
