@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scope": "regular-season",
-  "note": "Canonical one-row-per-matchup regular-season H2H ledger. Every matchup from 2012-2025 has exact scores and score-verified results. 2026 is complete through Week 6 and remains in-season/partial.",
+  "note": "Canonical one-row-per-matchup regular-season H2H ledger. Every matchup from 2012-2025 has exact scores and score-verified results. 2026 is complete through Week 5 and remains in-season/partial.",
   "throughCompleteSeason": 2025,
   "scoreCoverage": {
     "2012": "complete exact numeric scores; results score-verified",
@@ -18,7 +18,7 @@
     "2023": "complete exact numeric scores; results score-verified",
     "2024": "complete exact numeric scores; results score-verified",
     "2025": "complete exact numeric scores; results score-verified",
-    "2026": "Weeks 1-6 complete exact numeric scores; current season partial"
+    "2026": "Weeks 1-5 complete exact numeric scores; current season partial"
   },
   "records": {
     "singleGameHigh": {
@@ -19630,113 +19630,11 @@
       "resultStatus": "score-verified",
       "source": "user-supplied Sleeper weekly matchup screenshots",
       "provisionalSeason": true
-    },
-    {
-      "season": 2026,
-      "week": 6,
-      "phase": "regular-season",
-      "managerA": "Seth",
-      "managerB": "Nickster",
-      "scoreA": 99.46,
-      "scoreB": 94.38,
-      "winner": "Seth",
-      "tie": false,
-      "resultA": "W",
-      "resultB": "L",
-      "scoreStatus": "exact",
-      "resultStatus": "score-verified",
-      "source": "user-supplied Sleeper weekly matchup screenshots; manager mapping cross-checked against Week 5 ledger and Week 6 standings",
-      "provisionalSeason": true
-    },
-    {
-      "season": 2026,
-      "week": 6,
-      "phase": "regular-season",
-      "managerA": "Luke",
-      "managerB": "Metz",
-      "scoreA": 68.84,
-      "scoreB": 58.82,
-      "winner": "Luke",
-      "tie": false,
-      "resultA": "W",
-      "resultB": "L",
-      "scoreStatus": "exact",
-      "resultStatus": "score-verified",
-      "source": "user-supplied Sleeper weekly matchup screenshots; manager mapping cross-checked against Week 5 ledger and Week 6 standings",
-      "provisionalSeason": true
-    },
-    {
-      "season": 2026,
-      "week": 6,
-      "phase": "regular-season",
-      "managerA": "Ryan",
-      "managerB": "Payton",
-      "scoreA": 104.5,
-      "scoreB": 95.04,
-      "winner": "Ryan",
-      "tie": false,
-      "resultA": "W",
-      "resultB": "L",
-      "scoreStatus": "exact",
-      "resultStatus": "score-verified",
-      "source": "user-supplied Sleeper weekly matchup screenshots; manager mapping cross-checked against Week 5 ledger and Week 6 standings",
-      "provisionalSeason": true
-    },
-    {
-      "season": 2026,
-      "week": 6,
-      "phase": "regular-season",
-      "managerA": "Mott",
-      "managerB": "Kevin",
-      "scoreA": 116.2,
-      "scoreB": 84.42,
-      "winner": "Mott",
-      "tie": false,
-      "resultA": "W",
-      "resultB": "L",
-      "scoreStatus": "exact",
-      "resultStatus": "score-verified",
-      "source": "user-supplied Sleeper weekly matchup screenshots; manager mapping cross-checked against Week 5 ledger and Week 6 standings",
-      "provisionalSeason": true
-    },
-    {
-      "season": 2026,
-      "week": 6,
-      "phase": "regular-season",
-      "managerA": "Brett",
-      "managerB": "Mason",
-      "scoreA": 97.92,
-      "scoreB": 74.38,
-      "winner": "Brett",
-      "tie": false,
-      "resultA": "W",
-      "resultB": "L",
-      "scoreStatus": "exact",
-      "resultStatus": "score-verified",
-      "source": "user-supplied Sleeper weekly matchup screenshots; manager mapping cross-checked against Week 5 ledger and Week 6 standings",
-      "provisionalSeason": true
-    },
-    {
-      "season": 2026,
-      "week": 6,
-      "phase": "regular-season",
-      "managerA": "Diddles",
-      "managerB": "Ty/Molly",
-      "scoreA": 123.4,
-      "scoreB": 61.78,
-      "winner": "Diddles",
-      "tie": false,
-      "resultA": "W",
-      "resultB": "L",
-      "scoreStatus": "exact",
-      "resultStatus": "score-verified",
-      "source": "user-supplied Sleeper weekly matchup screenshots; manager mapping cross-checked against Week 5 ledger and Week 6 standings",
-      "provisionalSeason": true
     }
   ],
   "currentSeason": {
     "season": 2026,
-    "throughWeek": 6,
+    "throughWeek": 5,
     "status": "partial"
   }
 }
