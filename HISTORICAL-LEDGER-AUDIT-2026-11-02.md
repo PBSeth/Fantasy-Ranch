@@ -101,3 +101,8 @@ All regular-season wins, losses and team PF totals reconcile. This supersedes ea
 
 ## Remaining 2012 caveat
 Original `data-h2h-2012.json` and ledger match **all 72 officialWinner entries**, but the source's claim that these entries reconcile its own officialSeasonRecords is mathematically false: ledger Brett 3-9 vs official 5-7; ledger Kevin 6-6 vs official 4-8. Original 2012 weekly score sum 17,382.5 vs official PF sum 17,548.0; no score permutation can close the 165.5 league-wide deficit. Do not manufacture game results to force a match.
+
+## 2012 safe resolution for cumulative milestone calculations
+The 2012 source's Week 1 Kevin override was unsupported by its claimed reconciliation and contradicted the archived scoreboard. Restored **Brett 132.5 over Kevin 122.0** as score-supported/provisional; ledger now Brett 4-8, Kevin 5-7, versus official Brett 5-7, Kevin 4-8. Remaining individual result(s) cannot be uniquely identified from the supplied archived weekly scores and season totals (league-wide +165.5 discrepancy). Do not invent a specific winner.
+
+The Milestone Races now reconcile each manager's cumulative **2012 W-L and PF to the independent official season record at the end of 2012**. Thus 2013 onward career win/loss/points thresholds are not contaminated by the disputed 2012 game identities. Exact 2012 1,000-point milestone week is marked unverified rather than fabricated. This is a functional historical-statistics fix, not a claim that the remaining 2012 H2H matchups are independently established.
