@@ -259,15 +259,15 @@
       "managerB": "Kevin",
       "scoreA": 132.5,
       "scoreB": 122,
-      "winner": "Kevin",
+      "winner": "Brett",
       "tie": false,
-      "resultA": "L",
-      "resultB": "W",
+      "resultA": "W",
+      "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "official-override",
+      "resultStatus": "score-verified-provisional",
       "source": "data-h2h-2012.json",
-      "scoreResultConflict": true,
-      "officialOverrideNote": "Official recorded result retained over displayed score."
+      "scoreResultConflict": false,
+      "reconciliationNote": "Original source's Kevin officialWinner override was based on a mathematically invalid season reconciliation claim. Displayed 132.5-122 result favors Brett; restored scoreboard result pending independent historical confirmation."
     },
     {
       "season": 2012,
