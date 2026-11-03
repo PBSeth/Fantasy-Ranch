@@ -1,3 +1,16 @@
+
+## FINAL 2012 RESOLUTION — 2026-11-03 — SUPERSEDES ALL PREVIOUS 2012 OPEN ISSUES
+Original ESPN screenshots for all 12 weeks were provided. **Week 12 was wholly incorrect in the previous ledger**: all six matchups and scores were from a different pairing set. Correct Week 12:
+- Seth 108.5 vs Payton 140.5
+- Mott 140.5 vs Zach B 138.5
+- Brett 126.5 vs Kevin 123.0
+- Ty/Molly 213.5 vs Mason 109.5
+- Dick 136.5 vs Diddles 111.5
+- Brad 85.5 vs Karscig 129.0
+
+Also restored screenshot-proven score winners in Week 7 (Diddles 102 over Dick 74) and Week 8 (Zach B 122.5 over Payton 91.5). Week 1 Brett 132.5 over Kevin 122 remains correct. **All 12 managers' official 2012 W-L, PF and PA now match EXACTLY (36/36 checks, no discrepancies).** The previous 165.5-point deficit is eliminated. All earlier statements in this document describing 2012 as unresolved, or historical winner overrides as needed, are **superseded and obsolete**. Updated both `data-h2h-2012.json` and `data-h2h-ledger.json`.
+
+---
 # Fantasy Ranch historical regular-season audit — updated 2026-11-02
 
 ## Completed corrections
