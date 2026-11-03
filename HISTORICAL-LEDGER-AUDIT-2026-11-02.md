@@ -31,3 +31,12 @@
 
 ## Next steps
 Retrieve original weekly evidence for the three outstanding seasons; fix only source-verified outcomes; rerun per-season and cumulative totals and milestone rankings. Do not overwrite official records to match unverified weekly results.
+
+## Additional independent scoring reconciliation
+The user emphasized that historical ESPN team names may be unreliable. Cross-check manager identity and weekly opponents using PF, PA and official standings rather than accepting screenshot names at face value.
+
+2022: all twelve managers' ledger season PF totals exactly match `data-scoring-2022-2024.json`; PA discrepancies include Ty/Molly -61.9 and Luke +65.0 (official minus ledger), plus several other managers. This strongly points to weekly opponent pairing/mapping errors rather than missing team scores. Do not reverse the existing Week 10 Tyler win over Luke without evidence.
+
+2025: independent `Fantasy Ranch - Rivalry Profiles Combined.xlsx` official standings list Mott 4-10 PF 1219.60 PA 1338.36, Ryan 7-7 PF 1401.84 PA 1442.62. Ledger currently sums Mott PF 1178.94 PA 1322.06, Ryan PF 1423.34 PA 1421.12. Therefore there are score attribution errors beyond the W-L mismatch; use the original season-level source and weekly scoring to identify the week(s).
+
+2012: `data-scoring-2012-2015.json` PF and PA totals disagree substantially with archived weekly sums for multiple managers, indicating a broader archival mapping/scoring issue. 2012 official Brett 5-7 and Kevin 4-8 must be preserved; don't rely on the old reconciliation claim that three overrides alone fix the season.
