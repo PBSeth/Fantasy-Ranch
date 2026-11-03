@@ -80,3 +80,14 @@ Searched all same-week manager score swaps for an exact match to each manager's 
 These form part of a possible score-assignment cycle in Week 6, but **not a complete permutation**: Mason, Kevin, Mott, Ryan and Nickster still require reconciliation; 2025 Week 1 Ryan's -21.50 also exactly equals the difference between Ryan's and Mott's recorded scores, but swapping those two would change the winner and needs corroboration. No scores were changed on the strength of these arithmetic coincidences alone.
 
 Important: PF-matching swaps alone do not verify opponent assignments. Require a one-to-one permutation of all twelve scores for the affected week, check official PA totals and W-L simultaneously, and verify any remaining weekly adjustments against the supplied source.
+
+## DEFINITIVE 2025 RESOLUTION — 2026-11-03 (supersedes earlier unresolved notes)
+**All 12 official Sleeper manager PF totals, all 12 PA totals, and all 12 regular-season W-L records now reconcile exactly to the cent.** Weekly score values and all original matchups are preserved; only misassigned scores are permuted among managers within their own week. This is a full 36/36 independent constraint check.
+
+- Week 1: Mott **110.36**, Ryan **88.86** (previously attributed in reverse). Official winner Mott.
+- Week 6: Diddles **125.10**, Mason **96.08**, Kevin **93.04**, Metz **60.62**, Luke **120.62**, Mott **63.36**, Payton **119.24**, Ty/Molly **101.60**. Brett, Seth, Nickster, Ryan unchanged. All Week 6 winners remain the same.
+- Week 7: Kevin **84.92**, Mason **101.54**, Mott **117.96**, Nickster **95.14**. Other Week 7 scores unchanged. All Week 7 winners remain the same.
+
+This resolves the 2025 Mott/Ryan W-L mismatch and every 2025 PF/PA discrepancy without inventing scores. The earlier Week 6 partial-cycle diagnostic was a clue, not the full correction.
+
+**2012 remains separate**: official season PF total 17,548.0 vs 2012 weekly ledger total 17,382.5 (difference 165.5). Unlike 2025, a pure within-week permutation cannot resolve the 2012 season scoring discrepancy. Official Brett 5-7 and Kevin 4-8 remain at odds with ledger; further source evidence needed before editing individual results.
