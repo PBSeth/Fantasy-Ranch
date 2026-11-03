@@ -449,7 +449,7 @@
           "team2": "Dandy Daltons",
           "score2": 102,
           "displayedScoreWinner": "Diddles",
-          "officialWinner": "Dick",
+          "officialWinner": "Diddles",
           "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record."
         },
         {
@@ -535,7 +535,7 @@
           "team2": "Double Enchromdres",
           "score2": 122.5,
           "displayedScoreWinner": "Zach B",
-          "officialWinner": "Payton",
+          "officialWinner": "Zach B",
           "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record."
         }
       ]
@@ -739,64 +739,64 @@
       "week": 12,
       "matchups": [
         {
-          "manager1": "Ty/Molly",
-          "team1": "LOT LIZARDS",
-          "score1": 147.5,
-          "manager2": "Seth",
-          "team2": "Sex Panther",
-          "score2": 99,
-          "displayedScoreWinner": "Ty/Molly",
-          "officialWinner": "Ty/Molly"
-        },
-        {
-          "manager1": "Diddles",
-          "team1": "Dandy Daltons",
-          "score1": 172.5,
+          "manager1": "Seth",
+          "team1": "Sex Panther",
+          "score1": 108.5,
           "manager2": "Payton",
           "team2": "Edward Scissorfans",
-          "score2": 115.5,
-          "displayedScoreWinner": "Diddles",
-          "officialWinner": "Diddles"
-        },
-        {
-          "manager1": "Zach B",
-          "team1": "Double Enchromdres",
-          "score1": 108.5,
-          "manager2": "Dick",
-          "team2": "Kiss My Hamas",
-          "score2": 83,
-          "displayedScoreWinner": "Zach B",
-          "officialWinner": "Zach B"
-        },
-        {
-          "manager1": "Karscig",
-          "team1": "The J.J. Swatts",
-          "score1": 145.5,
-          "manager2": "Mason",
-          "team2": "Hometown Heros",
-          "score2": 109,
-          "displayedScoreWinner": "Karscig",
-          "officialWinner": "Karscig"
-        },
-        {
-          "manager1": "Kevin",
-          "team1": "Gruden's Gang",
-          "score1": 111.5,
-          "manager2": "Brad",
-          "team2": "Catfish McCoy",
-          "score2": 96.5,
-          "displayedScoreWinner": "Kevin",
-          "officialWinner": "Kevin"
+          "score2": 140.5,
+          "displayedScoreWinner": "Payton",
+          "officialWinner": "Payton"
         },
         {
           "manager1": "Mott",
           "team1": "Fuck You, Kenny Britt",
-          "score1": 114,
-          "manager2": "Brett",
-          "team2": "Tom Raper",
-          "score2": 95,
+          "score1": 140.5,
+          "manager2": "Zach B",
+          "team2": "Double Enchromdres",
+          "score2": 138.5,
           "displayedScoreWinner": "Mott",
           "officialWinner": "Mott"
+        },
+        {
+          "manager1": "Brett",
+          "team1": "Tom Raper",
+          "score1": 126.5,
+          "manager2": "Kevin",
+          "team2": "Gruden's Gang",
+          "score2": 123,
+          "displayedScoreWinner": "Brett",
+          "officialWinner": "Brett"
+        },
+        {
+          "manager1": "Ty/Molly",
+          "team1": "LOT LIZARDS",
+          "score1": 213.5,
+          "manager2": "Mason",
+          "team2": "Hometown Heros",
+          "score2": 109.5,
+          "displayedScoreWinner": "Ty/Molly",
+          "officialWinner": "Ty/Molly"
+        },
+        {
+          "manager1": "Dick",
+          "team1": "Kiss My Hamas",
+          "score1": 136.5,
+          "manager2": "Diddles",
+          "team2": "Dandy Daltons",
+          "score2": 111.5,
+          "displayedScoreWinner": "Dick",
+          "officialWinner": "Dick"
+        },
+        {
+          "manager1": "Brad",
+          "team1": "Catfish McCoy",
+          "score1": 85.5,
+          "manager2": "Karscig",
+          "team2": "The J.J. Swatts",
+          "score2": 129,
+          "displayedScoreWinner": "Karscig",
+          "officialWinner": "Karscig"
         }
       ]
     }
@@ -815,5 +815,5 @@
     "Diddles": "7-5",
     "Karscig": "7-5"
   },
-  "reconciliationNote": "The earlier claim that three overrides reconciled the official 2012 season records was mathematically incorrect. Week 1 Brett 132.5 vs Kevin 122 is restored to displayed-score winner Brett. The remaining 2012 source game winners yield Brett 4-8 and Kevin 5-7, versus official Brett 5-7 and Kevin 4-8. Original season PF 17,548 differs from the sum of archived weekly scores 17,382.5; source data insufficient for a unique further correction."
+  "reconciliationNote": "Verified against original ESPN 2012 weekly scoreboard screenshots for all 12 regular-season weeks. Week 12 six matchups were incorrectly transcribed and are now replaced; Week 7 Dick/Diddles and Week 8 Payton/Zach B winner overrides removed. All 12 official 2012 season W-L, PF and PA totals reconcile exactly."
 }
