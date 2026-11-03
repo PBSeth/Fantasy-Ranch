@@ -91,3 +91,13 @@ Important: PF-matching swaps alone do not verify opponent assignments. Require a
 This resolves the 2025 Mott/Ryan W-L mismatch and every 2025 PF/PA discrepancy without inventing scores. The earlier Week 6 partial-cycle diagnostic was a clue, not the full correction.
 
 **2012 remains separate**: official season PF total 17,548.0 vs 2012 weekly ledger total 17,382.5 (difference 165.5). Unlike 2025, a pure within-week permutation cannot resolve the 2012 season scoring discrepancy. Official Brett 5-7 and Kevin 4-8 remain at odds with ledger; further source evidence needed before editing individual results.
+
+## DEFINITIVE 2022 FULL RECONCILIATION — 2026-11-03
+All 12 official 2022 PF, PA and W-L totals now match the H2H ledger **exactly (36/36 checks)**. Preserved every manager's individual weekly score; corrected opponent assignments only:
+- Week 6: Kevin 94.5 vs Shea 71.7; Nickster 103.4 vs Luke 73.6 (previously Kevin-Luke and Nickster-Shea).
+- Week 11: Kevin 109.5 vs Luke 100.9; Mason 108.1 vs Metz 115.3 (previously Kevin-Mason and Luke-Metz). The prior Week 11 Luke-Metz correction was an intermediate step; this is the complete reconstruction.
+- Week 11: Shea 53.4 vs Ty/Molly 98.2 remains from prior fix.
+All regular-season wins, losses and team PF totals reconcile. This supersedes earlier notes that 2022 PA discrepancies remained.
+
+## Remaining 2012 caveat
+Original `data-h2h-2012.json` and ledger match **all 72 officialWinner entries**, but the source's claim that these entries reconcile its own officialSeasonRecords is mathematically false: ledger Brett 3-9 vs official 5-7; ledger Kevin 6-6 vs official 4-8. Original 2012 weekly score sum 17,382.5 vs official PF sum 17,548.0; no score permutation can close the 165.5 league-wide deficit. Do not manufacture game results to force a match.
