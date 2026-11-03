@@ -40,3 +40,6 @@ The user emphasized that historical ESPN team names may be unreliable. Cross-che
 2025: independent `Fantasy Ranch - Rivalry Profiles Combined.xlsx` official standings list Mott 4-10 PF 1219.60 PA 1338.36, Ryan 7-7 PF 1401.84 PA 1442.62. Ledger currently sums Mott PF 1178.94 PA 1322.06, Ryan PF 1423.34 PA 1421.12. Therefore there are score attribution errors beyond the W-L mismatch; use the original season-level source and weekly scoring to identify the week(s).
 
 2012: `data-scoring-2012-2015.json` PF and PA totals disagree substantially with archived weekly sums for multiple managers, indicating a broader archival mapping/scoring issue. 2012 official Brett 5-7 and Kevin 4-8 must be preserved; don't rely on the old reconciliation claim that three overrides alone fix the season.
+
+## 2022 Week 11 resolution (2026-11-03)
+Reassigned archived Week 11 opponent pairings without changing any individual team scores: Luke 100.9 vs Metz 115.3; Shea 53.4 vs Ty/Molly 98.2. This resolves Luke and Tyler official W-L discrepancies simultaneously, and reduces the two largest 2022 PA deltas by 61.9 each. Other 2022 PA mismatches still warrant investigation; this reconstruction is inferred, not directly screenshot-verified.
