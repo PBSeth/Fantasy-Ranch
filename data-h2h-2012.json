@@ -67,8 +67,9 @@
           "team2": "Gruden's Gang",
           "score2": 122,
           "displayedScoreWinner": "Brett",
-          "officialWinner": "Kevin",
-          "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record."
+          "officialWinner": "Brett",
+          "reconciliationNote": "Displayed score comparison conflicts with the preserved ESPN final season records; official winner reconciled to the season record.",
+          "resultVerification": "displayed-score-winner; prior Kevin override unsupported by season-record arithmetic"
         },
         {
           "manager1": "Diddles",
@@ -814,5 +815,5 @@
     "Diddles": "7-5",
     "Karscig": "7-5"
   },
-  "reconciliationNote": "The 72 displayed weekly scores do not reproduce six teams' preserved final W-L records. Exactly three matchup outcomes must differ from the displayed score comparison to reconcile every 2012 final record: Week 1 Kevin over Brett, Week 7 Dick over Diddles, and Week 8 Payton over Zach B. The cause of the historical score discrepancy is not yet confirmed, so both displayedScoreWinner and officialWinner are retained."
+  "reconciliationNote": "The earlier claim that three overrides reconciled the official 2012 season records was mathematically incorrect. Week 1 Brett 132.5 vs Kevin 122 is restored to displayed-score winner Brett. The remaining 2012 source game winners yield Brett 4-8 and Kevin 5-7, versus official Brett 5-7 and Kevin 4-8. Original season PF 17,548 differs from the sum of archived weekly scores 17,382.5; source data insufficient for a unique further correction."
 }
