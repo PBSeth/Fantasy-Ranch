@@ -4111,13 +4111,19 @@
       "managerB": "Mason",
       "scoreA": 89,
       "scoreB": 91.5,
-      "winner": "Mason",
+      "winner": "Kevin",
       "tie": false,
-      "resultA": "L",
-      "resultB": "W",
+      "resultA": "W",
+      "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "exact",
-      "source": "data-h2h-2015.json"
+      "resultStatus": "official-stat-correction",
+      "source": "data-h2h-2015.json",
+      "scoreResultConflict": true,
+      "officialOverrideNote": "2015 source reconciliation: corrected Kevin 92 vs Mason 91.5",
+      "correctedScores": {
+        "Kevin": 92
+      },
+      "displayedScoresPreserved": true
     },
     {
       "season": 2015,
@@ -4527,13 +4533,19 @@
       "managerB": "Ty/Molly",
       "scoreA": 88.5,
       "scoreB": 89,
-      "winner": "Ty/Molly",
+      "winner": "Payton",
       "tie": false,
-      "resultA": "L",
-      "resultB": "W",
+      "resultA": "W",
+      "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "exact",
-      "source": "data-h2h-2015.json"
+      "resultStatus": "official-stat-correction",
+      "source": "data-h2h-2015.json",
+      "scoreResultConflict": true,
+      "officialOverrideNote": "2015 source reconciliation: corrected Payton 91.5 vs Tyler 89",
+      "correctedScores": {
+        "Payton": 91.5
+      },
+      "displayedScoresPreserved": true
     },
     {
       "season": 2015,
@@ -6095,13 +6107,17 @@
       "managerB": "Seth",
       "scoreA": 108.8,
       "scoreB": 106.6,
-      "winner": "Mason",
+      "winner": "Seth",
       "tie": false,
-      "resultA": "W",
-      "resultB": "L",
+      "resultA": "L",
+      "resultB": "W",
       "scoreStatus": "exact",
-      "resultStatus": "exact",
-      "source": "data-h2h-2016.json"
+      "resultStatus": "official-stat-correction",
+      "source": "data-h2h-2016.json",
+      "scoreResultConflict": true,
+      "officialOverrideNote": "2016 source reconciliation: official result after stat correction; exact final score unrecoverable",
+      "correctedScores": null,
+      "displayedScoresPreserved": true
     },
     {
       "season": 2016,
