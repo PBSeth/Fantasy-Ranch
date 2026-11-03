@@ -1,10 +1,10 @@
 {
   "version": 1,
   "scope": "regular-season",
-  "note": "Canonical one-row-per-matchup regular-season H2H ledger. Every matchup from 2012-2025 has exact scores and score-verified results. 2026 is complete through Week 7 and remains in-season/partial. 2021 Week 12 matchups excluded from the regular-season ledger because official 2021 season records cover 11 games.",
+  "note": "Canonical one-row-per-matchup regular-season H2H ledger. 2012 matchups have archived scores but two unverified winner overrides and non-reconciling season totals; 2013-2025 ledger retains score/result sources and explicit reconciliations. 2026 is complete through Week 7 and remains in-season/partial. 2021 Week 12 matchups excluded from the regular-season ledger because official 2021 season records cover 11 games.",
   "throughCompleteSeason": 2025,
   "scoreCoverage": {
-    "2012": "complete exact numeric scores; results score-verified",
+    "2012": "72 archived numeric matchups; two scoreboard-winner conflicts (Weeks 7 and 8); 2012 official PF/PA and Brett/Kevin W-L do not reconcile; individual historical results unverified",
     "2013": "complete exact numeric scores; results score-verified",
     "2014": "complete exact numeric scores; results score-verified",
     "2015": "complete exact numeric scores; results score-verified",
@@ -894,10 +894,11 @@
       "resultA": "W",
       "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "official-override",
+      "resultStatus": "unverified-historical-override",
       "source": "data-h2h-2012.json",
       "scoreResultConflict": true,
-      "officialOverrideNote": "Official recorded result retained over displayed score."
+      "officialOverrideNote": "Official recorded result retained over displayed score.",
+      "reconciliationNote": "Official-winner override from earlier reconstruction conflicts with displayed score; not independently corroborated by original screenshot or game-level official result. Preserve for now but exclude from claims of score verification."
     },
     {
       "season": 2012,
@@ -1048,10 +1049,11 @@
       "resultA": "W",
       "resultB": "L",
       "scoreStatus": "exact",
-      "resultStatus": "official-override",
+      "resultStatus": "unverified-historical-override",
       "source": "data-h2h-2012.json",
       "scoreResultConflict": true,
-      "officialOverrideNote": "Official recorded result retained over displayed score."
+      "officialOverrideNote": "Official recorded result retained over displayed score.",
+      "reconciliationNote": "Official-winner override from earlier reconstruction conflicts with displayed score; not independently corroborated by original screenshot or game-level official result. Preserve for now but exclude from claims of score verification."
     },
     {
       "season": 2012,
