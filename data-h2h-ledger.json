@@ -18,7 +18,7 @@
     "2023": "complete exact numeric scores; results score-verified",
     "2024": "complete exact numeric scores; results score-verified",
     "2025": "complete exact numeric scores; results score-verified",
-    "2026": "Weeks 1-6 complete exact numeric scores; current season partial"
+    "2026": "Weeks 1–8 six matchups per week, final scores through Week 8; season in progress"
   },
   "records": {
     "singleGameHigh": {
@@ -19758,11 +19758,113 @@
       "resultStatus": "ESPN-screenshot-verified",
       "source": "2012 ESPN Week 12 screenshot supplied 2026-11-03",
       "scoreResultConflict": false
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "phase": "regular-season",
+      "managerA": "Seth",
+      "managerB": "Luke",
+      "scoreA": 111.5,
+      "scoreB": 130.46,
+      "winner": "Luke",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "phase": "regular-season",
+      "managerA": "Ryan",
+      "managerB": "Mott",
+      "scoreA": 99.96,
+      "scoreB": 73.18,
+      "winner": "Ryan",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "phase": "regular-season",
+      "managerA": "Kevin",
+      "managerB": "Metz",
+      "scoreA": 130.18,
+      "scoreB": 88.6,
+      "winner": "Kevin",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "phase": "regular-season",
+      "managerA": "Payton",
+      "managerB": "Brett",
+      "scoreA": 116.08,
+      "scoreB": 87.58,
+      "winner": "Payton",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "phase": "regular-season",
+      "managerA": "Mason",
+      "managerB": "Diddles",
+      "scoreA": 82.48,
+      "scoreB": 121.06,
+      "winner": "Diddles",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "phase": "regular-season",
+      "managerA": "Ty/Molly",
+      "managerB": "Nickster",
+      "scoreA": 70.04,
+      "scoreB": 90.2,
+      "winner": "Nickster",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
     }
   ],
   "currentSeason": {
     "season": 2026,
-    "throughWeek": 7,
+    "throughWeek": 8,
     "status": "partial"
   }
 }
