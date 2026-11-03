@@ -42,7 +42,7 @@
         // without inventing which 2012 week an unverified result occurred.
         if(g.year===2012 && (i===games.length-1 || games[i+1].year!==2012)){
           const official=DATA.managers?.[key]?.seasons?.find(s=>Number(s.year)===2012);
-          const record=String(official?.record||'').match(/^(\\d+)-(\\d+)/);
+          const record=String(official?.record||'').match(/^(\d+)-(\d+)/);
           if(record){ wins=Number(record[1]); losses=Number(record[2]); }
           if(Number.isFinite(Number(official?.pf)) && official?.pf!=null)
             points=Math.round(Number(official.pf)*100)/100;
