@@ -37,6 +37,20 @@
           for(let n=step;n<=limit;n+=step)if(!milestones[type][n])
             milestones[type][n]={key,games:i+1,year:g.year,week:g.week};
         }
+        // The 2012 weekly ESPN archive disagrees with the independently verified
+        // season standings/scoring. Correct cumulative counts at the season boundary,
+        // without inventing which 2012 week an unverified result occurred.
+        if(g.year===2012 && (i===games.length-1 || games[i+1].year!==2012)){
+          const official=DATA.managers?.[key]?.seasons?.find(s=>Number(s.year)===2012);
+          const record=String(official?.record||'').match(/^(\\d+)-(\\d+)/);
+          if(record){ wins=Number(record[1]); losses=Number(record[2]); }
+          if(Number.isFinite(Number(official?.pf)) && official?.pf!=null)
+            points=Math.round(Number(official.pf)*100)/100;
+          for(const [type,value,step] of [['wins',wins,10],['losses',losses,10],['points',points,1000]]){
+            for(let n=step;n<=Math.floor(value/step)*step;n+=step)
+              if(!milestones[type][n])milestones[type][n]={key,games:i+1,year:2012,week:null};
+          }
+        }
       });
       const years=[...new Set(games.filter(g=>g.year<=complete).map(g=>g.year))].sort((a,b)=>a-b);
       let count=0;
@@ -49,6 +63,8 @@
           milestones.winning[count]={key,games:i+1,year,week:null};
         }
       });
+      // A 2012 season PF total does not establish an exact week for a 1,000-point milestone.
+      for(const row of Object.values(milestones.points))if(row.year===2012)row.week=null;
       for(const type of Object.keys(milestones))
         for(const [n,row] of Object.entries(milestones[type]))results[type].push({...row,threshold:Number(n)});
     }
@@ -87,7 +103,7 @@
         </div>`).join('')}
       </div>
       ${rows.length>5?`<button type="button" class="milestone-more" data-expand="1">${showAll?'Show top 5':'View all '+rows.length+' managers'}</button>`:''}
-      <p class="milestone-footnote">Ranked by fewest career ${cat.basis==='seasons'?'seasons':'regular-season games'} to reach the milestone. Ties share a rank.${selected==='winning'?' Winning seasons require more wins than losses; current incomplete seasons excluded.':''}</p>`;
+      <p class="milestone-footnote">Ranked by fewest career ${cat.basis==='seasons'?'seasons':'regular-season games'} to reach the milestone. Ties share a rank.${selected==='winning'?' Winning seasons require more wins than losses; current incomplete seasons excluded.':''} 2012 point milestone weeks are unverified; later cumulative totals use official 2012 standings and PF.</p>`;
     root.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{
       selected=b.dataset.category;selectedThreshold=null;showAll=false;paint();
     }));
