@@ -43,3 +43,25 @@ The user emphasized that historical ESPN team names may be unreliable. Cross-che
 
 ## 2022 Week 11 resolution (2026-11-03)
 Reassigned archived Week 11 opponent pairings without changing any individual team scores: Luke 100.9 vs Metz 115.3; Shea 53.4 vs Ty/Molly 98.2. This resolves Luke and Tyler official W-L discrepancies simultaneously, and reduces the two largest 2022 PA deltas by 61.9 each. Other 2022 PA mismatches still warrant investigation; this reconstruction is inferred, not directly screenshot-verified.
+
+## Exhaustive 2025 season PF/PA comparison (2026-11-03)
+Official totals from user-supplied 2025 Sleeper Details (Rivalry Profiles Combined workbook). Values below are **official minus ledger**.
+
+| Manager | PF delta | PA delta |
+|---|---:|---:|
+| Payton | -5.86 | +5.52 |
+| Diddles | +4.48 | +32.72 |
+| Ty/Molly | +5.52 | -5.86 |
+| Mason | +16.30 | -5.74 |
+| Metz | -40.98 | -26.20 |
+| Ryan | -21.50 | +21.50 |
+| Seth | 0.00 | 0.00 |
+| Kevin | -36.42 | -57.40 |
+| Luke | +27.58 | +2.74 |
+| Brett | 0.00 | 0.00 |
+| Mott | +40.66 | +16.30 |
+| Nickster | +10.22 | +16.42 |
+
+Ten of twelve managers have discrepancies, so simply reversing one Mott-Ryan matchup is not a complete correction. Individual weekly score assignments and opponent pairings need reconstruction. Season PF and PA are independent conservation constraints, but without authoritative week-level player-to-score mapping there can be multiple mathematically valid solutions. Do not claim uniqueness merely because a proposed swap matches totals.
+
+2012: official Brett 5-7 vs ledger 3-9 and Kevin 4-8 vs ledger 6-6, while all other official W-L records match. A single flip cannot reconcile both; multiple compensating flips are needed, and the original 2012 PF/PA totals also disagree with archived scores across the league.
