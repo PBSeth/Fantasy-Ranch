@@ -136,7 +136,7 @@
       const nearest=Math.round(selectedThreshold/cat.step)*cat.step;
       const distance=Math.abs(nearest-selectedThreshold);
       const pixels=distance/Math.max(1,max-1)*tickTrack.clientWidth;
-      if(nearest>=1 && nearest<=max && distance<=cat.step/10 && pixels<=4)
+      if(nearest>=1 && nearest<=max && distance<=cat.step/10 && pixels<=8)
         setThreshold(nearest);
     });
     number.addEventListener('input',()=>{
