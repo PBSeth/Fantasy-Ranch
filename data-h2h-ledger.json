@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scope": "regular-season",
-  "note": "Canonical one-row-per-matchup regular-season H2H ledger. 2012 matchups have archived scores but two unverified winner overrides and non-reconciling season totals; 2013-2025 ledger retains score/result sources and explicit reconciliations. 2026 is complete through Week 7 and remains in-season/partial. 2021 Week 12 matchups excluded from the regular-season ledger because official 2021 season records cover 11 games.",
+  "note": "Canonical one-row-per-matchup regular-season H2H ledger. The 2012–2025 ledger retains score and result sources and documented reconciliations. The 2026 season is in progress, with final results through Week 9. 2021 Week 12 matchups are excluded because official regular-season records cover 11 games.",
   "throughCompleteSeason": 2025,
   "scoreCoverage": {
     "2012": "72/72 regular-season matchups verified against 2012 ESPN scoreboard screenshots, including corrected Week 12; 12/12 manager W-L, PF and PA totals exactly match official season standings.",
@@ -18,7 +18,7 @@
     "2023": "complete exact numeric scores; results score-verified",
     "2024": "complete exact numeric scores; results score-verified",
     "2025": "complete exact numeric scores; results score-verified",
-    "2026": "Weeks 1–8 six matchups per week, final scores through Week 8; season in progress"
+    "2026": "Weeks 1–9, six matchups per week with final scores; season in progress"
   },
   "records": {
     "singleGameHigh": {
@@ -19860,11 +19860,113 @@
       "resultStatus": "score-verified",
       "source": "user-supplied Sleeper 2026 Week 8 final matchup screenshots 2026-11-03; usernames mapped via data-core.json scoring2025",
       "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "phase": "regular-season",
+      "managerA": "Seth",
+      "managerB": "Mott",
+      "scoreA": 97.08,
+      "scoreB": 92.96,
+      "winner": "Seth",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 9 final matchup screenshot (1000030683.jpg, 2026-11-10); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "phase": "regular-season",
+      "managerA": "Luke",
+      "managerB": "Brett",
+      "scoreA": 72.64,
+      "scoreB": 94.84,
+      "winner": "Brett",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 9 final matchup screenshot (1000030683.jpg, 2026-11-10); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "phase": "regular-season",
+      "managerA": "Ryan",
+      "managerB": "Metz",
+      "scoreA": 85.04,
+      "scoreB": 95.7,
+      "winner": "Metz",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 9 final matchup screenshot (1000030683.jpg, 2026-11-10); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "phase": "regular-season",
+      "managerA": "Kevin",
+      "managerB": "Mason",
+      "scoreA": 69.54,
+      "scoreB": 100.28,
+      "winner": "Mason",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 9 final matchup screenshot (1000030685.jpg, 2026-11-10); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "phase": "regular-season",
+      "managerA": "Payton",
+      "managerB": "Ty/Molly",
+      "scoreA": 92.16,
+      "scoreB": 93.28,
+      "winner": "Ty/Molly",
+      "tie": false,
+      "resultA": "L",
+      "resultB": "W",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 9 final matchup screenshot (1000030685.jpg, 2026-11-10); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 9,
+      "phase": "regular-season",
+      "managerA": "Diddles",
+      "managerB": "Nickster",
+      "scoreA": 140.66,
+      "scoreB": 72.98,
+      "winner": "Diddles",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 9 final matchup screenshot (1000030685.jpg, 2026-11-10); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
     }
   ],
   "currentSeason": {
     "season": 2026,
-    "throughWeek": 8,
+    "throughWeek": 9,
     "status": "partial"
   }
 }
