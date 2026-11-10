@@ -148,6 +148,7 @@
       setThreshold(Number.isFinite(value)?Math.min(max,Math.max(1,Math.round(value))):selectedThreshold);
     }
     number.addEventListener('change',commitNumber);
+    number.addEventListener('blur',commitNumber);
     number.addEventListener('keydown',event=>{
       if(event.key==='Enter'){event.preventDefault();commitNumber();}
     });
