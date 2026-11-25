@@ -18,7 +18,7 @@
     "2023": "complete exact numeric scores; results score-verified",
     "2024": "complete exact numeric scores; results score-verified",
     "2025": "complete exact numeric scores; results score-verified",
-    "2026": "Weeks 1–9, six matchups per week with final scores; season in progress"
+    "2026": "Weeks 1–11, six matchups per week with final scores; season in progress"
   },
   "records": {
     "singleGameHigh": {
@@ -20064,11 +20064,113 @@
       "resultStatus": "score-verified",
       "source": "User-supplied Sleeper 2026 Week 10 final matchup screenshots (1000031061.jpg, 1000031063.jpg, 2026-11-17); usernames mapped via data-core.json scoring2025",
       "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "regular-season",
+      "managerA": "Seth",
+      "managerB": "Ryan",
+      "scoreA": 136.24,
+      "scoreB": 96.36,
+      "winner": "Seth",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 11 final matchup screenshots (1000031290.jpg, 1000031292.jpg, 2026-11-24); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "regular-season",
+      "managerA": "Diddles",
+      "managerB": "Luke",
+      "scoreA": 89.7,
+      "scoreB": 65.06,
+      "winner": "Diddles",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 11 final matchup screenshots (1000031290.jpg, 1000031292.jpg, 2026-11-24); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "regular-season",
+      "managerA": "Nickster",
+      "managerB": "Kevin",
+      "scoreA": 62.38,
+      "scoreB": 60.3,
+      "winner": "Nickster",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 11 final matchup screenshots (1000031290.jpg, 1000031292.jpg, 2026-11-24); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "regular-season",
+      "managerA": "Mason",
+      "managerB": "Payton",
+      "scoreA": 105.1,
+      "scoreB": 78.74,
+      "winner": "Mason",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 11 final matchup screenshots (1000031290.jpg, 1000031292.jpg, 2026-11-24); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "regular-season",
+      "managerA": "Ty/Molly",
+      "managerB": "Mott",
+      "scoreA": 134.76,
+      "scoreB": 80.46,
+      "winner": "Ty/Molly",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 11 final matchup screenshots (1000031290.jpg, 1000031292.jpg, 2026-11-24); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "phase": "regular-season",
+      "managerA": "Metz",
+      "managerB": "Brett",
+      "scoreA": 118.6,
+      "scoreB": 82.4,
+      "winner": "Metz",
+      "tie": false,
+      "resultA": "W",
+      "resultB": "L",
+      "scoreStatus": "exact",
+      "resultStatus": "score-verified",
+      "source": "User-supplied Sleeper 2026 Week 11 final matchup screenshots (1000031290.jpg, 1000031292.jpg, 2026-11-24); usernames mapped via data-core.json scoring2025",
+      "provisionalSeason": true
     }
   ],
   "currentSeason": {
     "season": 2026,
-    "throughWeek": 10,
+    "throughWeek": 11,
     "status": "partial"
   }
 }
